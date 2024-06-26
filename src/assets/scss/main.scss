@@ -3,4 +3,10 @@
 
 @import "./base/reset";
 
+@import "../../components/Links/Links";
+@import "../../components/ToggleButton/ToggleButton";
+
+@import "../../containers/Navbar/Navbar";
+@import "../../containers/Sidebar/Sidebar";
+
 @import "../../views/Home";

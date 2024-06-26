@@ -1,0 +1,14 @@
+.navbar {
+    @extend %flex-rowCentered;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: white;
+
+    // &__wrapper {}
+}
