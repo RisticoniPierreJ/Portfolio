@@ -1,14 +1,19 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.sidebar, .links {
+.hero__buttons, .hero, .heroContent__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar, .hero__content, .links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.navbar {
+.navbar, .SubmitButton, .heroImage__picture, .heroImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,6 +89,49 @@ main {
   width: 100%;
 }
 
+.heroContent {
+  padding: 10px;
+}
+.heroContent__title {
+  gap: 10px;
+  padding-bottom: 20px;
+}
+.heroContent h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #82A57D;
+}
+.heroContent h2 {
+  font-size: 24px;
+}
+.heroContent h2 span {
+  font-weight: 700;
+  color: #82A57D;
+}
+.heroContent__job {
+  font-size: 20px;
+  font-weight: 700;
+  color: #82A57D;
+}
+
+.heroImage {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+}
+.heroImage__picture-liquidShape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  top: 10%;
+}
+.heroImage__picture img {
+  width: 65%;
+  height: 100%;
+  z-index: -50;
+}
+
 .links {
   gap: 20px;
   width: 100%;
@@ -93,7 +141,7 @@ main {
   font-size: 26px;
 }
 
-button {
+.toggleButton {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -106,6 +154,31 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.SubmitButton {
+  width: 150px;
+  height: 100%;
+  padding: 11px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: white;
+  background-color: #C5B185;
+}
+
+.hero {
+  gap: 25px;
+}
+.hero__content {
+  gap: 25px;
+}
+.hero__buttons {
+  gap: 20px;
+  padding: 0 15px;
 }
 
 .navbar {
@@ -121,7 +194,7 @@ button {
 }
 
 .sidebar {
-  color: #000;
+  color: white;
 }
 .sidebar__background {
   position: fixed;
@@ -129,7 +202,7 @@ button {
   right: 0;
   bottom: 0;
   width: 200px;
-  background: #A3C6A6;
+  background: #82A57D;
 }
 
 html {
@@ -141,4 +214,38 @@ section {
   padding-top: 50px;
   height: 100vh;
   scroll-snap-align: center;
+}
+
+.project {
+  background-color: #A3C6A6;
+}
+
+.custom-shape-divider-bottom-1719499125 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1719499125 svg {
+  position: relative;
+  display: block;
+  width: calc(119% + 1.3px);
+  height: 57px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1719499125 .shape-fill {
+  fill: #A3C6A6;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1719499125 svg {
+    width: calc(238% + 1.3px);
+    height: 46px;
+  }
 }/*# sourceMappingURL=main.css.map */

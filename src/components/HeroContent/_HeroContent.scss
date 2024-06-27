@@ -1,0 +1,38 @@
+.heroContent {
+    padding: 10px;
+
+    &__title {
+        @extend %flex-column;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    & h1 {
+        font-size: 18px;
+        font-weight: 700;
+        color: $primary-dark;
+
+        // font-weight: 700;
+        // margin-bottom: 1rem;
+    }
+
+    & h2 {
+        font-size: 24px;
+        // font-weight: 600;
+
+        & span {
+            font-weight: 700;
+            color: $primary-dark;
+        }
+    }
+
+
+
+    &__job {
+        font-size: 20px;
+        font-weight: 700;
+        color: $primary-dark;
+        // color: transparent;
+        // -webkit-text-stroke: 1.1px $primary-dark;
+    }
+}

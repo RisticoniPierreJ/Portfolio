@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 
 function ToggleButton({ setOpen }) {
     return (
-        <button onClick={() => setOpen((prev) => !prev)}>
+        <button className="toggleButton" onClick={() => setOpen((prev) => !prev)}>
             <svg width="23" height="23" viewBox="0 0 24 24">
                 <motion.path
                     strokeWidth="2"
-                    stroke="grey"
+                    stroke="white"
+                    // stroke="grey"
                     // stroke="#C5B185"
                     strokeLinecap="round"
                     variants={{
@@ -17,7 +18,8 @@ function ToggleButton({ setOpen }) {
                 />
                 <motion.path
                     strokeWidth="2"
-                    stroke="grey"
+                    stroke="white"
+                    // stroke="grey"
                     // stroke="#C5B185"
                     strokeLinecap="round"
                     d="M 3 12 L 21 12" // 18 units
@@ -28,7 +30,8 @@ function ToggleButton({ setOpen }) {
                 />
                 <motion.path
                     strokeWidth="2"
-                    stroke="grey"
+                    stroke="white"
+                    // stroke="grey"
                     // stroke="#C5B185"
                     strokeLinecap="round"
                     variants={{

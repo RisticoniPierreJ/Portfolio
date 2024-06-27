@@ -1,0 +1,17 @@
+.hero {
+    @extend %flex-column;
+    gap: 25px;
+
+    &__content {
+        @extend %flex-columnCentered;
+        gap: 25px;
+    }
+
+    // height: 100%;
+
+    &__buttons {
+        @extend %flex-column;
+        gap: 20px;
+        padding: 0 15px;
+    }
+}

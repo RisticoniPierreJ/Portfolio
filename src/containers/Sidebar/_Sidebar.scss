@@ -1,6 +1,6 @@
 .sidebar {
     @extend %flex-columnCentered;
-    color: $font-color-dark;
+    color: white;
 
     &__background {
         position: fixed;
@@ -8,6 +8,6 @@
         right: 0;
         bottom: 0;
         width: 200px;
-        background: $primary-medium;
+        background: $primary-dark;
     }
 }
