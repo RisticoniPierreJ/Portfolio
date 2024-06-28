@@ -5,7 +5,7 @@ import HeroImage from "../../components/HeroImage/HeroImage";
 function Hero() {
     return (
         <div className="hero">
-            <div className="hero__content">
+            <div className="hero__top">
                 <HeroImage />
                 <HeroContent />
             </div>

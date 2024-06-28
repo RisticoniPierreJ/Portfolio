@@ -2,7 +2,7 @@
     @extend %flex-column;
     gap: 25px;
 
-    &__content {
+    &__top {
         @extend %flex-columnCentered;
         gap: 25px;
     }
@@ -12,6 +12,6 @@
     &__buttons {
         @extend %flex-column;
         gap: 20px;
-        padding: 0 15px;
+        padding: 0 16px;
     }
 }

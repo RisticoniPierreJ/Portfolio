@@ -1,16 +1,24 @@
 .toggleButton {
-    width: 35px;
-    height: 35px;
+    // width: 35px;
+    // height: 35px;
     border-radius: 50%;
     border: none;
     position: fixed;
-    top: 5px;
-    right: 15px;
+    // top: 5px;
+    // right: 15px;
     cursor: pointer;
     background-color: transparent;
+    // background-color: blue;
+    @extend %flex-rowCentered;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 1000;
 
+    width: 40px;
+    height: 40px;
+    top: 2.4px;
+    right: 12.6px;
+    // border: 0.1px solid rgb(0, 0, 0);
+
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }

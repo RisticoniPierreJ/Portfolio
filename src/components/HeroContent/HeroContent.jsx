@@ -8,14 +8,17 @@ function HeroContent() {
                 </h2>
                 <p className="heroContent__job">Développeur Web</p>
             </div>
-            <p className="heroContent__desciption">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p className="heroContent__description">
+                Click (Generate) to create a new font pairing, (Lock) to lock
+                fonts that you want to keep, and (Edit) to choose a font
+                manually. The text is editable, try replacing it with your
+                company name or other copy.
+                <br />
+                <br /> The goal of font pairing is to select fonts that share an
+                overarching theme yet have a pleasing contrast. Which fonts work
+                together is largely a matter of intuition, but we approach this
+                problem with a neural net. See Github for more technical
+                details.
             </p>
         </div>
     );

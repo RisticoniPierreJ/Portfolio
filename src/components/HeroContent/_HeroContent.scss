@@ -1,5 +1,5 @@
 .heroContent {
-    padding: 10px;
+    padding: 0 12px;
 
     &__title {
         @extend %flex-column;
@@ -8,17 +8,20 @@
     }
 
     & h1 {
-        font-size: 18px;
+        font-size: 13px;
         font-weight: 700;
         color: $primary-dark;
 
-        // font-weight: 700;
         // margin-bottom: 1rem;
+
+        font-family: Montserrat, sans-serif;
     }
 
     & h2 {
-        font-size: 24px;
+        font-size: 18px;
         // font-weight: 600;
+
+        font-family: Montserrat, sans-serif;
 
         & span {
             font-weight: 700;
@@ -29,10 +32,19 @@
 
 
     &__job {
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 25px;
+        font-weight: 600;
         color: $primary-dark;
+
         // color: transparent;
         // -webkit-text-stroke: 1.1px $primary-dark;
+
+        font-family: Teko, sans-serif;
+    }
+
+    &__description {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.08;
     }
 }

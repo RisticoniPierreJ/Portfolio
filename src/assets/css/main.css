@@ -6,14 +6,14 @@
   flex-direction: column;
 }
 
-.sidebar, .hero__content, .links {
+.sidebar, .hero__top, .links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.navbar, .SubmitButton, .heroImage__picture, .heroImage {
+.navbar, .SubmitButton, .toggleButton, .heroImage__picture, .heroImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,19 +25,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -47,8 +115,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -56,16 +133,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -81,8 +162,11 @@ a {
   color: inherit;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
+  font-family: roboto, sans-serif;
 }
 
 main {
@@ -90,34 +174,43 @@ main {
 }
 
 .heroContent {
-  padding: 10px;
+  padding: 0 12px;
 }
 .heroContent__title {
   gap: 10px;
   padding-bottom: 20px;
 }
 .heroContent h1 {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
   color: #82A57D;
+  font-family: Montserrat, sans-serif;
 }
 .heroContent h2 {
-  font-size: 24px;
+  font-size: 18px;
+  font-family: Montserrat, sans-serif;
 }
 .heroContent h2 span {
   font-weight: 700;
   color: #82A57D;
 }
 .heroContent__job {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 600;
   color: #82A57D;
+  font-family: Teko, sans-serif;
+}
+.heroContent__description {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.08;
 }
 
 .heroImage {
   position: relative;
   height: 40vh;
   width: 100%;
+  z-index: 2000;
 }
 .heroImage__picture-liquidShape {
   position: absolute;
@@ -142,18 +235,17 @@ main {
 }
 
 .toggleButton {
-  width: 35px;
-  height: 35px;
   border-radius: 50%;
   border: none;
   position: fixed;
-  top: 5px;
-  right: 15px;
   cursor: pointer;
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  top: 2.4px;
+  right: 12.6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .SubmitButton {
@@ -168,17 +260,18 @@ main {
   font-weight: 600;
   color: white;
   background-color: #C5B185;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
 .hero {
   gap: 25px;
 }
-.hero__content {
+.hero__top {
   gap: 25px;
 }
 .hero__buttons {
   gap: 20px;
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 .navbar {
@@ -190,7 +283,8 @@ main {
   top: 0;
   padding: 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  background-color: white;
+  background-color: #f5f1e5;
+  z-index: 10000;
 }
 
 .sidebar {
@@ -205,18 +299,14 @@ main {
   background: #82A57D;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
 section {
-  padding-top: 50px;
-  height: 100vh;
+  padding: 50px 0;
   scroll-snap-align: center;
+  background-color: #f5f1e5;
 }
 
-.project {
+.project,
+.techno {
   background-color: #A3C6A6;
 }
 

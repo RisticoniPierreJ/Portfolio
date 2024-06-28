@@ -1,18 +1,23 @@
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
+// html {
+//     scroll-snap-type: y mandatory;
+//     scroll-behavior: smooth;
+// }
+
 
 
 section {
-    padding-top: 50px;
-    height: 100vh;
+    // background-color: $secondary-light;
+    padding: 50px 0;
+    // height: 100vh;
     scroll-snap-align: center;
+    background-color: $secondary-light;
+
 }
 
 
 // TEST À SUPPRIMER 
-.project {
+.project,
+.techno {
     background-color: $primary-medium;
 }
 
