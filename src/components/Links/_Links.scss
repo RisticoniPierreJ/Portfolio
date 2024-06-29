@@ -5,6 +5,10 @@
     height: 100%;
 
     a {
-        font-size: 26px;
+        font-size: 24px;
+        font-family: $font-family-title;
+
+        // font-family: $font-family-subTitle;
+        // font-size: 35px;
     }
 }

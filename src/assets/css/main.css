@@ -1,16 +1,20 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.hero__buttons, .hero, .heroContent__title {
+.hero__buttons, .hero, .projectCard__contentTxt, .heroContent__title {
   display: flex;
   flex-direction: column;
 }
 
-.sidebar, .hero__top, .links {
+.sidebar, .projects, .hero__top, .links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.projectCard__content {
+  display: flex;
 }
 
 .navbar, .SubmitButton, .toggleButton, .heroImage__picture, .heroImage {
@@ -179,26 +183,31 @@ main {
 .heroContent__title {
   gap: 10px;
   padding-bottom: 20px;
+  padding-left: 2%;
 }
-.heroContent h1 {
+.heroContent__title h1 {
   font-size: 13px;
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
   color: #82A57D;
-  font-family: Montserrat, sans-serif;
+  margin-bottom: 5px;
 }
-.heroContent h2 {
+.heroContent__title h2 {
   font-size: 18px;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 4px;
+  font-weight: 500;
+  padding-left: 5%;
 }
-.heroContent h2 span {
+.heroContent__title h2 span {
   font-weight: 700;
   color: #82A57D;
 }
-.heroContent__job {
+.heroContent__title-job {
   font-size: 25px;
   font-weight: 600;
+  font-family: "teko", sans-serif;
   color: #82A57D;
-  font-family: Teko, sans-serif;
 }
 .heroContent__description {
   font-size: 15px;
@@ -231,7 +240,31 @@ main {
   height: 100%;
 }
 .links a {
-  font-size: 26px;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.projectCard {
+  width: 100%;
+  border-radius: 15px;
+  background-color: #f5f1e5;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.projectCard img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 174px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projectCard__content {
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 25px 18px 13px;
+}
+.projectCard__contentTxt {
+  align-items: unset;
+  gap: 5px;
 }
 
 .toggleButton {
@@ -271,7 +304,7 @@ main {
 }
 .hero__buttons {
   gap: 20px;
-  padding: 0 16px;
+  padding-left: 5%;
 }
 
 .navbar {
@@ -285,6 +318,11 @@ main {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   background-color: #f5f1e5;
   z-index: 10000;
+}
+
+.projects {
+  gap: 15px;
+  padding: 0 17px;
 }
 
 .sidebar {
@@ -303,6 +341,19 @@ section {
   padding: 50px 0;
   scroll-snap-align: center;
   background-color: #f5f1e5;
+}
+
+.sectioTitle {
+  text-align: center;
+  font-family: "teko", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.sectioTitle__light {
+  color: #E0F2C1;
+}
+.sectioTitle__dark {
+  color: #82A57D;
 }
 
 .project,

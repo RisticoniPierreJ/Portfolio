@@ -1,6 +1,7 @@
 import "../../assets/css/main.css";
 import Hero from "../../containers/Hero/Hero";
 import Navbar from "../../containers/Navbar/Navbar";
+import Projets from "../../containers/Projects/Projects";
 
 function Home() {
     return (
@@ -63,7 +64,11 @@ function Home() {
                             ></path>
                         </svg>
                     </div> */}
-                    Projets
+
+                    <h2 className="sectioTitle sectioTitle__light">
+                        Mes Projets
+                    </h2>
+                    <Projets />
                 </section>
 
                 {/* SEPARATEUR BAS DE SECTION ISSU DU SITE #2 */}
@@ -91,13 +96,15 @@ function Home() {
                     </svg>
                 </div> */}
                 <section id="Pour quoi ?" className="whatFor">
-                    Pour quoi ?
+                    <h2 className="sectioTitle sectioTitle__dark">
+                        Pour quoi ?
+                    </h2>
                 </section>
                 <section id="Compétences" className="techno">
-                    Technos
+                    <h2 className="sectioTitle sectioTitle__light">Technos</h2>
                 </section>
                 <section id="Contact" className="contact">
-                    Contact
+                    <h2 className="sectioTitle sectioTitle__dark">Contact</h2>
                 </section>
             </main>
         </>

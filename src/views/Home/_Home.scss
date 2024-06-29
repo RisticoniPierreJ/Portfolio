@@ -3,15 +3,29 @@
 //     scroll-behavior: smooth;
 // }
 
-
-
 section {
-    // background-color: $secondary-light;
     padding: 50px 0;
     // height: 100vh;
     scroll-snap-align: center;
     background-color: $secondary-light;
+}
 
+.sectioTitle {
+    text-align: center;
+    // font-family: $font-family-title;
+    font-family: $font-family-subTitle;
+
+
+    font-size: $font-size-title;
+    font-weight: 500;
+
+    &__light {
+        color: $primary-light;
+    }
+
+    &__dark {
+        color: $primary-dark;
+    }
 }
 
 
@@ -20,6 +34,11 @@ section {
 .techno {
     background-color: $primary-medium;
 }
+
+// 
+// CODE POUR LES SEPARATEURS DE SECTION
+// 
+
 
 // SEPARATEUR DE SECTION ISSU DU SITE #1
 // .custom-shape-divider-bottom-1719498443 {

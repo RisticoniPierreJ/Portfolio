@@ -6,7 +6,7 @@ function HeroContent() {
                 <h2>
                     Je suis <span>Pierre-Jean Risticoni</span>
                 </h2>
-                <p className="heroContent__job">Développeur Web</p>
+                <p className="heroContent__title-job">Développeur Web</p>
             </div>
             <p className="heroContent__description">
                 Click (Generate) to create a new font pairing, (Lock) to lock
