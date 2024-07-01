@@ -1,7 +1,7 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.hero__buttons, .hero, .projectCard__contentTxt, .heroContent__title {
+.hero__buttons, .hero, .heroContent__title {
   display: flex;
   flex-direction: column;
 }
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.projectCard__content {
+.projectCard {
   display: flex;
 }
 
@@ -175,6 +175,7 @@ a {
 
 main {
   width: 100%;
+  margin-top: 50px;
 }
 
 .heroContent {
@@ -247,24 +248,33 @@ main {
 .projectCard {
   width: 100%;
   border-radius: 15px;
-  background-color: #f5f1e5;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 .projectCard img {
-  border-radius: 15px 15px 0 0;
   width: 100%;
-  height: 174px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
+  border-radius: 15px;
 }
 .projectCard__content {
-  justify-content: space-between;
+  padding: 15px 20px 15px 15px;
+  background-color: rgba(245, 241, 229, 0.9);
   width: 100%;
-  padding: 18px 25px 18px 13px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 15px 15px;
 }
-.projectCard__contentTxt {
-  align-items: unset;
-  gap: 5px;
+.projectCard__title {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+.projectCard__plusBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
 }
 
 .toggleButton {
@@ -338,7 +348,7 @@ main {
 }
 
 section {
-  padding: 50px 0;
+  padding-bottom: 45px;
   scroll-snap-align: center;
   background-color: #f5f1e5;
 }

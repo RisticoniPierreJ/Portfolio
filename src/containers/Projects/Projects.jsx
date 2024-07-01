@@ -4,9 +4,6 @@ function Projets() {
     return (
         <div className="projects">
             <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
         </div>
     );
 }
