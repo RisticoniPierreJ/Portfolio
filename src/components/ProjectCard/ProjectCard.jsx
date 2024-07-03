@@ -25,7 +25,7 @@ function ProjectCard() {
                                 cy="12"
                                 r="11"
                                 stroke="#f5f1e5"
-                                stroke-width="2"
+                                strokeWidth="2"
                             />
                             <line
                                 x1="12"
@@ -33,8 +33,8 @@ function ProjectCard() {
                                 x2="12"
                                 y2="18"
                                 stroke="#f5f1e5"
-                                stroke-width="2"
-                                stroke-linecap="round"
+                                strokeWidth="2"
+                                strokeLinecap="round"
                             />
                             <line
                                 x1="6"
@@ -42,8 +42,8 @@ function ProjectCard() {
                                 x2="18"
                                 y2="12"
                                 stroke="#f5f1e5"
-                                stroke-width="2"
-                                stroke-linecap="round"
+                                strokeWidth="2"
+                                strokeLinecap="round"
                             />
                         </svg>
                     </a>

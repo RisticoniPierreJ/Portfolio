@@ -1,0 +1,54 @@
+[
+    {
+        "title": "C#",
+        "fileName": "CSharp.png"
+    },
+    {
+        "title": "Css",
+        "fileName": "Css.png"
+    },
+    {
+        "title": "Figma",
+        "fileName": "Figma.png"
+    },
+    {
+        "title": "Git",
+        "fileName": "Git.png"
+    },
+    {
+        "title": "Html",
+        "fileName": "Html.png"
+    },
+    {
+        "title": "Javascript",
+        "fileName": "Javascript.png"
+    },
+    {
+        "title": "MongoDb",
+        "fileName": "MongoDb.png"
+    },
+    {
+        "title": "React",
+        "fileName": "React.png"
+    },
+    {
+        "title": "Sass",
+        "fileName": "Sass_round.png"
+    },
+    {
+        "title": "SQL",
+        "fileName": "SQL.png"
+    },
+    {
+        "title": "Trello",
+        "fileName": "Trello.png"
+    },
+    {
+        "title": "Visual Studio",
+        "fileName": "VisualStudio.png"
+    },
+    {
+        "title": "VS Code",
+        "fileName": "VisualStudioCode.png"
+    }
+]

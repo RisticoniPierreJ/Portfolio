@@ -1,12 +1,12 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.hero__buttons, .hero, .heroContent__title {
+.techIcon, .hero__buttons, .hero, .heroContent__title {
   display: flex;
   flex-direction: column;
 }
 
-.sidebar, .projects, .hero__top, .links {
+.skills, .sidebar, .projects, .hero__top, .links {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -347,10 +347,31 @@ main {
   background: #82A57D;
 }
 
+.techIcon {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  background-color: #fff;
+  background-color: rgba(197, 177, 133, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+}
+.techIcon__image {
+  width: 65%;
+  height: 65%;
+}
+.techIcon__title {
+  text-wrap: nowrap;
+}
+
 section {
   padding-bottom: 45px;
   scroll-snap-align: center;
   background-color: #f5f1e5;
+  position: relative;
 }
 
 .sectioTitle {
@@ -366,14 +387,29 @@ section {
   color: #82A57D;
 }
 
+.techIconGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 20px;
+  border-radius: 15px;
+  padding: 20px 5%;
+  width: 90%;
+  background-color: rgba(245, 241, 229, 0.9);
+}
+
 .project,
-.techno {
+.skills {
   background-color: #A3C6A6;
+}
+
+.whatFor, .contact {
+  padding-top: 70px;
 }
 
 .custom-shape-divider-bottom-1719499125 {
   position: absolute;
-  bottom: 0;
+  top: -45px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -390,7 +426,7 @@ section {
 }
 
 .custom-shape-divider-bottom-1719499125 .shape-fill {
-  fill: #A3C6A6;
+  fill: #a3c6a6;
 }
 
 /** For mobile devices **/
@@ -399,4 +435,24 @@ section {
     width: calc(238% + 1.3px);
     height: 46px;
   }
+}
+.custom-shape-divider-top-1719498626 {
+  position: absolute;
+  bottom: -56px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10000;
+}
+
+.custom-shape-divider-top-1719498626 svg {
+  position: relative;
+  display: block;
+  width: calc(119% + 1.3px);
+  height: 57px;
+}
+
+.custom-shape-divider-top-1719498626 .shape-fill {
+  fill: #a3c6a6;
 }/*# sourceMappingURL=main.css.map */
