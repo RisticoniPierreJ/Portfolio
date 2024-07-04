@@ -1,12 +1,12 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.techIcon, .hero__buttons, .hero, .heroContent__title {
+.hero__buttons, .hero, .heroContent__title {
   display: flex;
   flex-direction: column;
 }
 
-.skills, .sidebar, .projects, .hero__top, .links {
+.skills, .sidebar, .projects, .hero__top, .techIcon, .links {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,7 @@
   display: flex;
 }
 
-.navbar, .SubmitButton, .toggleButton, .heroImage__picture, .heroImage {
+.navbar, .toggleButton, .SubmitButton, .heroImage__picture, .heroImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,6 +178,7 @@ main {
   margin-top: 50px;
 }
 
+/************************ heroContent  ************************/
 .heroContent {
   padding: 0 12px;
 }
@@ -216,6 +217,7 @@ main {
   line-height: 1.08;
 }
 
+/************************ heroImage  ************************/
 .heroImage {
   position: relative;
   height: 40vh;
@@ -235,6 +237,7 @@ main {
   z-index: -50;
 }
 
+/************************ links  ************************/
 .links {
   gap: 20px;
   width: 100%;
@@ -245,26 +248,27 @@ main {
   font-family: "Montserrat", sans-serif;
 }
 
+/************************ projectCard  ************************/
 .projectCard {
   width: 100%;
   border-radius: 15px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   position: relative;
 }
 .projectCard img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
   border-radius: 15px;
 }
 .projectCard__content {
-  padding: 15px 20px 15px 15px;
-  background-color: rgba(245, 241, 229, 0.9);
   width: 100%;
+  padding: 15px 20px 15px 15px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(245, 241, 229, 0.9);
   position: absolute;
   bottom: 0;
-  border-radius: 0 0 15px 15px;
 }
 .projectCard__title {
   font-size: 20px;
@@ -277,20 +281,7 @@ main {
   right: 14px;
 }
 
-.toggleButton {
-  border-radius: 50%;
-  border: none;
-  position: fixed;
-  cursor: pointer;
-  background-color: transparent;
-  z-index: 1000;
-  width: 40px;
-  height: 40px;
-  top: 2.4px;
-  right: 12.6px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
+/************************ submitButton  ************************/
 .SubmitButton {
   width: 150px;
   height: 100%;
@@ -306,6 +297,51 @@ main {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
+/************************ TechIcons  ************************/
+.techIconGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 20px;
+  border-radius: 15px;
+  padding: 20px 5%;
+  width: 90%;
+  background-color: rgba(245, 241, 229, 0.9);
+}
+
+.techIcon {
+  gap: 5px;
+  width: 120px;
+  height: 120px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: rgba(197, 177, 133, 0.9);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.techIcon__image {
+  width: 65%;
+  height: 65%;
+}
+.techIcon__title {
+  text-wrap: nowrap;
+}
+
+/************************ toggleButton  ************************/
+.toggleButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: fixed;
+  top: 3.4px;
+  right: 12.6px;
+  z-index: 1000;
+}
+
+/************************ Hero ************************/
 .hero {
   gap: 25px;
 }
@@ -315,26 +351,29 @@ main {
 .hero__buttons {
   gap: 20px;
   padding-left: 5%;
+  margin-bottom: 25px;
 }
 
+/************************ navbar  ************************/
 .navbar {
-  align-items: center;
   justify-content: space-between;
-  height: 45px;
   width: 100%;
+  height: 48px;
+  padding: 5px 15px;
+  background-color: #f5f1e5;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   position: fixed;
   top: 0;
-  padding: 5px 15px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  background-color: #f5f1e5;
   z-index: 10000;
 }
 
+/************************ projects  ************************/
 .projects {
-  gap: 15px;
+  gap: 20px;
   padding: 0 17px;
 }
 
+/************************ sidebar  ************************/
 .sidebar {
   color: white;
 }
@@ -347,26 +386,7 @@ main {
   background: #82A57D;
 }
 
-.techIcon {
-  width: 120px;
-  height: 120px;
-  border-radius: 15px;
-  background-color: #fff;
-  background-color: rgba(197, 177, 133, 0.9);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 5px;
-}
-.techIcon__image {
-  width: 65%;
-  height: 65%;
-}
-.techIcon__title {
-  text-wrap: nowrap;
-}
-
+/************************ home  ************************/
 section {
   padding-bottom: 45px;
   scroll-snap-align: center;
@@ -376,9 +396,10 @@ section {
 
 .sectioTitle {
   text-align: center;
-  font-family: "teko", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 800;
+  margin-bottom: 15px;
 }
 .sectioTitle__light {
   color: #E0F2C1;
@@ -387,29 +408,20 @@ section {
   color: #82A57D;
 }
 
-.techIconGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  gap: 20px;
-  border-radius: 15px;
-  padding: 20px 5%;
-  width: 90%;
-  background-color: rgba(245, 241, 229, 0.9);
-}
-
 .project,
 .skills {
   background-color: #A3C6A6;
+  padding-top: 23px;
 }
 
-.whatFor, .contact {
+.whatFor,
+.contact {
   padding-top: 70px;
 }
 
 .custom-shape-divider-bottom-1719499125 {
   position: absolute;
-  top: -45px;
+  bottom: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -438,12 +450,12 @@ section {
 }
 .custom-shape-divider-top-1719498626 {
   position: absolute;
-  bottom: -56px;
+  top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .custom-shape-divider-top-1719498626 svg {
@@ -455,4 +467,12 @@ section {
 
 .custom-shape-divider-top-1719498626 .shape-fill {
   fill: #a3c6a6;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1719498626 svg {
+    width: calc(238% + 1.3px);
+    height: 46px;
+  }
 }/*# sourceMappingURL=main.css.map */

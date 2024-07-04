@@ -1,24 +1,23 @@
+/************************ home  ************************/
 // html {
 //     scroll-snap-type: y mandatory;
 //     scroll-behavior: smooth;
 // }
 
 section {
-    // padding: 50px 0;
     padding-bottom: 45px;
-    // height: 100vh;
     scroll-snap-align: center;
     background-color: $secondary-light;
     position: relative;
+    // height: 100vh;
 }
 
 .sectioTitle {
     text-align: center;
-    // font-family: $font-family-title;
-    font-family: $font-family-subTitle;
-
+    font-family: $font-family-title;
     font-size: $font-size-title;
-    font-weight: 500;
+    font-weight: 800;
+    margin-bottom: 15px;
 
     &__light {
         color: $primary-light;
@@ -29,64 +28,42 @@ section {
     }
 }
 
-.techIconGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 20px;
-    border-radius: 15px;
-    padding: 20px 5%;
-    width: 90%;
-
-    // background-color: blue;
-    background-color: rgb(245, 241, 229, 0.9);
-}
+// À déplacer
+// .techIconGrid {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     justify-items: center;
+//     gap: 20px;
+//     border-radius: 15px;
+//     padding: 20px 5%;
+//     width: 90%;
+//     background-color: rgb(245, 241, 229, 0.9);
+// }
 
 .skills {
     @extend %flex-columnCentered;
 }
 
-// TEST À SUPPRIMER
 .project,
 .skills {
     background-color: $primary-medium;
+    padding-top: 23px;
 }
 
-.whatFor, .contact{
+.whatFor,
+.contact {
     padding-top: 70px;
 }
+
 
 //
 // CODE POUR LES SEPARATEURS DE SECTION
 //
 
-// SEPARATEUR DE SECTION ISSU DU SITE #1
-// .custom-shape-divider-bottom-1719498443 {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     overflow: hidden;
-//     line-height: 0;
-//     transform: rotate(180deg);
-// }
-
-// .custom-shape-divider-bottom-1719498443 svg {
-//     position: relative;
-//     display: block;
-//     width: calc(119% + 1.3px);
-//     height: 57px;
-// }
-
-// .custom-shape-divider-bottom-1719498443 .shape-fill {
-//     fill: #A3C6A6;
-// }
-
-// SEPARATEUR DE SECTION ISSU DU SITE #2
+// Séparateur du haut
 .custom-shape-divider-bottom-1719499125 {
     position: absolute;
-    // bottom: 0;
-    top: -45px;
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -104,7 +81,6 @@ section {
 
 .custom-shape-divider-bottom-1719499125 .shape-fill {
     fill: #a3c6a6;
-    // fill: blue;
 }
 
 /** For mobile devices **/
@@ -115,14 +91,15 @@ section {
     }
 }
 
+// Séparateur du bas
 .custom-shape-divider-top-1719498626 {
     position: absolute;
-    bottom: -56px;
+    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 .custom-shape-divider-top-1719498626 svg {
@@ -134,5 +111,12 @@ section {
 
 .custom-shape-divider-top-1719498626 .shape-fill {
     fill: #a3c6a6;
-    // fill: blue;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1719498626 svg {
+        width: calc(238% + 1.3px);
+        height: 46px;
+    }
 }

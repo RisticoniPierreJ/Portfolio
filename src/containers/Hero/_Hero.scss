@@ -1,3 +1,4 @@
+/************************ Hero ************************/
 .hero {
     @extend %flex-column;
     gap: 25px;
@@ -11,5 +12,6 @@
         @extend %flex-column;
         gap: 20px;
         padding-left: 5%;
+        margin-bottom: 25px;
     }
 }

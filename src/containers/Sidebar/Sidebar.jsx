@@ -12,7 +12,7 @@ const variants = {
         },
     },
     closed: {
-        clipPath: "circle(20px at 167.5px 22.5px)",
+        clipPath: "circle(20px at 167.5px 23.5px)",
         transition: {
             ease: "linear",
             duration: 0.3,

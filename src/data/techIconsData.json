@@ -1,31 +1,15 @@
 [
     {
-        "title": "C#",
-        "fileName": "CSharp.png"
+        "title": "Html",
+        "fileName": "Html.png"
     },
     {
         "title": "Css",
         "fileName": "Css.png"
     },
     {
-        "title": "Figma",
-        "fileName": "Figma.png"
-    },
-    {
-        "title": "Git",
-        "fileName": "Git.png"
-    },
-    {
-        "title": "Html",
-        "fileName": "Html.png"
-    },
-    {
         "title": "Javascript",
         "fileName": "Javascript.png"
-    },
-    {
-        "title": "MongoDb",
-        "fileName": "MongoDb.png"
     },
     {
         "title": "React",
@@ -36,12 +20,24 @@
         "fileName": "Sass_round.png"
     },
     {
+        "title": "C#",
+        "fileName": "CSharp.png"
+    },
+    {
+        "title": "MongoDb",
+        "fileName": "MongoDb.png"
+    },
+    {
         "title": "SQL",
         "fileName": "SQL.png"
     },
     {
-        "title": "Trello",
-        "fileName": "Trello.png"
+        "title": "Git",
+        "fileName": "Git.png"
+    },
+    {
+        "title": "Figma",
+        "fileName": "Figma.png"
     },
     {
         "title": "Visual Studio",
@@ -50,5 +46,9 @@
     {
         "title": "VS Code",
         "fileName": "VisualStudioCode.png"
+    },
+    {
+        "title": "Trello",
+        "fileName": "Trello.png"
     }
 ]

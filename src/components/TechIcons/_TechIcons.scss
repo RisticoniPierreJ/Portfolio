@@ -1,0 +1,37 @@
+/************************ TechIcons  ************************/
+.techIconGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    padding: 20px 5%;
+    width: 90%;
+    background-color: rgb(245, 241, 229, 0.9);
+}
+
+.techIcon {
+    // Dimensiosn pour 320px
+    // width: 100px;
+    // height: 100px;
+
+    @extend %flex-columnCentered;
+    gap: 5px;
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(197, 177, 133, 0.9);
+
+    // #19
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    &__image {
+        width: 65%;
+        height: 65%;
+    }
+
+    &__title {
+        text-wrap: nowrap;
+    }
+}

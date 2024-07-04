@@ -1,19 +1,16 @@
+/************************ toggleButton  ************************/
 .toggleButton {
-    // width: 35px;
-    // height: 35px;
-    // top: 5px;
-    // right: 15px;
-    border-radius: 50%;
-    border: none;
-    position: fixed;
-    cursor: pointer;
-    background-color: transparent;
     @extend %flex-rowCentered;
-    z-index: 1000;
-
     width: 40px;
     height: 40px;
-    top: 2.4px;
-    right: 12.6px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    position: fixed;
+    top: 3.4px;
+    right: 12.6px;
+    z-index: 1000;
 }
