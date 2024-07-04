@@ -31,7 +31,7 @@ function Links() {
     const items = [
         "Acceuil",
         "Projets",
-        "Pour quoi ?",
+        "Services",
         "Compétences",
         "Contact",
     ];

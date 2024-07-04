@@ -28,18 +28,6 @@ section {
     }
 }
 
-// À déplacer
-// .techIconGrid {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     justify-items: center;
-//     gap: 20px;
-//     border-radius: 15px;
-//     padding: 20px 5%;
-//     width: 90%;
-//     background-color: rgb(245, 241, 229, 0.9);
-// }
-
 .skills {
     @extend %flex-columnCentered;
 }
@@ -50,7 +38,7 @@ section {
     padding-top: 23px;
 }
 
-.whatFor,
+.services,
 .contact {
     padding-top: 70px;
 }

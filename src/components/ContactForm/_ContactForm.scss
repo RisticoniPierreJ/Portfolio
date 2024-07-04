@@ -1,0 +1,61 @@
+/************************ contactForm  ************************/
+.contactForm {
+    // @extend %flex-columnCentered;
+    @extend %flex-column;
+    gap: 20px;
+    // width: 60%;
+    width: 80%;
+
+    &__input {
+        @extend %flex-column;
+        gap: 5px;
+
+        position: relative;
+
+        & label {
+            margin-top: 6px;
+        }
+
+        & input {
+            height: 36px;
+            font-size: 0.875em;
+            border-radius: 5px;
+            // border: 1px solid rgb(0, 0, 0, 0.6);
+            border: none;
+            background: rgba($primary-medium, 0.7);
+            padding-left: 28px;
+
+
+        }
+
+        & textarea {
+            padding: 10px 10px 10px 28px;
+            // padding: 10px;
+            border-radius: 5px;
+            resize: none;
+            overflow: auto;
+            // border: 1px solid rgb(0, 0, 0, 0.6);
+            border: none;
+            font-size: 0.875em;
+            background: rgba($primary-medium, 0.7);
+
+            // &::placeholder{
+            //     padding-left: 18px;
+            // }
+        }
+
+
+    }
+
+    &__icon {
+        position: absolute;
+        left: 7px;
+        top: 20px;
+        color: $secondary-light;
+    }
+
+    &__message {
+        @extend %flex-columnCentered;
+        // gap: 20px;
+    }
+}

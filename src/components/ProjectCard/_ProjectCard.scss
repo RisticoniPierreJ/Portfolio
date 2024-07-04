@@ -20,7 +20,8 @@
         width: 100%;
         padding: 15px 20px 15px 15px;
         border-radius: 0 0 15px 15px;
-        background-color: rgb(245, 241, 229, 0.9);
+        background-color: rgba($secondary-light, 0.9);
+
         position: absolute;
         bottom: 0;
     }

@@ -1,12 +1,12 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.hero__buttons, .hero, .heroContent__title {
+.hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm {
   display: flex;
   flex-direction: column;
 }
 
-.skills, .sidebar, .projects, .hero__top, .techIcon, .links {
+.skills, .sidebar, .projects, .hero__top, .techIcon, .links, .contactForm__message {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,6 +178,41 @@ main {
   margin-top: 50px;
 }
 
+/************************ contactForm  ************************/
+.contactForm {
+  gap: 20px;
+  width: 80%;
+}
+.contactForm__input {
+  gap: 5px;
+  position: relative;
+}
+.contactForm__input label {
+  margin-top: 6px;
+}
+.contactForm__input input {
+  height: 36px;
+  font-size: 0.875em;
+  border-radius: 5px;
+  border: none;
+  background: rgba(163, 198, 166, 0.7);
+  padding-left: 28px;
+}
+.contactForm__input textarea {
+  padding: 10px 10px 10px 28px;
+  border-radius: 5px;
+  resize: none;
+  overflow: auto;
+  border: none;
+  font-size: 0.875em;
+  background: rgba(163, 198, 166, 0.7);
+}
+.contactForm__icon {
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  color: #f5f1e5;
+}
 /************************ heroContent  ************************/
 .heroContent {
   padding: 0 12px;
@@ -341,6 +376,13 @@ main {
   z-index: 1000;
 }
 
+/************************ contactContainer ************************/
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /************************ Hero ************************/
 .hero {
   gap: 25px;
@@ -414,7 +456,7 @@ section {
   padding-top: 23px;
 }
 
-.whatFor,
+.services,
 .contact {
   padding-top: 70px;
 }

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function SubmitButton({ children }) {
     return (
         <>
-            <button className="SubmitButton">{children}</button>
+            <button className="SubmitButton" type="submit">{children}</button>
         </>
     );
 }

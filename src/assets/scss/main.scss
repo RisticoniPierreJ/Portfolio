@@ -3,6 +3,7 @@
 
 @import "./base/reset";
 
+@import "../../components/ContactForm/ContactForm";
 @import "../../components/HeroContent/HeroContent";
 @import "../../components/HeroImage/HeroImage";
 @import "../../components/Links/Links";
@@ -12,10 +13,10 @@
 @import "../../components/ToggleButton/ToggleButton";
 
 
+@import "../../containers/Contact/Contact";
 @import "../../containers/Hero/Hero";
 @import "../../containers/Navbar/Navbar";
 @import "../../containers/Projects/Projects";
 @import "../../containers/Sidebar/Sidebar";
-@import "../../containers/Skills/Skills";
 
 @import "../../views/Home/Home";

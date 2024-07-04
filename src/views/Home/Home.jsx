@@ -1,9 +1,9 @@
 import "../../assets/css/main.css";
 import TechIcons from "../../components/TechIcons/TechIcons";
+import Contact from "../../containers/Contact/Contact";
 import Hero from "../../containers/Hero/Hero";
 import Navbar from "../../containers/Navbar/Navbar";
 import Project from "../../containers/Projects/Projects";
-// import Skills from "../../containers/Skills/Skills";
 
 function Home() {
     return (
@@ -51,7 +51,7 @@ function Home() {
                     <Project />
                 </section>
 
-                <section id="Pour quoi ?" className="whatFor">
+                <section id="Services" className="services">
                     {/* SEPARATEUR BAS DE SECTION ISSU DU SITE */}
                     <div className="custom-shape-divider-top-1719498626">
                         <svg
@@ -78,7 +78,7 @@ function Home() {
                     </div>
 
                     <h2 className="sectioTitle sectioTitle__dark">
-                        Pour quoi ?
+                        Pourquoi faire appel à moi ?
                     </h2>
 
                     {/* SEPARATEUR BAS DE SECTION ISSU DU SITE */}
@@ -144,6 +144,7 @@ function Home() {
                     </div>
 
                     <h2 className="sectioTitle sectioTitle__dark">Contact</h2>
+                    <Contact />
                 </section>
             </main>
         </>
