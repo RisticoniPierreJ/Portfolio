@@ -1,9 +1,7 @@
 /************************ contactForm  ************************/
 .contactForm {
-    // @extend %flex-columnCentered;
     @extend %flex-column;
     gap: 20px;
-    // width: 60%;
     width: 80%;
 
     &__input {

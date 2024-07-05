@@ -2,15 +2,17 @@ import "../../assets/css/main.css";
 import TechIcons from "../../components/TechIcons/TechIcons";
 import Contact from "../../containers/Contact/Contact";
 import Hero from "../../containers/Hero/Hero";
-import Navbar from "../../containers/Navbar/Navbar";
+// import Navbar from "../../containers/Navbar/Navbar";
 import Project from "../../containers/Projects/Projects";
+import Services from "../../containers/Services/Services";
+import WhyMe from "../../containers/WhyMe/WhyMe";
 
 function Home() {
     return (
         <>
-            <header>
+            {/* <header>
                 <Navbar />
-            </header>
+            </header> */}
             <main>
                 <section id="Acceuil" className="hero">
                     <Hero />
@@ -77,9 +79,16 @@ function Home() {
                         </svg>
                     </div>
 
-                    <h2 className="sectioTitle sectioTitle__dark">
-                        Pourquoi faire appel à moi ?
-                    </h2>
+                    <div className="services__container">
+                        <h2 className="sectioTitle sectioTitle__dark">
+                            Pourquoi faire appel à moi ?
+                        </h2>
+                        <WhyMe />
+                        <h2 className="sectioTitle sectioTitle__dark">
+                            Services
+                        </h2>
+                        <Services />
+                    </div>
 
                     {/* SEPARATEUR BAS DE SECTION ISSU DU SITE */}
                     <div

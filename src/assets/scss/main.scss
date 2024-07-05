@@ -3,6 +3,7 @@
 
 @import "./base/reset";
 
+@import "../../components/Collapse/Collapse";
 @import "../../components/ContactForm/ContactForm";
 @import "../../components/HeroContent/HeroContent";
 @import "../../components/HeroImage/HeroImage";
@@ -17,6 +18,9 @@
 @import "../../containers/Hero/Hero";
 @import "../../containers/Navbar/Navbar";
 @import "../../containers/Projects/Projects";
+@import "../../containers/Services/Services";
 @import "../../containers/Sidebar/Sidebar";
+@import "../../containers/WhyMe/WhyMe";
 
 @import "../../views/Home/Home";
+@import "../../views/Project/Project";

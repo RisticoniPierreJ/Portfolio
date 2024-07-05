@@ -1,7 +1,7 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm {
+.services__container, .theme, .WhyMe, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm, .collapse {
   display: flex;
   flex-direction: column;
 }
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.projectCard {
+.theme__titleContainer, .servicesCards__list-item, .projectCard, .collapse__title {
   display: flex;
 }
 
@@ -176,6 +176,50 @@ a {
 main {
   width: 100%;
   margin-top: 50px;
+}
+
+/************************ Collapse  ************************/
+.collapse {
+  width: 100%;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 0 0 5px 5px;
+}
+.collapse__title {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  padding: 30px 15px;
+  background: #82A57D;
+  z-index: 2;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: #f5f1e5;
+  font-weight: 500;
+}
+.collapse__txt {
+  background: #82A57D;
+  border-top: 8px solid #C5B185;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.collapse__txt.show {
+  max-height: 350px;
+}
+.collapse__txt-inner {
+  padding: 10px 15px 15px 15px;
+}
+
+.chevronUp {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
 }
 
 /************************ contactForm  ************************/
@@ -415,6 +459,30 @@ main {
   padding: 0 17px;
 }
 
+/************************ Services  ************************/
+.servicesContainer {
+  gap: 24px;
+  padding: 0 10px;
+  padding-bottom: 50px;
+}
+
+.servicesCards {
+  gap: 20px;
+}
+.servicesCards__text {
+  color: #f5f1e5;
+}
+.servicesCards__list {
+  gap: 10px;
+}
+.servicesCards__list-item {
+  gap: 10px;
+  color: #f5f1e5;
+}
+.servicesCards__list-icon {
+  color: #C5B185;
+}
+
 /************************ sidebar  ************************/
 .sidebar {
   color: white;
@@ -426,6 +494,32 @@ main {
   bottom: 0;
   width: 200px;
   background: #82A57D;
+}
+
+/************************ WhyMe ************************/
+.WhyMe {
+  padding: 0 10px;
+  gap: 24px;
+}
+.WhyMe__title {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.theme {
+  gap: 8px;
+}
+.theme__titleContainer {
+  gap: 5px;
+}
+.theme__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: #82A57D;
+  font-weight: 500;
+}
+.theme__text {
+  padding-left: 15px;
 }
 
 /************************ home  ************************/
@@ -459,6 +553,10 @@ section {
 .services,
 .contact {
   padding-top: 70px;
+}
+
+.services__container {
+  gap: 30px;
 }
 
 .custom-shape-divider-bottom-1719499125 {

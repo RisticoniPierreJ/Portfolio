@@ -43,6 +43,13 @@ section {
     padding-top: 70px;
 }
 
+.services {
+
+    &__container {
+        @extend %flex-column;
+        gap: 30px;
+    }
+}
 
 //
 // CODE POUR LES SEPARATEURS DE SECTION

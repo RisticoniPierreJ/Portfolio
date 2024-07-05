@@ -1,0 +1,31 @@
+/************************ Services  ************************/
+.servicesContainer {
+    @extend %flex-column;
+    gap: 24px;
+    padding: 0 10px;
+    padding-bottom: 50px
+}
+
+.servicesCards {
+    @extend %flex-column;
+    gap: 20px;
+
+    &__text{
+        color: $secondary-light;
+    }
+
+    &__list {
+        @extend %flex-column;
+        gap: 10px;
+
+        &-item {
+            @extend %flex-row;
+            gap: 10px;
+            color: $secondary-light;
+        }
+
+        &-icon {
+            color: $secondary;
+        }
+    }
+}

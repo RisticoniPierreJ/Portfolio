@@ -1,0 +1,62 @@
+/************************ Collapse  ************************/
+.collapse {
+    @extend %flex-column;
+    width: 100%;
+    overflow: hidden;
+    // #28
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 0 0 5px 5px;
+
+
+    &__title {
+        @extend %flex-row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        // border-radius: 5px;
+        border-radius: 5px 5px 0 0;
+        // padding: 10px 15px;
+        padding: 30px 15px;
+        background: $primary-dark;
+        z-index: 2;
+        cursor: pointer;
+
+
+        font-family: $font-family-title;
+        font-size: $font-size-title;
+        color: $secondary-light;
+        font-weight: 500;
+
+    }
+
+    &__txt {
+        background: $primary-dark;
+        // background: $secondary-light;
+        // border-radius: 0 0 5px 5px;
+        border-top: 8px solid $secondary;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    &__txt.show {
+        // max-height: 250px;
+        max-height: 350px;
+        // max-height: 1000px; 
+    }
+
+    &__txt-inner {
+        padding: 10px 15px 15px 15px;
+    }
+}
+
+
+
+.chevronUp {
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
