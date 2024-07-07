@@ -47,6 +47,8 @@
 
     &__txt-inner {
         padding: 10px 15px 15px 15px;
+        @extend %flex-column;
+        gap: 10px;
     }
 }
 

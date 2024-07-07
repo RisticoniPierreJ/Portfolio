@@ -13,8 +13,8 @@ function Home() {
             {/* <header>
                 <Navbar />
             </header> */}
-            <main>
-                <section id="Acceuil" className="hero">
+            <main id="Acceuil">
+                <section  className="acceuil">
                     <Hero />
                     {/* SEPARATEUR HAUT DE SECTION ISSU DU SITE */}
                     <div

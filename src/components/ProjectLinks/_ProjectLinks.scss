@@ -1,0 +1,37 @@
+/************************ ProjectLinks  ************************/
+.projectLinks {
+    @extend %flex-rowCentered;
+    // @extend %flex-row;
+    // align-items: center;
+    // justify-content: space-between;
+    gap: 40px;
+    border-radius: 15px;
+    padding: 20px 5%;
+    width: 90%;
+    background-color: rgba($secondary-light, 0.9);
+
+    &__repo,
+    &__demo {
+        @extend %flex-columnCentered;
+        gap: 10px;
+        width: 120px;
+        height: 120px;
+        padding: 5px;
+        border-radius: 15px;
+        background-color: rgba($secondary, 0.9);
+
+        // #19
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    }
+
+    &__icon {
+        width: 65%;
+        height: 65%;
+    }
+
+    &__title {
+        font-weight: 500;
+    }
+
+}

@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 
 function Navbar() {
     return (
         <nav className="navbar">
-            <div className="navbar__wrapper">
+            <Link className="navbar__wrapper" to="/">
                 <span>Ghost.Dev</span>
-            </div>
+            </Link>
             <Sidebar />
 
             {/* <ul>

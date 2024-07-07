@@ -2,8 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./views/Home/Home.jsx";
 import "../src/utils/fontAwesomeConfig.js";
 import Navbar from "./containers/Navbar/Navbar.jsx";
-// import "./assets/css/main.css";
-// import "./App.css";
+import ViewProject from "./views/ViewProject/ViewProject.jsx";
 
 function App() {
     return (
@@ -13,7 +12,7 @@ function App() {
             </header>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/projet" element={<Home />} />
+                <Route path="/projet/:id" element={<ViewProject />} />
             </Routes>
         </Router>
     );

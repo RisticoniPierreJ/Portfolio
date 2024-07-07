@@ -1,23 +1,23 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.services__container, .theme, .WhyMe, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm, .collapse {
+.viewProject__challenges-content, .viewProject__challenges, .viewProject__description-content, .viewProject__description, .viewProject, .services__container, .theme, .WhyMe, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm, .collapse__txt-inner, .collapse {
   display: flex;
   flex-direction: column;
 }
 
-.skills, .sidebar, .projects, .hero__top, .techIcon, .links, .contactForm__message {
+.viewProjectGallery, .skills, .sidebar, .projects, .hero__top, .techIcon, .projectLinks__repo, .projectLinks__demo, .links, .contactForm__message {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.theme__titleContainer, .servicesCards__list-item, .projectCard, .collapse__title {
+.theme__titleContainer, .servicesCards__list-item, .tags ul, .projectCard, .collapse__title {
   display: flex;
 }
 
-.navbar, .toggleButton, .SubmitButton, .heroImage__picture, .heroImage {
+.navbar, .toggleButton, .SubmitButton, .tags li, .projectLinks, .heroImage__picture, .heroImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,7 +175,6 @@ a {
 
 main {
   width: 100%;
-  margin-top: 50px;
 }
 
 /************************ Collapse  ************************/
@@ -211,6 +210,7 @@ main {
 }
 .collapse__txt-inner {
   padding: 10px 15px 15px 15px;
+  gap: 10px;
 }
 
 .chevronUp {
@@ -358,6 +358,44 @@ main {
   position: absolute;
   top: 14px;
   right: 14px;
+}
+
+/************************ ProjectLinks  ************************/
+.projectLinks {
+  gap: 40px;
+  border-radius: 15px;
+  padding: 20px 5%;
+  width: 90%;
+  background-color: rgba(245, 241, 229, 0.9);
+}
+.projectLinks__repo, .projectLinks__demo {
+  gap: 10px;
+  width: 120px;
+  height: 120px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: rgba(197, 177, 133, 0.9);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.projectLinks__icon {
+  width: 65%;
+  height: 65%;
+}
+.projectLinks__title {
+  font-weight: 500;
+}
+
+/************************ ProjectTags  ************************/
+.tags ul {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tags li {
+  padding: 6px 9%;
+  border-radius: 10px;
+  background: #82A57D;
+  color: #f5f1e5;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 /************************ submitButton  ************************/
@@ -559,6 +597,10 @@ section {
   gap: 30px;
 }
 
+.acceuil {
+  padding-top: 50px;
+}
+
 .custom-shape-divider-bottom-1719499125 {
   position: absolute;
   bottom: -1px;
@@ -615,4 +657,78 @@ section {
     width: calc(238% + 1.3px);
     height: 46px;
   }
+}
+/************************ ViewProjectTest  ************************/
+.viewProjecttMain {
+  margin-top: 50px;
+}
+
+.viewProjectBanner__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.viewProjectBanner__logo {
+  width: 67%;
+  height: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.viewProject {
+  gap: 50px;
+  padding: 0 10px 75px 10px;
+}
+.viewProject__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.viewProject__description {
+  gap: 20px;
+}
+.viewProject__description-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #82A57D;
+}
+.viewProject__description-content {
+  gap: 10px;
+}
+.viewProject__challenges {
+  gap: 20px;
+}
+.viewProject__challenges-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #82A57D;
+}
+.viewProject__challenges-content {
+  gap: 20px;
+  color: #f5f1e5;
+}
+
+.viewProjectGallery {
+  gap: 50px;
+  background-color: #A3C6A6;
+  padding: 23px 10px 50px 10px;
+  width: 100%;
+}
+.viewProjectGallery__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #E0F2C1;
+}
+.viewProjectGallery__desktop {
+  width: 100%;
+}
+.viewProjectGallery__mobile {
+  width: 70%;
 }/*# sourceMappingURL=main.css.map */
