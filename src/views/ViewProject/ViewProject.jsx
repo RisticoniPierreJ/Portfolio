@@ -5,13 +5,21 @@ import mobileImg from "../../assets/images/mobile_screen.png";
 import desktopImg from "../../assets/images/desktop_screen.png";
 import ProjectTags from "../../components/ProjectTags/ProjectTags";
 import ProjectLinks from "../../components/ProjectLinks/ProjectLinks";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DropDownGallery from "../../components/DropDownGallery/DropDownGaller";
+import { useState } from "react";
 
 // Utilitaire pour diviser le texte par les points et générer des paragraphes
 function splitTextToParagraphs(text) {
     return text.split(".").map((sentence, index) => {
         // Ne pas ajouter de <p> pour les phrases vides après un point final
         if (sentence.trim()) {
-            return <p key={index}>{sentence.trim()}.</p>;
+            return (
+                <p key={index}>
+                    <FontAwesomeIcon icon="fa-solid fa-caret-right" />{" "}
+                    {sentence.trim()}.
+                </p>
+            );
         }
         return null;
     });
@@ -21,6 +29,12 @@ function ViewProject() {
     const { id } = useParams();
     const project = projectsData.find((project) => project.id === id);
 
+    const [selecteDesktopImg, setSelectedDesktopImg] = useState(0);
+    const [selecteMobileImg, setSelectedMobileImg] = useState(0);
+
+    const mutlipleDesktopImg = project.desktop.length > 1;
+    const mutlipleMobileImg = project.mobile.length > 1;
+
     if (!project) {
         return (
             <>
@@ -29,12 +43,43 @@ function ViewProject() {
         );
     }
 
+    // Gestion des clics pour les boutons de navigation
+    const handlePrevDesktop = () => {
+        setSelectedDesktopImg((prevIndex) =>
+            prevIndex > 0 ? prevIndex - 1 : project.desktop.length - 1
+        );
+    };
+
+    const handleNextDesktop = () => {
+        setSelectedDesktopImg((prevIndex) =>
+            prevIndex < project.desktop.length - 1 ? prevIndex + 1 : 0
+        );
+    };
+
+    const handlePrevMobile = () => {
+        setSelectedMobileImg((prevIndex) =>
+            prevIndex > 0 ? prevIndex - 1 : project.mobile.length - 1
+        );
+    };
+
+    const handleNextMobile = () => {
+        setSelectedMobileImg((prevIndex) =>
+            prevIndex < project.mobile.length - 1 ? prevIndex + 1 : 0
+        );
+    };
+
     return (
         <main className="viewProjecttMain">
-                <section className="viewProjectBanner">
-                    <img className="viewProjectBanner__img" src={project.cover} alt="" />
-                    <img className="viewProjectBanner__logo" src="" alt="" />
-                </section>
+            <div className="viewProjectBanner">
+                <img
+                    className="viewProjectBanner__img"
+                    src={project.cover}
+                    alt=""
+                />
+                <div className="viewProjectBanner__logo">
+                    <img src={project.logo} alt="logo du site web" />
+                </div>
+            </div>
             <section className="viewProject">
                 {/* <h1 className="viewProject__title">{project.title}</h1> */}
 
@@ -97,12 +142,86 @@ function ViewProject() {
                     </svg>
                 </div>
             </section>
-
             <section className="viewProjectGallery">
-            <h2 className="viewProjectGallery__title"> Liens et Gallerie</h2>
-            <ProjectLinks repos={project.repository} demo={project.demo}/>
-            <img src={desktopImg} alt="" className="viewProjectGallery__desktop" />
-            <img src={mobileImg} alt="" className="viewProjectGallery__mobile" />
+                <h2 className="viewProjectGallery__title">Liens & Galerie</h2>
+                <ProjectLinks repos={project.repository} demo={project.demo} />
+
+                <div className="galleryContainer">
+                    {mutlipleDesktopImg && (
+                        <div className="galleryContainer__navigate">
+                            <button onClick={handlePrevDesktop}>
+                                <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
+                            </button>
+                            <DropDownGallery
+                                pages={project.desktop}
+                                onSelect={(index) =>
+                                    setSelectedDesktopImg(index)
+                                }
+                                selectedIndex={selecteDesktopImg}
+                            />
+                            <button onClick={handleNextDesktop}>
+                                <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
+                            </button>
+                        </div>
+                    )}
+                    <div className="desktopGallery">
+                        <img
+                            src={desktopImg}
+                            alt="écran de bureau du site web"
+                            className="desktopGallery__frame"
+                        />
+                        <div className="desktopGallery__scrollContainer desktopGallery__scrollContainer-scrollInner">
+                            <img
+                                // src={project.desktop[0].images}
+                                src={
+                                    project.desktop[selecteDesktopImg].images[0]
+                                }
+                                alt="aperçu du site web sur desktop"
+                                className="desktopGallery__scrollContainer-image"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="galleryContainer">
+                    {mutlipleMobileImg && (
+                        <div className="galleryContainer__navigate">
+                            <button onClick={handlePrevMobile}>
+                                <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
+                            </button>
+                            <DropDownGallery
+                                pages={project.mobile}
+                                onSelect={(index) =>
+                                    setSelectedMobileImg(index)
+                                }
+                                selectedIndex={selecteMobileImg}
+                            />
+                            <button onClick={handleNextMobile}>
+                                <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
+                            </button>
+                        </div>
+                    )}
+                    {project.mobile[0].title !== "" && (
+                        // Votre contenu ici
+                        <div className="mobileGallery">
+                            <img
+                                src={mobileImg}
+                                alt="écran de mobile du site web"
+                                className="mobileGallery__frame"
+                            />
+                            <div className="mobileGallery__scrollContainer mobileGallery__scrollContainer-scrollInner">
+                                <img
+                                    // src={project.mobile[0].images}
+                                    src={
+                                        project.mobile[selecteMobileImg]
+                                            .images[0]
+                                    }
+                                    alt="aperçu du site web sur mobile"
+                                    className="mobileGallery__scrollContainer-image"
+                                />
+                            </div>
+                        </div>
+                    )}
+                </div>
             </section>
 
             <section>

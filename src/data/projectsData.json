@@ -2,7 +2,8 @@
     {
         "id": "c67ab8a7",
         "title": "Oh my food",
-        "cover": "https://dl.dropboxusercontent.com/scl/fi/k7i45thb81smwmvpq75dm/ohMyFood.png?rlkey=it4q85fq4jkonzudbf0ywrvcu&st=6reqpsam&dl=0",
+        "cover": "https://thumbs2.imgbox.com/f5/43/6tFJtMDA_t.png",
+        "logo":"https://images2.imgbox.com/9e/e9/kJcaJQKS_o.png",
         "description": "L'objectif de cette mission était de développer l'interface mobile-first du site Ohmyfood, une start-up spécialisée dans la restauration. Le site répertorie les menus de restaurants gastronomiques, permettant aux clients de composer leur repas à l'avance pour minimiser les temps d'attente.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -29,30 +30,22 @@
         ],
         "desktop": [
             {
-                "category": "Acceuil",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/be/ce/HLDrZSW1_o.jpg"]
             },
             {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Restaurant",
+                "images": ["https://images2.imgbox.com/21/e6/JXZBfyJA_o.jpg"]
             }
         ],
         "mobile": [
             {
-                "category": "Acceuil",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/28/ff/ReRpxMMM_o.jpg"]
             },
             {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Restaurant",
+                "images": ["https://images2.imgbox.com/fc/8d/YPGBJtCT_o.jpg"]
             }
         ],
         "tags": ["Html", "Css", "Sass", "Git", "GitHub"],
@@ -62,7 +55,8 @@
     {
         "id": "b9123946",
         "title": "Kaza",
-        "cover": "https://dl.dropboxusercontent.com/scl/fi/wjaozhmazak6o7vm8omui/kaza.png?rlkey=7psotc80mk18xlygdpmvtj49f&st=d34faral&dl=0",
+        "cover": "https://thumbs2.imgbox.com/2f/f4/4kw8HdWV_t.png",
+        "logo":"https://images2.imgbox.com/7f/a8/Lq6ZF9Bb_o.png",
         "description": "L'objectif de cette mission était de développer l'interface front-end du site Kasa, une entreprise de location d'appartements entre particuliers. J'ai utilisé React et React Router pour offrir une expérience utilisateur moderne et dynamique. La refonte du site devait inclure une transition vers une stack JavaScript complète et un design responsive basé sur des maquettes Figma.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -89,30 +83,30 @@
         ],
         "desktop": [
             {
-                "category": "Acceuil",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/d8/87/wQQl5mqf_o.jpg"]
             },
             {
-                "category": "Logement",
-                "images": [""]
+                "title": "Logement",
+                "images": ["https://images2.imgbox.com/29/e4/GNUEGuim_o.jpg"]
             },
             {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Á propos",
+                "images": ["https://images2.imgbox.com/3f/5a/ZFTGlAb0_o.jpg"]
             }
         ],
         "mobile": [
             {
-                "category": "Acceuil",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/3d/40/rDh2XyLy_o.jpg"]
             },
             {
-                "category": "Logement",
-                "images": [""]
+                "title": "Logement",
+                "images": ["https://images2.imgbox.com/f1/a8/1FpgbONe_o.jpg"]
             },
             {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Á propos",
+                "images": ["https://images2.imgbox.com/a9/4d/cmKTfIAu_o.jpg"]
             }
         ],
         "tags": ["Html", "Css","Sass","Javascript", "React", "React Router"],
@@ -122,7 +116,8 @@
     {
         "id": "46d188c5",
         "title": "Domaine Victoria",
-        "cover": "https://dl.dropboxusercontent.com/scl/fi/aiirr9mumde09sefnybf7/domaineVictoria.png?rlkey=gngujf0a2ux8xdf7xxmaljv6v&st=gk6h4sp5&dl=0",
+        "cover": "https://thumbs2.imgbox.com/86/30/cgeSEpXl_t.png",
+        "logo":"https://images2.imgbox.com/be/2a/P4bl88yT_o.png",
         "description": "L'objectif de ce projet professionnel était de créer un site web pour la location de villas de luxe en Corse, spécifiquement en Balagne. Le site devait être entièrement fonctionnel,responsive, esthétiquement plaisant, et optimisé pour le SEO afin d'attirer et de convertir les visiteurs en clients potentiels.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -157,30 +152,38 @@
         ],
         "desktop": [
             {
-                "category": "Acceuil",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/7a/77/DVZmH4o5_o.jpg"]
             },
             {
-                "category": "Logement",
-                "images": [""]
+                "title": "villas",
+                "images": ["https://images2.imgbox.com/a1/ba/ylYlTmMJ_o.jpg"]
             },
             {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Tarifs",
+                "images": ["https://images2.imgbox.com/0f/e8/zy4shb7c_o.jpg"]
+            },
+            {
+                "title": "Contact",
+                "images": ["https://images2.imgbox.com/79/d7/5vQEFGUs_o.jpg"]
             }
         ],
         "mobile": [
             {
-                "category": "Acceuil",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/ce/cb/bsBtC2PU_o.jpg"]
             },
             {
-                "category": "Logement",
-                "images": [""]
+                "title": "villas",
+                "images": ["https://images2.imgbox.com/0a/db/kc0qfliO_o.jpg"]
             },
             {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Tarifs",
+                "images": ["https://images2.imgbox.com/4c/24/c5pVUi3E_o.jpg"]
+            },
+            {
+                "title": "Contact",
+                "images": ["https://images2.imgbox.com/21/61/jOdQOpnQ_o.jpg"]
             }
         ],
         "tags": ["Html", "Css", "Javascript", "Sass", "Git", "C#"],
@@ -190,7 +193,8 @@
     {
         "id": "0979876d",
         "title": "Booki",
-        "cover": "https://dl.dropboxusercontent.com/scl/fi/74o298y0hqe8bva7bkl6g/booki.png?rlkey=77obl3gl0ju2yu7aej0clwj6t&st=sx7a11r0&dl=0",
+        "cover": "https://thumbs2.imgbox.com/76/cf/CRLRVZLJ_t.png",
+        "logo":"https://images2.imgbox.com/da/e1/exQzOqMv_o.png",
         "description": "L'objectif de cette mission était d'intégrer l'interface du site Booki en HTML et CSS, en veillant à ce que le site soit responsive et fonctionne parfaitement sur tous les appareils et tailles d'écran.Le site permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -213,30 +217,14 @@
         ],
         "desktop": [
             {
-                "category": "Acceuil",
-                "images": [""]
-            },
-            {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/eb/6d/b0JRY79U_o.jpg"]
             }
         ],
         "mobile": [
             {
-                "category": "Acceuil",
-                "images": [""]
-            },
-            {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/0d/f2/dunJCssX_o.jpg"]
             }
         ],
         "tags": ["Html", "Css"],
@@ -246,7 +234,8 @@
     {
         "id": "b4c67936",
         "title": "Sophie Bluel",
-        "cover": "https://dl.dropboxusercontent.com/scl/fi/dpox35h92d6dvf5qz0228/sophieBluel.png?rlkey=2v2d0db4tg3qogf0qn26ikiwi&st=39q2csvd&dl=0",
+        "cover": "https://thumbs2.imgbox.com/c4/6f/oKgnksuN_t.png",
+        "logo":"https://images2.imgbox.com/9f/28/lAW3R0iP_o.png",
         "description": "L'objectif de cette mission était de développer le site portfolio d'une architecte d'intérieur en utilisant JavaScript pour créer des pages web dynamiques et communiquer avec une API. Cela incluait la gestion des interactions utilisateur et la manipulation du DOM.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -269,29 +258,29 @@
         ],
         "desktop": [
             {
-                "category": "Acceuil",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/cf/56/gVanXno4_o.jpg"]
             },
             {
-                "category": "Logement",
-                "images": [""]
+                "title": "Login",
+                "images": ["https://images2.imgbox.com/c1/bc/EtaWRv4C_o.jpg"]
             },
             {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Admin",
+                "images": ["https://images2.imgbox.com/28/9a/b4orJb5Y_o.jpg"]
+            },
+            {
+                "title": "Admin modale #1",
+                "images": ["https://images2.imgbox.com/ad/75/EHoVcsII_o.png"]
+            },
+            {
+                "title": "Admin modale #2",
+                "images": ["https://images2.imgbox.com/de/f5/YSD7r03f_o.png"]
             }
         ],
         "mobile": [
             {
-                "category": "Acceuil",
-                "images": [""]
-            },
-            {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
+                "title": "",
                 "images": [""]
             }
         ],
@@ -302,7 +291,8 @@
     {
         "id": "cb2f9222",
         "title": "724Events",
-        "cover": "https://dl.dropboxusercontent.com/scl/fi/qpb90c7wyurlqs5tmugte/724Events.png?rlkey=4rrv8wcn60n8zzqrkcvnq2njx&st=m7fh3pde&dl=0",
+        "cover": "https://thumbs2.imgbox.com/d1/a7/77qkZbVc_t.png",
+        "logo":"https://images2.imgbox.com/0a/12/reDnFSmi_o.png",
         "description": "L'objectif de cette mission était de débugger et finaliser le développement du site one-page de l'agence événementielle 724events. Cela impliquait l'utilisation des Chrome DevTools pour identifier les problèmes et des outils spécifiques à React, comme React Developer Tools, pour résoudre les bugs signalés.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -329,29 +319,13 @@
         ],
         "desktop": [
             {
-                "category": "Acceuil",
-                "images": [""]
-            },
-            {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/c8/cf/bbzozh0u_o.jpg"]
             }
         ],
         "mobile": [
             {
-                "category": "Acceuil",
-                "images": [""]
-            },
-            {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
+                "title": "",
                 "images": [""]
             }
         ],
@@ -362,7 +336,8 @@
     {
         "id": "2cf259e1",
         "title": "Nina Carducci",
-        "cover": "https://dl.dropboxusercontent.com/scl/fi/53e2cayrznzcqgbzxnhcp/ninaCarducci.png?rlkey=475ccqyjxrxbxcdg18mlduicw&st=20j2sr7o&dl=0",
+        "cover": "https://thumbs2.imgbox.com/cd/25/QOe1MfU3_t.png",
+        "logo":"https://images2.imgbox.com/36/d1/HC74sZ2C_o.png",
         "description": "L'objectif de cette mission était d'optimiser le référencement (SEO) et la performance du site de la photographe Nina Carducci. Le projet incluait l'amélioration de la vitesse de chargement, de la structure du code, et de l'accessibilité, en utilisant des outils comme Lighthouse et Wave.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -397,30 +372,14 @@
         ],
         "desktop": [
             {
-                "category": "Acceuil",
-                "images": [""]
-            },
-            {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/e1/e8/PXaG0L5w_o.jpg"]
             }
         ],
         "mobile": [
             {
-                "category": "Acceuil",
-                "images": [""]
-            },
-            {
-                "category": "Logement",
-                "images": [""]
-            },
-            {
-                "category": "Á propos",
-                "images": [""]
+                "title": "Acceuil",
+                "images": ["https://images2.imgbox.com/81/63/ZNTuiTzG_o.jpg"]
             }
         ],
         "tags": ["Html", "Css", "Javascript", "Schema.org", "Lighthouse", "Wave"],

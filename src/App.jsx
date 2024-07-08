@@ -6,7 +6,7 @@ import ViewProject from "./views/ViewProject/ViewProject.jsx";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/Portfolio">
             <header>
                 <Navbar />
             </header>

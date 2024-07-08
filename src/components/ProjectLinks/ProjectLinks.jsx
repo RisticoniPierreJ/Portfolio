@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 
-function ProjectLinks({repos, demo}) {
+function ProjectLinks({ repos = '', demo = '' }) {
     return (
         // <article className="projectLinks">
         //     <Link to={repos} className="projectLinks__repo">
@@ -36,11 +36,6 @@ function ProjectLinks({repos, demo}) {
 ProjectLinks.propTypes = {
     repos: PropTypes.string.isRequired,
     demo: PropTypes.string.isRequired,
-};
-
-ProjectLinks.defaultProps = {
-    repos: '',
-    demo: '',
 };
 
 export default ProjectLinks;
