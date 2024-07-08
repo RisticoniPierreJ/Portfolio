@@ -134,16 +134,19 @@
 
     &__navigate {
         @extend %flex-rowCentered;
-        gap: 10px;
-        width: 70%;
-        justify-content: space-between;
+        gap: 20px;
 
         & button {
-            background-color: $secondary-light;
             border-radius: 50px;
             width: 40px;
             height: 40px;
             border: none;
+            // #19
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+            // background-color: $secondary-light;
+            background-color: $secondary;
+            color: $secondary-light;
 
         }
     }
@@ -192,7 +195,6 @@
             display: block;
             width: 100%;
             height: auto;
-            // height: 100%;
         }
     }
 }

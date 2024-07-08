@@ -258,19 +258,61 @@ main {
   top: 20px;
   color: #f5f1e5;
 }
+.dropDownGalleryContainer {
+  position: relative;
+}
+
 .dropDownGallery {
+  /* Remove default styling */
+  /* Remove default styling for WebKit */
+  /* Remove default styling for Firefox */
   border: none;
-  width: 150px;
-  height: 40px;
-  border-radius: 50px;
-  padding: 5px 10px;
-  background-color: #f5f1e5;
+  padding: 1em 3em 1em 1.5em;
+  border-radius: 5px;
+  background-color: #C5B185;
+  color: #f5f1e5;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   font-weight: 500;
-  text-align: center;
+}
+.dropDownGallery:focus {
+  outline: none;
 }
 .dropDownGallery__item {
-  background-color: #f5f1e5;
+  color: #f5f1e5;
   font-weight: 500;
+  background-color: #C5B185;
+}
+.dropDownGallery__arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  height: 100%;
+  width: 2.5em;
+  pointer-events: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #f5f1e5;
+}
+.dropDownGallery__arrow::before, .dropDownGallery__arrow::after {
+  --size: 0.45em;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+}
+.dropDownGallery__arrow::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid #C5B185;
+  top: 40%;
+}
+.dropDownGallery__arrow::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid #C5B185;
+  top: 60%;
 }
 
 /************************ heroContent  ************************/
@@ -767,16 +809,16 @@ section {
   gap: 10px;
 }
 .galleryContainer__navigate {
-  gap: 10px;
-  width: 70%;
-  justify-content: space-between;
+  gap: 20px;
 }
 .galleryContainer__navigate button {
-  background-color: #f5f1e5;
   border-radius: 50px;
   width: 40px;
   height: 40px;
   border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #C5B185;
+  color: #f5f1e5;
 }
 
 .desktopGallery,
