@@ -3,10 +3,12 @@ import Home from "./views/Home/Home.jsx";
 import "../src/utils/fontAwesomeConfig.js";
 import Navbar from "./containers/Navbar/Navbar.jsx";
 import ViewProject from "./views/ViewProject/ViewProject.jsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 function App() {
     return (
         <Router basename="/Portfolio">
+            <ScrollToTop />
             <header>
                 <Navbar />
             </header>

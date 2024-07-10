@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 
 const linksVariants = {
     open: {
@@ -28,20 +29,25 @@ const itemVariants = {
 };
 
 function Links() {
-    const items = [
-        "Acceuil",
-        "Projets",
-        "Services",
-        "Compétences",
-        "Contact",
-    ];
+    const items = ["Acceuil", "Projets", "Services", "Compétences", "Contact"];
 
     return (
         <motion.div className="links" variants={linksVariants}>
             {items.map((item) => (
-                <motion.a href={`#${item}`} key={item} variants={itemVariants}>
-                    {item}
-                </motion.a>
+                // <motion.a href={`#${item}`} key={item} variants={itemVariants}>
+                //     {item}
+                // </motion.a>
+                <motion.div key={item} variants={itemVariants}>
+                    <ScrollLink
+                        to={item}
+                        smooth={true}
+                        duration={500}
+                        // Ajustez cette valeur pour compenser la hauteur de la navbar
+                        // offset={-70}
+                    >
+                        {item}
+                    </ScrollLink>
+                </motion.div>
             ))}
         </motion.div>
     );

@@ -4,7 +4,7 @@ function HeroImage() {
     return (
         <div className="heroImage">
             <div className="heroImage__picture">
-                <img src={avatar} alt="Portrait du propriétaire" />
+                <img src={avatar} alt="Portrait du propriétaire" loading="lazy"/>
                 <svg
                     viewBox="0 0 500 500"
                     xmlns="http://www.w3.org/2000/svg"

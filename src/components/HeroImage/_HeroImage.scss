@@ -3,6 +3,7 @@
     @extend %flex-rowCentered;
     position: relative;
     height: 40vh;
+    min-height: 345px;
     width: 100%;
     z-index: 2000;
 

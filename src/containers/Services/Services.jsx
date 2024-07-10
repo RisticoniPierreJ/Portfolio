@@ -4,7 +4,7 @@ import Collapse from "../../components/Collapse/Collapse";
 function Services() {
     return (
         <div className="servicesContainer">
-            <Collapse title="Création">
+            <Collapse title="Création" customClass="collapse">
                 <div className="servicesCards">
                     <p className="servicesCards__text">
                         Création de sites Internet adaptés à vos besoins
@@ -54,7 +54,7 @@ function Services() {
                 </div>
             </Collapse>
 
-            <Collapse title="Optimisation">
+            <Collapse title="Optimisation" customClass="collapse">
                 <div className="servicesCards">
                     <p className="servicesCards__text">
                     Optimisez chaque aspect de votre site pour des performances maximales
@@ -100,7 +100,7 @@ function Services() {
                     </p>
                 </div>
             </Collapse>
-            <Collapse title="Maintenance">
+            <Collapse title="Maintenance" customClass="collapse">
                 <div className="servicesCards">
                     <p className="servicesCards__text">
                     Gardez votre site à jour et performant

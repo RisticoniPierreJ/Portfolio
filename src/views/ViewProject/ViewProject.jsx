@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import projectsData from "../../data/projectsData.json";
 import Collapse from "../../components/Collapse/Collapse";
 import mobileImg from "../../assets/images/mobile_screen.png";
@@ -26,14 +26,21 @@ function splitTextToParagraphs(text) {
 }
 
 function ViewProject() {
+    const navigate = useNavigate();
+
+    // Gestion de la récupération des données du projet
     const { id } = useParams();
     const project = projectsData.find((project) => project.id === id);
 
+    // Gestion de l affichage des images
     const [selecteDesktopImg, setSelectedDesktopImg] = useState(0);
     const [selecteMobileImg, setSelectedMobileImg] = useState(0);
 
     const mutlipleDesktopImg = project.desktop.length > 1;
     const mutlipleMobileImg = project.mobile.length > 1;
+
+    // gestion du lazyload avec blur
+    const [isLoaded, setIsLoaded] = useState(false);
 
     if (!project) {
         return (
@@ -68,21 +75,45 @@ function ViewProject() {
         );
     };
 
+    const handleClose = () => {
+        navigate("/");
+    };
+
     return (
         <main className="viewProjecttMain">
+            {/************/}
+            {/* Bannière */}
+            {/************/}
             <div className="viewProjectBanner">
-                <img
-                    className="viewProjectBanner__img"
-                    src={project.cover}
-                    alt=""
-                />
+                <div
+                    className="viewProjectBanner__blurLoad"
+                    style={{
+                        backgroundImage: `url(${project.coverSmall})`,
+                    }}
+                >
+                    <img
+                        className={`viewProjectBanner__img ${
+                            isLoaded ? "loaded" : ""
+                        }`}
+                        src={project.cover}
+                        alt="Bannière du projet"
+                        onLoad={() => setIsLoaded(true)}
+                    />
+                </div>
                 <div className="viewProjectBanner__logo">
                     <img src={project.logo} alt="logo du site web" />
                 </div>
+                <FontAwesomeIcon
+                    icon="fa-regular fa-circle-xmark"
+                    className="viewProjectBanner__closeIcon"
+                    onClick={handleClose}
+                />
             </div>
-            <section className="viewProject">
-                {/* <h1 className="viewProject__title">{project.title}</h1> */}
 
+            {/***********/}
+            {/* Contenu */}
+            {/***********/}
+            <section className="viewProject">
                 <div className="viewProject__description">
                     <h2 className="viewProject__description-title">
                         Description
@@ -103,15 +134,11 @@ function ViewProject() {
                     </h2>
                     <div className="viewProject__challenges-content">
                         {project.challenges.map(({ title, content }, index) => (
-                            // <div key={index}>
-                            //     <h3 className="project__challenges-contentTitle">
-                            //         {title}
-                            //     </h3>
-                            //     <p className="project__challenges-contentText">{content}</p>
-                            // </div>
-
-                            <Collapse title={title} key={index}>
-                                {/* <p>{content}</p> */}
+                            <Collapse
+                                title={title}
+                                key={index}
+                                customClass="projectCollapse"
+                            >
                                 {splitTextToParagraphs(content)}
                             </Collapse>
                         ))}
@@ -142,10 +169,17 @@ function ViewProject() {
                     </svg>
                 </div>
             </section>
+
+            {/***********/}
+            {/* Galerie */}
+            {/***********/}
             <section className="viewProjectGallery">
                 <h2 className="viewProjectGallery__title">Liens & Galerie</h2>
                 <ProjectLinks repos={project.repository} demo={project.demo} />
 
+                {/*******************/}
+                {/* Galerie Desktop */}
+                {/*******************/}
                 <div className="galleryContainer">
                     {mutlipleDesktopImg && (
                         <div className="galleryContainer__navigate">
@@ -164,24 +198,48 @@ function ViewProject() {
                             </button>
                         </div>
                     )}
+
                     <div className="desktopGallery">
                         <img
                             src={desktopImg}
                             alt="écran de bureau du site web"
                             className="desktopGallery__frame"
+                            loading="lazy"
                         />
                         <div className="desktopGallery__scrollContainer desktopGallery__scrollContainer-scrollInner">
+                            {/* <div
+                            className="desktopGallery__scrollContainer-blurLoad"
+                            style={{
+                              backgroundImage: `url(${project.coverSmall})`,
+                          }}
+                          >
+                        <img
+                            className={`desktopGallery__scrollContainer-image ${
+                            isLoaded ? "loaded" : ""
+                            }`}
+                            src={
+                                project.desktop[selecteDesktopImg].images[0]
+                            }
+                            alt="aperçu du site web sur desktop"
+                            onLoad={() => setIsLoaded(true)}
+                            loading="lazy"
+                        />
+                        </div> */}
                             <img
-                                // src={project.desktop[0].images}
                                 src={
                                     project.desktop[selecteDesktopImg].images[0]
                                 }
                                 alt="aperçu du site web sur desktop"
                                 className="desktopGallery__scrollContainer-image"
+                                loading="lazy"
                             />
                         </div>
                     </div>
                 </div>
+
+                {/******************/}
+                {/* Galerie Mobile */}
+                {/******************/}
                 <div className="galleryContainer">
                     {mutlipleMobileImg && (
                         <div className="galleryContainer__navigate">
@@ -200,13 +258,14 @@ function ViewProject() {
                             </button>
                         </div>
                     )}
+
                     {project.mobile[0].title !== "" && (
-                        // Votre contenu ici
                         <div className="mobileGallery">
                             <img
                                 src={mobileImg}
                                 alt="écran de mobile du site web"
                                 className="mobileGallery__frame"
+                                loading="lazy"
                             />
                             <div className="mobileGallery__scrollContainer mobileGallery__scrollContainer-scrollInner">
                                 <img
@@ -217,6 +276,7 @@ function ViewProject() {
                                     }
                                     alt="aperçu du site web sur mobile"
                                     className="mobileGallery__scrollContainer-image"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>

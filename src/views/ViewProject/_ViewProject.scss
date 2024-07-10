@@ -1,19 +1,26 @@
 /************************ ViewProjectTest  ************************/
-
 .viewProjecttMain {
-    margin-top: 50px;
     background-color: $secondary-light;
-
+    // margin-top: 50px;
 }
 
+
+/* ------------------ bannière ------------------ */
 .viewProjectBanner {
     position: relative;
-    border-radius: 0 0 55px 55px;
+    // border-radius: 0 0 55px 55px;
     background: #000;
-    height: 250px;
+    // height: 250px;
+    border-radius: 0 0 55px 55px;
+    // padding-bottom: 125px;
+    min-height: 281px;
 
 
-
+    &__blurLoad {
+        background-size: cover;
+        background-position: center;
+        border-radius: 0 0 55px 55px;
+    }
 
     &__img {
         object-fit: cover;
@@ -22,9 +29,15 @@
 
         // height: 250px;
         border-radius: 0 0 55px 55px;
+        // opacity: 0.8;
+        display: block;
+        object-position: center;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+    }
+
+    &__img.loaded {
         opacity: 0.8;
-
-
     }
 
     &__logo {
@@ -51,14 +64,23 @@
             // width: 70%;
             height: 100%;
             border-radius: 10px;
-
-
-
-
         }
+    }
+
+    &__closeIcon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: $secondary-light;
+        cursor: pointer;
     }
 }
 
+
+/* ------------------ contenu ------------------ */
 .viewProject {
     @extend %flex-column;
     gap: 65px;
@@ -111,7 +133,7 @@
     }
 }
 
-
+/* ------------------ Galerie ------------------ */
 .viewProjectGallery {
 
     @extend %flex-columnCentered;
@@ -124,13 +146,13 @@
         font-family: $font-family-title;
         font-size: 1.4rem;
         font-weight: 800;
-        color: $primary-light;
+        color: $secondary-light;
     }
 }
 
 .galleryContainer {
     @extend %flex-columnCentered;
-    gap: 10px;
+    gap: 20px;
 
     &__navigate {
         @extend %flex-rowCentered;
@@ -147,7 +169,6 @@
             // background-color: $secondary-light;
             background-color: $secondary;
             color: $secondary-light;
-
         }
     }
 }
@@ -155,7 +176,6 @@
 .desktopGallery,
 .mobileGallery {
     // @extend %flex-columnCentered;
-
     position: relative;
     width: 100%;
     height: auto;
@@ -185,7 +205,6 @@
         // masque les barres de défilement pour Firefox
         scrollbar-width: none;
 
-
         // masque les barres de défilement pour Chrome, Safari, et Opera
         &-scrollInner::-webkit-scrollbar {
             display: none;
@@ -195,19 +214,24 @@
             display: block;
             width: 100%;
             height: auto;
+
+            
+            object-fit: cover;
+            object-position: center;
         }
     }
 }
 
-.desktopGallery {
-    margin-top: 15px;
-}
-
 .mobileGallery {
+    &__frame {
+        width: 72%;
+        pointer-events: none;
+        z-index: 1;
+    }
 
     &__scrollContainer {
-        width: 63%;
-        height: 90%;
-        margin-top: 7.5%;
+        width: 64%;
+        height: 93%;
+        margin-top: 4.5%;
     }
 }

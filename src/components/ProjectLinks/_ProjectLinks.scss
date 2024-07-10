@@ -1,24 +1,22 @@
 /************************ ProjectLinks  ************************/
 .projectLinks {
     @extend %flex-rowCentered;
-    // @extend %flex-row;
-    // align-items: center;
-    // justify-content: space-between;
-    gap: 40px;
+    gap: 15px;
     border-radius: 15px;
-    padding: 20px 5%;
-    width: 90%;
+    padding: 15px 15px;
+    // width: 65%;
     background-color: rgba($secondary-light, 0.9);
 
     &__repo,
     &__demo {
         @extend %flex-columnCentered;
         gap: 10px;
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
         padding: 5px;
         border-radius: 15px;
         background-color: rgba($secondary, 0.9);
+
 
         // #19
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -32,6 +30,12 @@
 
     &__title {
         font-weight: 500;
+    }
+
+    &__disabled {
+        color: black;
+        opacity: 0.5;
+        pointer-events: none;
     }
 
 }

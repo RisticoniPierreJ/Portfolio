@@ -14,7 +14,7 @@ function Home() {
                 <Navbar />
             </header> */}
             <main id="Acceuil">
-                <section  className="acceuil">
+                <section className="acceuil">
                     <Hero />
                     {/* SEPARATEUR HAUT DE SECTION ISSU DU SITE */}
                     <div
@@ -46,7 +46,7 @@ function Home() {
                 </section>
 
                 <section className="project">
-                    <h2 className="sectioTitle sectioTitle__light">
+                    <h2 className="sectionTitle sectionTitle__light">
                         Mes Projets
                     </h2>
 
@@ -80,11 +80,11 @@ function Home() {
                     </div>
 
                     <div className="services__container">
-                        <h2 className="sectioTitle sectioTitle__dark">
+                        <h2 className="sectionTitle sectionTitle__dark">
                             Pourquoi faire appel à moi ?
                         </h2>
                         <WhyMe />
-                        <h2 className="sectioTitle sectioTitle__dark">
+                        <h2 className="sectionTitle sectionTitle__dark">
                             Services
                         </h2>
                         <Services />
@@ -120,7 +120,7 @@ function Home() {
                 </section>
 
                 <section className="skills">
-                    <h2 className="sectioTitle sectioTitle__light">
+                    <h2 className="sectionTitle sectionTitle__light">
                         Compétences
                     </h2>
                     <TechIcons />
@@ -152,7 +152,8 @@ function Home() {
                         </svg>
                     </div>
 
-                    <h2 className="sectioTitle sectioTitle__dark">Contact</h2>
+                    <h2 className="sectionTitle sectionTitle__dark">Contact</h2>
+                    <p className="sectionSubTitle">Vous avez un projet ? contactez moi !</p>
                     <Contact />
                 </section>
             </main>

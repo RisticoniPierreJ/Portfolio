@@ -1,8 +1,11 @@
+@charset "UTF-8";
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
 .desktopGallery__scrollContainer,
-.mobileGallery__scrollContainer, .viewProject__challenges-content, .viewProject__challenges, .viewProject__description-content, .viewProject__description, .viewProject, .services__container, .theme, .WhyMe, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm, .collapse__txt-inner, .collapse {
+.mobileGallery__scrollContainer, .viewProject__challenges-content, .viewProject__challenges, .viewProject__description-content, .viewProject__description, .viewProject, .services__container, .theme, .WhyMe, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm, .collapse__txt-inner,
+.projectCollapse__txt-inner, .collapse,
+.projectCollapse {
   display: flex;
   flex-direction: column;
 }
@@ -14,7 +17,8 @@
   align-items: center;
 }
 
-.theme__titleContainer, .servicesCards__list-item, .tags ul, .projectCard, .collapse__title {
+.theme__titleContainer, .servicesCards__list-item, .tags ul, .projectCard, .collapse__title,
+.projectCollapse__title {
   display: flex;
 }
 
@@ -179,48 +183,59 @@ main {
 }
 
 /************************ Collapse  ************************/
-.collapse {
+.collapse,
+.projectCollapse {
   width: 100%;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 0 0 5px 5px;
 }
-.collapse__title {
+.collapse__title,
+.projectCollapse__title {
   justify-content: space-between;
   align-items: center;
   width: 100%;
   border-radius: 5px 5px 0 0;
-  padding: 30px 15px;
+  padding: 25px 15px;
   background: #82A57D;
   z-index: 2;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #f5f1e5;
   font-weight: 500;
 }
-.collapse__txt {
+.collapse__txt,
+.projectCollapse__txt {
   background: #82A57D;
   border-top: 8px solid #C5B185;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
-.collapse__txt.show {
+.collapse__txt.show,
+.projectCollapse__txt.show {
   max-height: 350px;
 }
-.collapse__txt-inner {
+.collapse__txt-inner,
+.projectCollapse__txt-inner {
   padding: 10px 15px 15px 15px;
   gap: 10px;
 }
 
-.chevronUp {
-  transition: transform 0.3s ease-in-out;
+.projectCollapse {
+  border-radius: 0 20px 20px 0;
+  min-height: 52px;
 }
-
-.rotate {
-  transform: rotate(180deg);
-  transition: transform 0.3s;
+.projectCollapse__title {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 52px;
+}
+.projectCollapse__txt {
+  border-top: 4px solid #C5B185;
+  background: #82A57D;
 }
 
 /************************ contactForm  ************************/
@@ -358,6 +373,7 @@ main {
 .heroImage {
   position: relative;
   height: 40vh;
+  min-height: 345px;
   width: 100%;
   z-index: 2000;
 }
@@ -388,19 +404,35 @@ main {
 /************************ projectCard  ************************/
 .projectCard {
   width: 100%;
+  min-width: 341px;
+  min-height: 255px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   position: relative;
 }
-.projectCard img {
+.projectCard__blurLoad {
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+.projectCard__image {
   width: 100%;
   height: 100%;
+  border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 15px;
+  display: block;
+  -o-object-position: center;
+     object-position: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.projectCard__image.loaded {
+  opacity: 1;
 }
 .projectCard__content {
   width: 100%;
+  min-width: 341px;
   padding: 15px 20px 15px 15px;
   border-radius: 0 0 15px 15px;
   background-color: rgba(245, 241, 229, 0.9);
@@ -416,20 +448,22 @@ main {
   position: absolute;
   top: 14px;
   right: 14px;
+  width: 28px;
+  height: 28px;
+  color: white;
 }
 
 /************************ ProjectLinks  ************************/
 .projectLinks {
-  gap: 40px;
+  gap: 15px;
   border-radius: 15px;
-  padding: 20px 5%;
-  width: 90%;
+  padding: 15px 15px;
   background-color: rgba(245, 241, 229, 0.9);
 }
 .projectLinks__repo, .projectLinks__demo {
   gap: 10px;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   padding: 5px;
   border-radius: 15px;
   background-color: rgba(197, 177, 133, 0.9);
@@ -441,6 +475,11 @@ main {
 }
 .projectLinks__title {
   font-weight: 500;
+}
+.projectLinks__disabled {
+  color: black;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 /************************ ProjectTags  ************************/
@@ -626,18 +665,24 @@ section {
   position: relative;
 }
 
-.sectioTitle {
+.sectionTitle {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   font-weight: 800;
   margin-bottom: 15px;
 }
-.sectioTitle__light {
-  color: #E0F2C1;
+.sectionTitle__light {
+  color: #f5f1e5;
 }
-.sectioTitle__dark {
+.sectionTitle__dark {
   color: #82A57D;
+}
+
+.sectionSubTitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .project,
@@ -718,15 +763,20 @@ section {
 }
 /************************ ViewProjectTest  ************************/
 .viewProjecttMain {
-  margin-top: 50px;
   background-color: #f5f1e5;
 }
 
+/* ------------------ bannière ------------------ */
 .viewProjectBanner {
   position: relative;
-  border-radius: 0 0 55px 55px;
   background: #000;
-  height: 250px;
+  border-radius: 0 0 55px 55px;
+  min-height: 281px;
+}
+.viewProjectBanner__blurLoad {
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 55px 55px;
 }
 .viewProjectBanner__img {
   -o-object-fit: cover;
@@ -734,6 +784,13 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 0 0 55px 55px;
+  display: block;
+  -o-object-position: center;
+     object-position: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.viewProjectBanner__img.loaded {
   opacity: 0.8;
 }
 .viewProjectBanner__logo {
@@ -754,7 +811,18 @@ section {
   height: 100%;
   border-radius: 10px;
 }
+.viewProjectBanner__closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #f5f1e5;
+  cursor: pointer;
+}
 
+/* ------------------ contenu ------------------ */
 .viewProject {
   gap: 65px;
   padding: 45px 10px 125px 10px;
@@ -792,6 +860,7 @@ section {
   color: #f5f1e5;
 }
 
+/* ------------------ Galerie ------------------ */
 .viewProjectGallery {
   gap: 50px;
   background-color: #A3C6A6;
@@ -802,11 +871,11 @@ section {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
-  color: #E0F2C1;
+  color: #f5f1e5;
 }
 
 .galleryContainer {
-  gap: 10px;
+  gap: 20px;
 }
 .galleryContainer__navigate {
   gap: 20px;
@@ -857,14 +926,19 @@ section {
   display: block;
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
-.desktopGallery {
-  margin-top: 15px;
+.mobileGallery__frame {
+  width: 72%;
+  pointer-events: none;
+  z-index: 1;
 }
-
 .mobileGallery__scrollContainer {
-  width: 63%;
-  height: 90%;
-  margin-top: 7.5%;
+  width: 64%;
+  height: 93%;
+  margin-top: 4.5%;
 }/*# sourceMappingURL=main.css.map */

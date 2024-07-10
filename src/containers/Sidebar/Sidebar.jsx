@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Links from "../../components/Links/Links";
 import ToggleButton from "../../components/ToggleButton/ToggleButton";
@@ -22,6 +22,25 @@ const variants = {
 
 function Sidebar() {
     const [open, setOpen] = useState(false);
+
+    // Fermeture du menu si l'utilisateur clique en dehors de la sidebar
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (open && !document.querySelector('.sidebar').contains(event.target)) {
+                setOpen(false);
+            }
+        };
+
+        if (open) {
+            document.addEventListener('mousedown', handleOutsideClick);
+        } else {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [open]);
 
     return (
         <motion.div

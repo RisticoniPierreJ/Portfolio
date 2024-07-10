@@ -5,30 +5,24 @@ import PropTypes from 'prop-types';
 
 function ProjectLinks({ repos = '', demo = '' }) {
     return (
-        // <article className="projectLinks">
-        //     <Link to={repos} className="projectLinks__repo">
-        //         <FontAwesomeIcon className="projectLinks__icon" icon="fa-brands fa-github" />
-        //         <p className="projectLinks__title">Repo</p>
-        //     </Link>
-        //     <Link to={demo} className="projectLinks__demo">
-        //         <FontAwesomeIcon className="projectLinks__icon" icon="fa-solid fa-globe" />
-        //         <p className="projectLinks__title">Demo</p>
-        //     </Link>
-        // </article>
 
         <article className="projectLinks">
-            {repos && (
-                <Link to={repos} className="projectLinks__repo">
-                    <FontAwesomeIcon className="projectLinks__icon" icon="fa-brands fa-github" />
-                    <p className="projectLinks__title">Repo</p>
-                </Link>
-            )}
-            {demo && (
-                <Link to={demo} className="projectLinks__demo">
-                    <FontAwesomeIcon className="projectLinks__icon" icon="fa-solid fa-globe" />
-                    <p className="projectLinks__title">Demo</p>
-                </Link>
-            )}
+            <Link
+                to={repos}
+                className={`projectLinks__repo ${!repos ? 'projectLinks__disabled' : ''}`}
+                aria-disabled={!repos}
+            >
+                <FontAwesomeIcon className="projectLinks__icon" icon="fa-brands fa-github" />
+                <p className="projectLinks__title">Repo</p>
+            </Link>
+            <Link
+                to={demo}
+                className={`projectLinks__demo ${!demo ? 'projectLinks__disabled' : ''}`}
+                aria-disabled={!demo}
+            >
+                <FontAwesomeIcon className="projectLinks__icon" icon="fa-solid fa-globe" />
+                <p className="projectLinks__title">Demo</p>
+            </Link>
         </article>
     );
 }

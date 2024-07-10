@@ -10,6 +10,7 @@ function TechIcons() {
                         className="techIcon__image"
                         src={getImageUrl(icon.fileName)}
                         alt={`Icone de technologie ${icon.title}`}
+                        loading="lazy"
                     />
                     <h3 className="techIcon__title">{icon.title}</h3>
                 </article>

@@ -12,20 +12,26 @@ section {
     // height: 100vh;
 }
 
-.sectioTitle {
+.sectionTitle {
     text-align: center;
     font-family: $font-family-title;
-    font-size: $font-size-title;
+    font-size: $fontSize-title;
     font-weight: 800;
     margin-bottom: 15px;
 
     &__light {
-        color: $primary-light;
+        color: $secondary-light;
     }
 
     &__dark {
         color: $primary-dark;
     }
+}
+
+.sectionSubTitle {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .skills {

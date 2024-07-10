@@ -3,7 +3,8 @@
         "id": "c67ab8a7",
         "title": "Oh my food",
         "cover": "https://thumbs2.imgbox.com/f5/43/6tFJtMDA_t.png",
-        "logo":"https://images2.imgbox.com/9e/e9/kJcaJQKS_o.png",
+        "coverSmall": "https://images2.imgbox.com/37/67/fF7ek3lG_o.png",
+        "logo": "https://images2.imgbox.com/9e/e9/kJcaJQKS_o.png",
         "description": "L'objectif de cette mission était de développer l'interface mobile-first du site Ohmyfood, une start-up spécialisée dans la restauration. Le site répertorie les menus de restaurants gastronomiques, permettant aux clients de composer leur repas à l'avance pour minimiser les temps d'attente.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -56,7 +57,8 @@
         "id": "b9123946",
         "title": "Kaza",
         "cover": "https://thumbs2.imgbox.com/2f/f4/4kw8HdWV_t.png",
-        "logo":"https://images2.imgbox.com/7f/a8/Lq6ZF9Bb_o.png",
+        "coverSmall": "https://images2.imgbox.com/f0/55/0ADomfhz_o.png",
+        "logo": "https://images2.imgbox.com/7f/a8/Lq6ZF9Bb_o.png",
         "description": "L'objectif de cette mission était de développer l'interface front-end du site Kasa, une entreprise de location d'appartements entre particuliers. J'ai utilisé React et React Router pour offrir une expérience utilisateur moderne et dynamique. La refonte du site devait inclure une transition vers une stack JavaScript complète et un design responsive basé sur des maquettes Figma.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -109,7 +111,7 @@
                 "images": ["https://images2.imgbox.com/a9/4d/cmKTfIAu_o.jpg"]
             }
         ],
-        "tags": ["Html", "Css","Sass","Javascript", "React", "React Router"],
+        "tags": ["Html", "Css", "Sass", "Javascript", "React", "React Router"],
         "repository": "https://github.com/RisticoniPierreJ/Kasa",
         "demo": "https://risticonipierrej.github.io/Kasa/"
     },
@@ -117,7 +119,8 @@
         "id": "46d188c5",
         "title": "Domaine Victoria",
         "cover": "https://thumbs2.imgbox.com/86/30/cgeSEpXl_t.png",
-        "logo":"https://images2.imgbox.com/be/2a/P4bl88yT_o.png",
+        "coverSmall": "https://images2.imgbox.com/2e/17/C0LNdOE7_o.png",
+        "logo": "https://images2.imgbox.com/be/2a/P4bl88yT_o.png",
         "description": "L'objectif de ce projet professionnel était de créer un site web pour la location de villas de luxe en Corse, spécifiquement en Balagne. Le site devait être entièrement fonctionnel,responsive, esthétiquement plaisant, et optimisé pour le SEO afin d'attirer et de convertir les visiteurs en clients potentiels.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -194,7 +197,8 @@
         "id": "0979876d",
         "title": "Booki",
         "cover": "https://thumbs2.imgbox.com/76/cf/CRLRVZLJ_t.png",
-        "logo":"https://images2.imgbox.com/da/e1/exQzOqMv_o.png",
+        "coverSmall": "https://images2.imgbox.com/ea/54/c0aoSr2X_o.png",
+        "logo": "https://images2.imgbox.com/da/e1/exQzOqMv_o.png",
         "description": "L'objectif de cette mission était d'intégrer l'interface du site Booki en HTML et CSS, en veillant à ce que le site soit responsive et fonctionne parfaitement sur tous les appareils et tailles d'écran.Le site permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -235,7 +239,8 @@
         "id": "b4c67936",
         "title": "Sophie Bluel",
         "cover": "https://thumbs2.imgbox.com/c4/6f/oKgnksuN_t.png",
-        "logo":"https://images2.imgbox.com/9f/28/lAW3R0iP_o.png",
+        "coverSmall": "https://images2.imgbox.com/97/89/4Qsx9x4a_o.png",
+        "logo": "https://images2.imgbox.com/9f/28/lAW3R0iP_o.png",
         "description": "L'objectif de cette mission était de développer le site portfolio d'une architecte d'intérieur en utilisant JavaScript pour créer des pages web dynamiques et communiquer avec une API. Cela incluait la gestion des interactions utilisateur et la manipulation du DOM.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -292,7 +297,8 @@
         "id": "cb2f9222",
         "title": "724Events",
         "cover": "https://thumbs2.imgbox.com/d1/a7/77qkZbVc_t.png",
-        "logo":"https://images2.imgbox.com/0a/12/reDnFSmi_o.png",
+        "coverSmall": "https://images2.imgbox.com/34/1c/JayKFzvz_o.png",
+        "logo": "https://images2.imgbox.com/0a/12/reDnFSmi_o.png",
         "description": "L'objectif de cette mission était de débugger et finaliser le développement du site one-page de l'agence événementielle 724events. Cela impliquait l'utilisation des Chrome DevTools pour identifier les problèmes et des outils spécifiques à React, comme React Developer Tools, pour résoudre les bugs signalés.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -329,7 +335,16 @@
                 "images": [""]
             }
         ],
-        "tags": ["Html", "Css", "Javascript", "React", "React Developer Tools", "Chrome DevTools", "Yarn", "Node.js"],
+        "tags": [
+            "Html",
+            "Css",
+            "Javascript",
+            "React",
+            "React Developer Tools",
+            "Chrome DevTools",
+            "Yarn",
+            "Node.js"
+        ],
         "repository": "https://github.com/RisticoniPierreJ/Debuggez-une-application-React.JS",
         "demo": ""
     },
@@ -337,7 +352,8 @@
         "id": "2cf259e1",
         "title": "Nina Carducci",
         "cover": "https://thumbs2.imgbox.com/cd/25/QOe1MfU3_t.png",
-        "logo":"https://images2.imgbox.com/36/d1/HC74sZ2C_o.png",
+        "coverSmall": "https://images2.imgbox.com/1b/59/vV0JWfkS_o.png",
+        "logo": "https://images2.imgbox.com/36/d1/HC74sZ2C_o.png",
         "description": "L'objectif de cette mission était d'optimiser le référencement (SEO) et la performance du site de la photographe Nina Carducci. Le projet incluait l'amélioration de la vitesse de chargement, de la structure du code, et de l'accessibilité, en utilisant des outils comme Lighthouse et Wave.",
         "mobilePictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
@@ -382,7 +398,14 @@
                 "images": ["https://images2.imgbox.com/81/63/ZNTuiTzG_o.jpg"]
             }
         ],
-        "tags": ["Html", "Css", "Javascript", "Schema.org", "Lighthouse", "Wave"],
+        "tags": [
+            "Html",
+            "Css",
+            "Javascript",
+            "Schema.org",
+            "Lighthouse",
+            "Wave"
+        ],
         "repository": "https://github.com/RisticoniPierreJ/ninacarducci.github.io",
         "demo": "https://risticonipierrej.github.io/ninacarducci.github.io/"
     }

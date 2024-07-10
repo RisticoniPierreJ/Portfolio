@@ -1,5 +1,6 @@
 /************************ Collapse  ************************/
-.collapse {
+.collapse,
+.projectCollapse {
     @extend %flex-column;
     width: 100%;
     overflow: hidden;
@@ -13,17 +14,16 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        // border-radius: 5px;
         border-radius: 5px 5px 0 0;
         // padding: 10px 15px;
-        padding: 30px 15px;
+        padding: 25px 15px;
         background: $primary-dark;
         z-index: 2;
         cursor: pointer;
 
 
         font-family: $font-family-title;
-        font-size: $font-size-title;
+        font-size: $fontSize-title-XL;
         color: $secondary-light;
         font-weight: 500;
 
@@ -52,13 +52,24 @@
     }
 }
 
+.projectCollapse {
+    border-radius: 0 20px 20px 0;
+    min-height: 52px;
+
+    &__title {
+        padding: 10px 15px;
+        // padding: 30px 15px;
+
+        font-size: $fontSize-title-S;
+        font-weight: 600;
+        min-height: 52px;
 
 
-.chevronUp {
-    transition: transform 0.3s ease-in-out;
-}
 
-.rotate {
-    transform: rotate(180deg);
-    transition: transform 0.3s;
+    }
+
+    &__txt {
+        border-top: 4px solid $secondary;
+        background: $primary-dark;
+    }
 }
