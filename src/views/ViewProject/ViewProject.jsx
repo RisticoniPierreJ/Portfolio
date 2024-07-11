@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import projectsData from "../../data/projectsData.json";
 import Collapse from "../../components/Collapse/Collapse";
 import mobileImg from "../../assets/images/mobile_screen.png";
@@ -36,19 +36,15 @@ function ViewProject() {
     const [selecteDesktopImg, setSelectedDesktopImg] = useState(0);
     const [selecteMobileImg, setSelectedMobileImg] = useState(0);
 
-    const mutlipleDesktopImg = project.desktop.length > 1;
-    const mutlipleMobileImg = project.mobile.length > 1;
-
     // gestion du lazyload avec blur
     const [isLoaded, setIsLoaded] = useState(false);
 
     if (!project) {
-        return (
-            <>
-                <h1>ERREUR</h1>
-            </>
-        );
+        return <Navigate to="/404" replace />;
     }
+
+    const mutlipleDesktopImg = project.desktop.length > 1;
+    const mutlipleMobileImg = project.mobile.length > 1;
 
     // Gestion des clics pour les boutons de navigation
     const handlePrevDesktop = () => {
@@ -114,6 +110,9 @@ function ViewProject() {
             {/* Contenu */}
             {/***********/}
             <section className="viewProject">
+                {/* <h2 className="viewProject__title">
+                        Le projet
+                    </h2> */}
                 <div className="viewProject__description">
                     <h2 className="viewProject__description-title">
                         Description

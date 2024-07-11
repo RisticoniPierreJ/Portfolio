@@ -160,7 +160,7 @@ function Home() {
                             Contact
                         </h2>
                         <p className="sectionSubTitle">
-                            Vous avez un projet ? contactez moi !
+                            Vous avez un <span>projet</span> ? contactez moi !
                         </p>
                         <Contact />
                     </div>

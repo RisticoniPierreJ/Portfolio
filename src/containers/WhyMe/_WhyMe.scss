@@ -1,91 +1,4 @@
 // /************************ WhyMe ************************/
-// .WhyMe {
-//     padding: 0 10px;
-//     @extend %flex-columnCentered;
-//     gap: 24px;
-
-
-//     &__title {
-//         font-family: $font-family-title;
-//         text-align: center;
-//         // font-size: $fontSize-title;
-//         // color: $primary-dark;
-//     }
-
-//     &__wrapper {
-//         display: flex;
-//         gap: 20px;
-//         width: 330px;
-//         height: 250px;
-//         overflow-x: scroll;
-//         scroll-snap-type: x mandatory;
-
-//     }
-
-//     &__card {
-//         @extend %flex-column;
-//         gap: 40px;
-//         position: relative;
-
-//         // Style de l'exemple 
-//         padding: 35px 30px;
-//         flex-shrink: 0;
-//         width: 330px;
-//         height: 250px;
-//         // background-color: $secondary-light;
-//         background-color: $primary-medium;
-//         border-radius: 14px;
-//         text-align: center;
-//         scroll-snap-align: center;
-
-//         border: 3px solid $primary-dark;
-
-//         &-icon {
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             opacity: 0.2;
-//             width: 100%;
-//             height: 100%;
-//             z-index: 1;
-
-//             // color: $secondary;
-//             color: $primary-dark;
-//         }
-
-//         &-title {
-//             font-family: $font-family-title;
-//             font-size: $fontSize-title-XL;
-//             font-weight: 800;
-//             min-height: 41px;
-
-//             color: #ebdeb5;
-//         }
-
-//         &-text {
-//             color: $secondary-light;
-//             opacity: 1;
-//         }
-
-//         & h3,
-//         & p {
-//             position: relative;
-//             z-index: 2;
-//         }
-//     }
-// }
-
-
-
-/************************ WhyMe ************************/
-/************************ WhyMe ************************/
-/************************ WhyMe ************************/
-/************************ WhyMe ************************/
-/************************ WhyMe ************************/
-/************************ WhyMe ************************/
-/************************ WhyMe ************************/
-
-/************************ FONCTIONNEL MAIS LES CHEVRON NE SONT PAS POSITIONNER SUR LES CARDS ************************/
 .whyMe {
     @extend %flex-columnCentered;
     gap: 24px;
@@ -95,6 +8,12 @@
     &__title {
         font-family: $font-family-title;
         text-align: center;
+        line-height: 1.2;
+
+        & span {
+            color: $primary-dark;
+            font-weight: 800;
+        }
     }
 
 
@@ -148,6 +67,7 @@
         &-text {
             color: $secondary-light;
             opacity: 1;
+            line-height: 1.3;
         }
 
         & h3,

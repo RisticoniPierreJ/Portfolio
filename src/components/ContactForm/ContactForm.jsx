@@ -18,6 +18,7 @@ function ContactForm() {
                 () => {
                     console.log("SUCCESS!");
                     setError(false);
+                    form.current.reset();
                 },
                 (error) => {
                     console.log("FAILED...", error.text);
@@ -28,23 +29,55 @@ function ContactForm() {
 
     return (
         <form ref={form} onSubmit={sendEmail} className="contactForm">
+            {/* <div className="contactForm__inputContainer">
+
+            </div> */}
             <div className="contactForm__input">
-            <FontAwesomeIcon className="contactForm__icon" icon="fa-solid fa-user" />
+                <FontAwesomeIcon
+                    className="contactForm__icon"
+                    icon="fa-solid fa-user"
+                />
                 <label htmlFor="name"></label>
-                <input type="text" id="name" name="name" required placeholder="Nom(*)"/>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Nom(*)"
+                />
             </div>
             <div className="contactForm__input">
-                <FontAwesomeIcon className="contactForm__icon" icon="fa-solid fa-envelope" />
+                <FontAwesomeIcon
+                    className="contactForm__icon"
+                    icon="fa-solid fa-envelope"
+                />
                 <label htmlFor="email"></label>
-                <input type="email" id="email" name="email" required placeholder="Email(*)"/>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Email(*)"
+                />
             </div>
             <div className="contactForm__input">
-            <FontAwesomeIcon className="contactForm__icon" icon="fa-solid fa-phone-flip" />
+                <FontAwesomeIcon
+                    className="contactForm__icon"
+                    icon="fa-solid fa-phone-flip"
+                />
                 <label htmlFor="phone"></label>
-                <input type="tel" id="phone" name="phone" placeholder="Téléphone"/>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Téléphone"
+                />
             </div>
             <div className="contactForm__input">
-            <FontAwesomeIcon className="contactForm__icon" icon="fa-solid fa-comment-dots" />
+                <FontAwesomeIcon
+                    className="contactForm__icon"
+                    icon="fa-solid fa-comment-dots"
+                />
                 <label htmlFor="message"></label>
                 <textarea
                     id="message"
@@ -56,8 +89,8 @@ function ContactForm() {
                     placeholder="Votre message(*)"
                 />
             </div>
-            <div className="contactForm__message">
-                <SubmitButton type>Envoyer</SubmitButton>
+            <div className="contactForm__button">
+                <SubmitButton>Envoyer</SubmitButton>
             </div>
 
             {error === false ? (

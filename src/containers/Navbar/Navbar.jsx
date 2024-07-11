@@ -6,12 +6,9 @@ function Navbar() {
     const location = useLocation();
 
     return (
-        <>
+        <header>
             {location.pathname === "/" && (
                 <nav className="navbar">
-                    {/* <a className="navbar__wrapper" href="#Acceuil">
-                        <span>Ghost.Dev</span>
-                    </a> */}
                     <ScrollLink
                         className="navbar__wrapper"
                         to="Acceuil"
@@ -31,7 +28,7 @@ function Navbar() {
                 </ul> */}
                 </nav>
             )}
-        </>
+        </header>
     );
 }
 

@@ -126,7 +126,7 @@ function WhyMe() {
     return (
         <div className="whyMe">
             <h2 className="whyMe__title">
-                La présence en ligne est devenue essentielle pour toutes les
+                La <span>présence en ligne</span> est devenue <span>essentielle</span> pour toutes les
                 entreprises, quelle que soit leur taille ou leur secteur.
             </h2>
             <div className="whyMe__container">

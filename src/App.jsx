@@ -4,18 +4,24 @@ import "../src/utils/fontAwesomeConfig.js";
 import Navbar from "./containers/Navbar/Navbar.jsx";
 import ViewProject from "./views/ViewProject/ViewProject.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
+import Footer from "./containers/Footer/Footer.jsx";
+import NotFound from "./views/NotFound/NotFound.jsx";
 
 function App() {
     return (
         <Router basename="/Portfolio">
             <ScrollToTop />
-            <header>
-                <Navbar />
-            </header>
+
+            <Navbar />
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/projet/:id" element={<ViewProject />} />
+                <Route path="/404" element={<NotFound />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
+
+            <Footer />
         </Router>
     );
 }

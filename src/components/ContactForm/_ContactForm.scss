@@ -3,7 +3,7 @@
     @extend %flex-column;
     gap: 20px;
     width: 80%;
-    // width: 100%;
+    width: 300px;
 
     &__input {
         @extend %flex-column;
@@ -53,8 +53,9 @@
         color: $secondary-light;
     }
 
-    &__message {
+    &__button {
         @extend %flex-columnCentered;
+        margin-top: 20px;
         // gap: 20px;
     }
 }
