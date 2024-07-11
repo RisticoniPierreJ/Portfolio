@@ -3,6 +3,7 @@
     @extend %flex-column;
     gap: 20px;
     width: 80%;
+    // width: 100%;
 
     &__input {
         @extend %flex-column;

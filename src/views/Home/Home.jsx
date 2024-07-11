@@ -46,11 +46,13 @@ function Home() {
                 </section>
 
                 <section className="project">
-                    <h2 className="sectionTitle sectionTitle__light">
-                        Mes Projets
-                    </h2>
+                    <div className="project__container">
+                        <h2 className="sectionTitle sectionTitle__light">
+                            Mes Projets
+                        </h2>
 
-                    <Project />
+                        <Project />
+                    </div>
                 </section>
 
                 <section id="Services" className="services">
@@ -120,10 +122,12 @@ function Home() {
                 </section>
 
                 <section className="skills">
-                    <h2 className="sectionTitle sectionTitle__light">
-                        Compétences
-                    </h2>
-                    <TechIcons />
+                    <div className="skills__container">
+                        <h2 className="sectionTitle sectionTitle__light">
+                            Compétences
+                        </h2>
+                        <TechIcons />
+                    </div>
                 </section>
 
                 <section id="Contact" className="contact">
@@ -151,10 +155,15 @@ function Home() {
                             ></path>
                         </svg>
                     </div>
-
-                    <h2 className="sectionTitle sectionTitle__dark">Contact</h2>
-                    <p className="sectionSubTitle">Vous avez un projet ? contactez moi !</p>
-                    <Contact />
+                    <div className="contact__container">
+                        <h2 className="sectionTitle sectionTitle__dark">
+                            Contact
+                        </h2>
+                        <p className="sectionSubTitle">
+                            Vous avez un projet ? contactez moi !
+                        </p>
+                        <Contact />
+                    </div>
                 </section>
             </main>
         </>
