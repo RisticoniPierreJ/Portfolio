@@ -2,7 +2,6 @@ import "../../assets/css/main.css";
 import TechIcons from "../../components/TechIcons/TechIcons";
 import Contact from "../../containers/Contact/Contact";
 import Hero from "../../containers/Hero/Hero";
-// import Navbar from "../../containers/Navbar/Navbar";
 import Project from "../../containers/Projects/Projects";
 import Services from "../../containers/Services/Services";
 import WhyMe from "../../containers/WhyMe/WhyMe";
@@ -10,9 +9,6 @@ import WhyMe from "../../containers/WhyMe/WhyMe";
 function Home() {
     return (
         <>
-            {/* <header>
-                <Navbar />
-            </header> */}
             <main id="Acceuil">
                 <section className="acceuil">
                     <Hero />

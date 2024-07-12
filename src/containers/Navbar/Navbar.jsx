@@ -1,34 +1,69 @@
-import { useLocation } from "react-router-dom";
-import Sidebar from "../Sidebar/Sidebar";
-import { Link as ScrollLink } from "react-scroll";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Links from "../../components/Links/Links";
+import ToggleButton from "../../components/ToggleButton/ToggleButton";
+
+const variants = {
+    open: {
+        clipPath: "circle(1200px at 50px 50px)",
+        transition: {
+            ease: "linear",
+            duration: 0.5,
+        },
+    },
+    closed: {
+        clipPath: "circle(20px at 167.5px 23.5px)",
+        transition: {
+            ease: "linear",
+            duration: 0.3,
+        },
+    },
+};
 
 function Navbar() {
-    const location = useLocation();
+    const [open, setOpen] = useState(false);
+
+    // Fermeture du menu si l'utilisateur clique en dehors de la navbar
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (
+                open &&
+                !document.querySelector(".navbar").contains(event.target)
+            ) {
+                setOpen(false);
+            }
+        };
+
+        if (open) {
+            document.addEventListener("mousedown", handleOutsideClick);
+        } else {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        };
+    }, [open]);
 
     return (
-        <header>
-            {location.pathname === "/" && (
-                <nav className="navbar">
-                    <ScrollLink
-                        className="navbar__wrapper"
-                        to="Acceuil"
-                        smooth={true}
-                        duration={500}
-                    >
-                        Ghost.Dev
-                    </ScrollLink>
-                    <Sidebar />
+        <>
+            <motion.div
+                className="navbar"
+                initial={open ? "open" : "closed"}
+                animate={open ? "open" : "closed"}
+            >
+                <motion.div className="navbar__background" variants={variants}>
+                    <Links />
+                </motion.div>
+                <ToggleButton setOpen={setOpen} className="toggleButton" />
+            </motion.div>
 
-                    {/* <ul>
-                    <li>Acceuil</li>
-                    <li>Projets</li>
-                    <li>Pour quoi </li>
-                    <li>Compétences</li>
-                    <li>Contact</li>
-                </ul> */}
-                </nav>
-            )}
-        </header>
+            <div className="navbarDesktop">
+                <div className="navbarDesktop__background">
+                    <Links />
+                </div>
+            </div>
+        </>
     );
 }
 

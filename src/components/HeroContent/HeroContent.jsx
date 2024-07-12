@@ -2,10 +2,10 @@ function HeroContent() {
     return (
         <div className="heroContent">
             <div className="heroContent__title">
-                <h1>Bienvenue ! </h1>
-                <h2>
+                <p className="heroContent__title-welcome">Bienvenue ! </p>
+                <h1 className="heroContent__title-name">
                     Je suis <span>Pierre-Jean Risticoni</span>
-                </h2>
+                </h1>
                 <p className="heroContent__title-job">Développeur Web</p>
             </div>
             <p className="heroContent__description">

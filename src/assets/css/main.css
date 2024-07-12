@@ -3,16 +3,16 @@
 /*********************************************************************************************************/
 /************************ Flex box ************************/
 .desktopGallery__scrollContainer,
-.mobileGallery__scrollContainer, .viewProject__challenges-content, .viewProject__description-content, .viewProject, .whyMe__card, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm, .collapse__txt-inner,
+.mobileGallery__scrollContainer, .viewProject__challenges-content, .viewProject__description-content, .whyMe__card, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .heroContent__title, .contactForm__input, .contactForm, .collapse__txt-inner,
 .projectCollapse__txt-inner, .collapse,
 .projectCollapse {
   display: flex;
   flex-direction: column;
 }
 
-.galleryContainer, .viewProjectGallery, .viewProject__challenges, .viewProject__description, .viewProjectBanner__logo, .notFound__container, .contact__container, .services__container,
+.galleryContainer, .viewProjectGallery__allGaleriesContainer, .viewProjectGallery, .viewProject__challenges, .viewProject__description-contentAndTagsContainer, .viewProject__description, .viewProject, .viewProjectBanner__logo, .notFound__container, .acceuil, .contact__container, .services__container,
 .project__container,
-.skills__container, .skills, .whyMe, .sidebar, .projects, .hero__top, .footer, .techIcon, .projectLinks__repo, .projectLinks__demo, .links, .contactForm__button {
+.skills__container, .skills, .whyMe, .projects, .navbar, .hero__top, .footer, .techIcon, .projectLinks__repo, .projectLinks__demo, .links, .contactForm__button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +24,7 @@
   display: flex;
 }
 
-.galleryContainer__navigate, .navbar, .footer__social, .toggleButton, .button, .tags li, .projectLinks, .heroImage__picture, .heroImage {
+.galleryContainer__navigate, .header, .footer__social, .toggleButton, .button, .tags li, .projectLinks, .heroImage__picture, .heroImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,6 +183,11 @@ a {
 main {
   width: 100%;
 }
+@media (min-width: 768px) {
+  main {
+    font-size: 18px;
+  }
+}
 
 /************************ Collapse  ************************/
 .collapse,
@@ -203,9 +208,22 @@ main {
   z-index: 2;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
   color: #f5f1e5;
   font-weight: 500;
+  font-size: 1.125rem;
+}
+@media (min-width: 768px) {
+  .collapse__title,
+  .projectCollapse__title {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 1025px) {
+  .collapse__title,
+  .projectCollapse__title {
+    font-size: 1.625rem;
+    cursor: unset;
+  }
 }
 .collapse__txt,
 .projectCollapse__txt {
@@ -225,6 +243,33 @@ main {
   gap: 10px;
 }
 
+.fa-solid.fa-chevron-up {
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-solid.fa-chevron-up.rotate {
+  transform: rotate(180deg);
+}
+
+/************************ Collapse desktop ************************/
+@media (min-width: 1025px) {
+  .collapse__txt {
+    max-height: none;
+    height: 450px;
+  }
+}
+@media (min-width: 1025px) {
+  .collapse__txt.show {
+    max-height: none;
+  }
+}
+@media (min-width: 1025px) {
+  .collapse .fa-solid.fa-chevron-up {
+    display: none;
+  }
+}
+
+/************************ ProjectCollapse  ************************/
 .projectCollapse {
   border-radius: 0 20px 20px 0;
   min-height: 52px;
@@ -235,6 +280,11 @@ main {
   font-weight: 600;
   min-height: 52px;
 }
+@media (min-width: 768px) {
+  .projectCollapse__title {
+    font-size: 1.25rem;
+  }
+}
 .projectCollapse__txt {
   border-top: 4px solid rgba(224, 203, 157, 0.9019607843);
   background: #82A57D;
@@ -243,8 +293,8 @@ main {
 /************************ contactForm  ************************/
 .contactForm {
   gap: 20px;
-  width: 80%;
-  width: 300px;
+  width: 75%;
+  max-width: 570px;
 }
 .contactForm__input {
   gap: 5px;
@@ -255,19 +305,19 @@ main {
 }
 .contactForm__input input {
   height: 36px;
-  font-size: 0.875em;
+  font-size: 1rem;
   border-radius: 5px;
   border: none;
   background: rgba(163, 198, 166, 0.7);
-  padding-left: 28px;
+  padding-left: 32px;
 }
 .contactForm__input textarea {
-  padding: 10px 10px 10px 28px;
+  padding: 8px 10px 10px 32px;
   border-radius: 5px;
   resize: none;
   overflow: auto;
   border: none;
-  font-size: 0.875em;
+  font-size: 1rem;
   background: rgba(163, 198, 166, 0.7);
 }
 .contactForm__icon {
@@ -295,6 +345,12 @@ main {
   color: #f5f1e5;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   font-weight: 500;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .dropDownGallery {
+    font-size: 16px;
+  }
 }
 .dropDownGallery:focus {
   outline: none;
@@ -303,6 +359,12 @@ main {
   color: #f5f1e5;
   font-weight: 500;
   background-color: #C5B185;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .dropDownGallery__item {
+    font-size: 16px;
+  }
 }
 .dropDownGallery__arrow {
   position: absolute;
@@ -341,39 +403,85 @@ main {
 .heroContent {
   padding: 0 12px;
 }
+@media (min-width: 768px) {
+  .heroContent {
+    width: 100%;
+    padding: 70px 0 0 0;
+  }
+}
+@media (min-width: 1025px) {
+  .heroContent {
+    padding: 0;
+  }
+}
 .heroContent__title {
   gap: 10px;
   padding-bottom: 20px;
   padding-left: 2%;
 }
-.heroContent__title h1 {
-  font-size: 13px;
+.heroContent__title-welcome {
+  font-size: 0.875rem;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   color: #82A57D;
   margin-bottom: 5px;
 }
-.heroContent__title h2 {
-  font-size: 18px;
+@media (min-width: 768px) {
+  .heroContent__title-welcome {
+    font-size: 0.938rem;
+  }
+}
+@media (min-width: 1025px) {
+  .heroContent__title-welcome {
+    font-size: 1rem;
+  }
+}
+.heroContent__title-name {
+  font-size: 1.125rem;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 4px;
   font-weight: 500;
   padding-left: 5%;
 }
-.heroContent__title h2 span {
+@media (min-width: 768px) {
+  .heroContent__title-name {
+    font-size: 1.313rem;
+  }
+}
+@media (min-width: 1025px) {
+  .heroContent__title-name {
+    font-size: 1.625rem;
+  }
+}
+.heroContent__title-name span {
   font-weight: 700;
   color: #82A57D;
 }
 .heroContent__title-job {
-  font-size: 25px;
+  font-size: 1.563rem;
   font-weight: 600;
   font-family: "teko", sans-serif;
   color: #82A57D;
 }
+@media (min-width: 768px) {
+  .heroContent__title-job {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 1025px) {
+  .heroContent__title-job {
+    font-size: 2.5rem;
+  }
+}
 .heroContent__description {
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.08;
+}
+@media (min-width: 768px) {
+  .heroContent__description {
+    font-size: 1.125rem;
+  }
 }
 
 /************************ heroImage  ************************/
@@ -404,8 +512,33 @@ main {
   height: 100%;
 }
 .links a {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
+  color: white;
+}
+@media (min-width: 1025px) {
+  .links {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .linksDesktop {
+    display: none;
+  }
+}
+@media (min-width: 1025px) {
+  .linksDesktop {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .linksDesktop a {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+  }
 }
 
 /************************ projectCard  ************************/
@@ -416,6 +549,11 @@ main {
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   position: relative;
+}
+@media (min-width: 768px) {
+  .projectCard {
+    min-width: unset;
+  }
 }
 .projectCard__blurLoad {
   background-size: cover;
@@ -448,11 +586,32 @@ main {
   position: absolute;
   bottom: 0;
 }
+@media (min-width: 768px) {
+  .projectCard__content {
+    min-width: unset;
+    padding: 20px 20px 20px 15px;
+  }
+}
+@media (min-width: 1025px) {
+  .projectCard__content {
+    padding: 25px 20px 25px 15px;
+  }
+}
 .projectCard__title {
-  font-size: 20px;
+  font-size: 1.125rem;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   color: #1e8571;
+}
+@media (min-width: 768px) {
+  .projectCard__title {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 1025px) {
+  .projectCard__title {
+    font-size: 1.625rem;
+  }
 }
 .projectCard__plusBtn {
   position: absolute;
@@ -461,6 +620,12 @@ main {
   width: 28px;
   height: 28px;
   color: white;
+}
+@media (min-width: 768px) {
+  .projectCard__plusBtn {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 /************************ ProjectLinks  ************************/
@@ -503,6 +668,13 @@ main {
   background: #82A57D;
   color: #f5f1e5;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  font-size: 10px;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .tags li {
+    font-size: 14px;
+  }
 }
 
 /************************ submitButton  ************************/
@@ -514,7 +686,7 @@ main {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
   color: white;
@@ -529,14 +701,25 @@ main {
   justify-items: center;
   gap: 20px;
   border-radius: 15px;
-  padding: 20px 5%;
+  padding: 20px 8%;
   background-color: rgba(245, 241, 229, 0.9);
+}
+@media (min-width: 768px) {
+  .techIconGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1025px) {
+  .techIconGrid {
+    grid-template-columns: repeat(7, 1fr);
+  }
 }
 
 .techIcon {
   gap: 5px;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   padding: 5px;
   border-radius: 15px;
   background-color: rgba(224, 203, 157, 0.9);
@@ -570,6 +753,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .footer {
@@ -590,21 +774,8 @@ main {
   text-align: center;
 }
 
-/************************ Hero ************************/
-.hero {
-  gap: 25px;
-}
-.hero__top {
-  gap: 25px;
-}
-.hero__buttons {
-  gap: 20px;
-  padding-left: 5%;
-  margin-bottom: 25px;
-}
-
 /************************ navbar  ************************/
-.navbar {
+.header {
   justify-content: space-between;
   width: 100%;
   height: 48px;
@@ -615,11 +786,107 @@ main {
   top: 0;
   z-index: 10000;
 }
+@media (min-width: 1025px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1025px) {
+  .header__wrapper {
+    display: none;
+  }
+}
+
+/************************ Hero ************************/
+.hero {
+  gap: 25px;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 0 5%;
+    gap: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  .hero {
+    padding-top: 50px;
+    max-width: 1300px;
+  }
+}
+.hero__top {
+  gap: 25px;
+}
+@media (min-width: 768px) {
+  .hero__top {
+    flex-direction: row-reverse;
+    align-items: unset;
+    justify-content: unset;
+    width: 100%;
+  }
+}
+.hero__buttons {
+  gap: 20px;
+  padding-left: 5%;
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  .hero__buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    padding-left: unset;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  .hero__buttons {
+    justify-content: unset;
+  }
+}
+
+/************************ Navbar  ************************/
+.navbar__background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  background: #82A57D;
+  background: rgba(130, 165, 125, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+@media (min-width: 1025px) {
+  .navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbarDesktop {
+    display: none;
+  }
+}
+@media (min-width: 1025px) {
+  .navbarDesktop {
+    display: flex;
+  }
+}
 
 /************************ projects  ************************/
 .projects {
   gap: 20px;
   padding: 0 17px;
+}
+@media (min-width: 768px) {
+  .projects {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 6%;
+    grid-row-gap: 50px;
+  }
 }
 
 /************************ Services  ************************/
@@ -628,6 +895,12 @@ main {
   padding: 0 10px;
   padding-bottom: 50px;
   line-height: 1.3;
+}
+@media (min-width: 1025px) {
+  .servicesContainer {
+    padding: 0 0 60px 0;
+    flex-direction: row;
+  }
 }
 
 .servicesCards {
@@ -647,28 +920,16 @@ main {
   color: rgba(224, 203, 157, 0.9019607843);
 }
 
-/************************ sidebar  ************************/
-.sidebar {
-  color: white;
-}
-.sidebar__background {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 200px;
-  background: #82A57D;
-  background: rgba(130, 165, 125, 0.8);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
 .whyMe {
   gap: 24px;
   padding: 0 10px;
 }
+@media (min-width: 768px) {
+  .whyMe {
+    padding: unset;
+  }
+}
 .whyMe__title {
-  font-family: "Montserrat", sans-serif;
   text-align: center;
   line-height: 1.2;
 }
@@ -688,6 +949,19 @@ main {
   scroll-snap-type: x mandatory;
   border-radius: 14px;
 }
+@media (min-width: 768px) {
+  .whyMe__wrapper {
+    width: 100%;
+    max-width: 940px;
+    height: 100%;
+    overflow-x: unset;
+    scroll-snap-type: unset;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 9.25%;
+    grid-row-gap: 50px;
+  }
+}
 .whyMe__card {
   gap: 40px;
   position: relative;
@@ -701,6 +975,11 @@ main {
   scroll-snap-align: center;
   border: 3px solid #82A57D;
 }
+@media (min-width: 768px) {
+  .whyMe__card {
+    width: 100%;
+  }
+}
 .whyMe__card-icon {
   position: absolute;
   top: 0;
@@ -713,10 +992,20 @@ main {
 }
 .whyMe__card-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.375rem;
   font-weight: 800;
   min-height: 41px;
   color: #ebdeb5;
+}
+@media (min-width: 768px) {
+  .whyMe__card-title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  .whyMe__card-title {
+    font-size: 1.625rem;
+  }
 }
 .whyMe__card-text {
   color: #f5f1e5;
@@ -751,6 +1040,11 @@ main {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .whyMe__chevron {
+    display: none;
+  }
+}
 
 /************************ home  ************************/
 section {
@@ -763,9 +1057,19 @@ section {
 .sectionTitle {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3rem;
   font-weight: 800;
   margin-top: 15px;
+  font-size: 1.375rem;
+}
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  .sectionTitle {
+    font-size: 1.875rem;
+  }
 }
 .sectionTitle::after {
   content: "";
@@ -789,7 +1093,6 @@ section {
 
 .sectionSubTitle {
   text-align: center;
-  font-size: 14px;
 }
 .sectionSubTitle span {
   color: #82A57D;
@@ -815,6 +1118,12 @@ section {
 
 .contact__container {
   gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .services__container {
+    padding: 0 5%;
+  }
 }
 
 .acceuil {
@@ -937,6 +1246,7 @@ section {
   background-size: cover;
   background-position: center;
   border-radius: 0 0 55px 55px;
+  opacity: 0.8;
 }
 .viewProjectBanner__img {
   -o-object-fit: cover;
@@ -950,12 +1260,17 @@ section {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
+@media (min-width: 768px) {
+  .viewProjectBanner__img {
+    height: 300px;
+  }
+}
 .viewProjectBanner__img.loaded {
-  opacity: 0.8;
+  opacity: 1;
 }
 .viewProjectBanner__logo {
-  width: 80%;
-  height: 90px;
+  width: 60%;
+  height: 70px;
   padding: 10px 5%;
   position: absolute;
   top: 50%;
@@ -963,13 +1278,19 @@ section {
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 5px;
+  border: 5px solid #C5B185;
+}
+@media (min-width: 768px) {
+  .viewProjectBanner__logo {
+    width: 60%;
+    height: 100px;
+  }
 }
 .viewProjectBanner__logo img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
 .viewProjectBanner__closeIcon {
   position: absolute;
@@ -981,6 +1302,12 @@ section {
   color: #f5f1e5;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .viewProjectBanner__closeIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 /* ------------------ contenu ------------------ */
 .viewProject {
@@ -990,18 +1317,64 @@ section {
   /*****************A FACTORISER ******************/
   /************************************************/
 }
-.viewProject__title {
-  font-size: 2.5rem;
-  font-weight: 800;
+@media (min-width: 768px) {
+  .viewProject {
+    padding: 45px 12% 125px 12%;
+  }
+}
+@media (min-width: 1025px) {
+  .viewProject {
+    padding: 45px 5% 125px 5%;
+  }
+}
+.viewProject__tags {
+  border-radius: 15px;
+  padding: 20px 5%;
+  background-color: rgba(245, 241, 229, 0.9);
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+@media (min-width: 768px) {
+  .viewProject__tags {
+    margin: auto;
+    width: 95%;
+    max-width: 640px;
+  }
+}
+@media (min-width: 1025px) {
+  .viewProject__tags {
+    margin: unset;
+  }
 }
 .viewProject__description {
   gap: 35px;
 }
+@media (min-width: 768px) {
+  .viewProject__description {
+    max-width: 640px;
+  }
+}
+@media (min-width: 1025px) {
+  .viewProject__description {
+    max-width: 1050px;
+  }
+}
+.viewProject__description-contentAndTagsContainer {
+  gap: 35px;
+}
+@media (min-width: 1025px) {
+  .viewProject__description-contentAndTagsContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 65px;
+    align-items: start;
+  }
+}
 .viewProject__description-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
   font-weight: 800;
   color: #82A57D;
+  font-size: 1.375rem;
 }
 .viewProject__description-title::after {
   content: "";
@@ -1011,6 +1384,16 @@ section {
   margin: 5px auto 0;
   background-color: #82A57D;
 }
+@media (min-width: 768px) {
+  .viewProject__description-title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  .viewProject__description-title {
+    font-size: 1.875rem;
+  }
+}
 .viewProject__description-content {
   gap: 10px;
   line-height: 1.2;
@@ -1018,11 +1401,21 @@ section {
 .viewProject__challenges {
   gap: 35px;
 }
+@media (min-width: 768px) {
+  .viewProject__challenges {
+    max-width: 640px;
+  }
+}
+@media (min-width: 1025px) {
+  .viewProject__challenges {
+    max-width: 1050px;
+  }
+}
 .viewProject__challenges-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
   font-weight: 800;
   color: #82A57D;
+  font-size: 1.375rem;
 }
 .viewProject__challenges-title::after {
   content: "";
@@ -1032,12 +1425,21 @@ section {
   margin: 5px auto 0;
   background-color: #82A57D;
 }
+@media (min-width: 768px) {
+  .viewProject__challenges-title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  .viewProject__challenges-title {
+    font-size: 1.875rem;
+  }
+}
 .viewProject__challenges-content {
   gap: 20px;
   color: #f5f1e5;
   line-height: 1.2;
 }
-
 /* ------------------ Galerie ------------------ */
 .viewProjectGallery {
   gap: 50px;
@@ -1045,11 +1447,30 @@ section {
   padding: 23px 10px 50px 10px;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .viewProjectGallery {
+    padding: 23px 5% 50px 5%;
+  }
+}
+@media (min-width: 1025px) {
+  .viewProjectGallery {
+    padding: 23px 3% 50px 3%;
+  }
+}
+.viewProjectGallery__allGaleriesContainer {
+  gap: 50px;
+}
+@media (min-width: 1025px) {
+  .viewProjectGallery__allGaleriesContainer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
 .viewProjectGallery__title {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
   font-weight: 800;
   color: #f5f1e5;
+  font-size: 1.375rem;
 }
 .viewProjectGallery__title::after {
   content: "";
@@ -1058,6 +1479,16 @@ section {
   height: 3px;
   margin: 5px auto 0;
   background-color: #f5f1e5;
+}
+@media (min-width: 768px) {
+  .viewProjectGallery__title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  .viewProjectGallery__title {
+    font-size: 1.875rem;
+  }
 }
 
 .galleryContainer {
@@ -1075,6 +1506,12 @@ section {
   background-color: #C5B185;
   color: #f5f1e5;
 }
+@media (min-width: 768px) {
+  .galleryContainer__navigate button {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 .desktopGallery,
 .mobileGallery {
@@ -1084,6 +1521,12 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .desktopGallery,
+  .mobileGallery {
+    width: 90%;
+  }
 }
 .desktopGallery__frame,
 .mobileGallery__frame {
@@ -1118,6 +1561,17 @@ section {
      object-position: center;
 }
 
+@media (min-width: 1025px) {
+  .desktopGallery {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobileGallery {
+    width: 70%;
+  }
+}
 .mobileGallery__frame {
   width: 72%;
   pointer-events: none;

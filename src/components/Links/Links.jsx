@@ -32,24 +32,49 @@ function Links() {
     const items = ["Acceuil", "Projets", "Services", "Compétences", "Contact"];
 
     return (
-        <motion.div className="links" variants={linksVariants}>
-            {items.map((item) => (
-                // <motion.a href={`#${item}`} key={item} variants={itemVariants}>
-                //     {item}
-                // </motion.a>
-                <motion.div key={item} variants={itemVariants}>
-                    <ScrollLink
-                        to={item}
-                        smooth={true}
-                        duration={500}
-                        // Ajustez cette valeur pour compenser la hauteur de la navbar
-                        // offset={-70}
+        <>
+            <motion.div className="links" variants={linksVariants}>
+                {items.map((item) => (
+                    // <motion.a href={`#${item}`} key={item} variants={itemVariants}>
+                    //     {item}
+                    // </motion.a>
+                    <motion.div
+                        key={item}
+                        variants={itemVariants}
+                        className="links__item"
                     >
-                        {item}
-                    </ScrollLink>
-                </motion.div>
-            ))}
-        </motion.div>
+                        <ScrollLink
+                            to={item}
+                            smooth={true}
+                            duration={500}
+                            // Ajustez cette valeur pour compenser la hauteur de la navbar
+                            // offset={-70}
+                        >
+                            {item}
+                        </ScrollLink>
+                    </motion.div>
+                ))}
+            </motion.div>
+
+            <div className="linksDesktop">
+                {items.map((item) => (
+                    // <motion.a href={`#${item}`} key={item} variants={itemVariants}>
+                    //     {item}
+                    // </motion.a>
+                    <div key={item}>
+                        <ScrollLink
+                            to={item}
+                            smooth={true}
+                            duration={500}
+                            // Ajustez cette valeur pour compenser la hauteur de la navbar
+                            // offset={-70}
+                        >
+                            {item}
+                        </ScrollLink>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 }
 

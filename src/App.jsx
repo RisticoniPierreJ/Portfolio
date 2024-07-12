@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./views/Home/Home.jsx";
 import "../src/utils/fontAwesomeConfig.js";
-import Navbar from "./containers/Navbar/Navbar.jsx";
+import Header from "./containers/Header/Header.jsx";
 import ViewProject from "./views/ViewProject/ViewProject.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import Footer from "./containers/Footer/Footer.jsx";
@@ -12,7 +12,8 @@ function App() {
         <Router basename="/Portfolio">
             <ScrollToTop />
 
-            <Navbar />
+            {/* <Navbar /> */}
+            <Header />
 
             <Routes>
                 <Route path="/" element={<Home />} />

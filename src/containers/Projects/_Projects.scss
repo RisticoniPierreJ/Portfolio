@@ -3,4 +3,12 @@
     @extend %flex-columnCentered;
     gap: 20px;
     padding: 0 17px;
+
+    @media (min-width: 768px) {
+        padding: 0 5%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 6%;
+        grid-row-gap: 50px;
+    }
 }

@@ -113,19 +113,34 @@ function ViewProject() {
                 {/* <h2 className="viewProject__title">
                         Le projet
                     </h2> */}
+
                 <div className="viewProject__description">
                     <h2 className="viewProject__description-title">
                         Description
                     </h2>
-                    <div className="viewProject__description-content">
-                        {/* {project.description} */}
-                        {splitTextToParagraphs(project.description)}
+                    <div className="viewProject__description-contentAndTagsContainer">
+                        <div className="viewProject__description-content">
+                            {/* {project.description} */}
+                            {splitTextToParagraphs(project.description)}
+                        </div>
+                        <div className="viewProject__tags">
+                            <ProjectTags tags={project.tags} />
+                        </div>
                     </div>
                 </div>
 
-                <div className="viewProject__tags">
-                    <ProjectTags tags={project.tags} />
-                </div>
+                {/* <div className="viewProject__description">
+                        <h2 className="viewProject__description-title">
+                            Description
+                        </h2>
+                        <div className="viewProject__description-content">
+                            {splitTextToParagraphs(project.description)}
+                        </div>
+                    </div>
+
+                    <div className="viewProject__tags">
+                        <ProjectTags tags={project.tags} />
+                    </div> */}
 
                 <div className="viewProject__challenges">
                     <h2 className="viewProject__challenges-title">
@@ -179,34 +194,35 @@ function ViewProject() {
                 {/*******************/}
                 {/* Galerie Desktop */}
                 {/*******************/}
-                <div className="galleryContainer">
-                    {mutlipleDesktopImg && (
-                        <div className="galleryContainer__navigate">
-                            <button onClick={handlePrevDesktop}>
-                                <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
-                            </button>
-                            <DropDownGallery
-                                pages={project.desktop}
-                                onSelect={(index) =>
-                                    setSelectedDesktopImg(index)
-                                }
-                                selectedIndex={selecteDesktopImg}
-                            />
-                            <button onClick={handleNextDesktop}>
-                                <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
-                            </button>
-                        </div>
-                    )}
+                <div className="viewProjectGallery__allGaleriesContainer">
+                    <div className="galleryContainer">
+                        {mutlipleDesktopImg && (
+                            <div className="galleryContainer__navigate">
+                                <button onClick={handlePrevDesktop}>
+                                    <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
+                                </button>
+                                <DropDownGallery
+                                    pages={project.desktop}
+                                    onSelect={(index) =>
+                                        setSelectedDesktopImg(index)
+                                    }
+                                    selectedIndex={selecteDesktopImg}
+                                />
+                                <button onClick={handleNextDesktop}>
+                                    <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
+                                </button>
+                            </div>
+                        )}
 
-                    <div className="desktopGallery">
-                        <img
-                            src={desktopImg}
-                            alt="écran de bureau du site web"
-                            className="desktopGallery__frame"
-                            loading="lazy"
-                        />
-                        <div className="desktopGallery__scrollContainer desktopGallery__scrollContainer-scrollInner">
-                            {/* <div
+                        <div className="desktopGallery">
+                            <img
+                                src={desktopImg}
+                                alt="écran de bureau du site web"
+                                className="desktopGallery__frame"
+                                loading="lazy"
+                            />
+                            <div className="desktopGallery__scrollContainer desktopGallery__scrollContainer-scrollInner">
+                                {/* <div
                             className="desktopGallery__scrollContainer-blurLoad"
                             style={{
                               backgroundImage: `url(${project.coverSmall})`,
@@ -224,62 +240,64 @@ function ViewProject() {
                             loading="lazy"
                         />
                         </div> */}
-                            <img
-                                src={
-                                    project.desktop[selecteDesktopImg].images[0]
-                                }
-                                alt="aperçu du site web sur desktop"
-                                className="desktopGallery__scrollContainer-image"
-                                loading="lazy"
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                {/******************/}
-                {/* Galerie Mobile */}
-                {/******************/}
-                <div className="galleryContainer">
-                    {mutlipleMobileImg && (
-                        <div className="galleryContainer__navigate">
-                            <button onClick={handlePrevMobile}>
-                                <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
-                            </button>
-                            <DropDownGallery
-                                pages={project.mobile}
-                                onSelect={(index) =>
-                                    setSelectedMobileImg(index)
-                                }
-                                selectedIndex={selecteMobileImg}
-                            />
-                            <button onClick={handleNextMobile}>
-                                <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
-                            </button>
-                        </div>
-                    )}
-
-                    {project.mobile[0].title !== "" && (
-                        <div className="mobileGallery">
-                            <img
-                                src={mobileImg}
-                                alt="écran de mobile du site web"
-                                className="mobileGallery__frame"
-                                loading="lazy"
-                            />
-                            <div className="mobileGallery__scrollContainer mobileGallery__scrollContainer-scrollInner">
                                 <img
-                                    // src={project.mobile[0].images}
                                     src={
-                                        project.mobile[selecteMobileImg]
+                                        project.desktop[selecteDesktopImg]
                                             .images[0]
                                     }
-                                    alt="aperçu du site web sur mobile"
-                                    className="mobileGallery__scrollContainer-image"
+                                    alt="aperçu du site web sur desktop"
+                                    className="desktopGallery__scrollContainer-image"
                                     loading="lazy"
                                 />
                             </div>
                         </div>
-                    )}
+                    </div>
+
+                    {/******************/}
+                    {/* Galerie Mobile */}
+                    {/******************/}
+                    <div className="galleryContainer">
+                        {mutlipleMobileImg && (
+                            <div className="galleryContainer__navigate">
+                                <button onClick={handlePrevMobile}>
+                                    <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
+                                </button>
+                                <DropDownGallery
+                                    pages={project.mobile}
+                                    onSelect={(index) =>
+                                        setSelectedMobileImg(index)
+                                    }
+                                    selectedIndex={selecteMobileImg}
+                                />
+                                <button onClick={handleNextMobile}>
+                                    <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
+                                </button>
+                            </div>
+                        )}
+
+                        {project.mobile[0].title !== "" && (
+                            <div className="mobileGallery">
+                                <img
+                                    src={mobileImg}
+                                    alt="écran de mobile du site web"
+                                    className="mobileGallery__frame"
+                                    loading="lazy"
+                                />
+                                <div className="mobileGallery__scrollContainer mobileGallery__scrollContainer-scrollInner">
+                                    <img
+                                        // src={project.mobile[0].images}
+                                        src={
+                                            project.mobile[selecteMobileImg]
+                                                .images[0]
+                                        }
+                                        alt="aperçu du site web sur mobile"
+                                        className="mobileGallery__scrollContainer-image"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </section>
 

@@ -3,9 +3,26 @@
     @extend %flex-column;
     gap: 25px;
 
+    @media (min-width: 768px) {
+        padding: 0 5%;
+        gap: 50px;
+    }
+
+    @media (min-width: 1025px) {
+        padding-top: 50px;
+        max-width: 1300px;
+    }
+
     &__top {
         @extend %flex-columnCentered;
         gap: 25px;
+
+        @media (min-width: 768px) {
+            flex-direction: row-reverse;
+            align-items: unset;
+            justify-content: unset;
+            width: 100%;
+        }
     }
 
     &__buttons {
@@ -13,5 +30,17 @@
         gap: 20px;
         padding-left: 5%;
         margin-bottom: 25px;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+            padding-left: unset;
+            margin-bottom: 50px;
+        }
+
+        @media (min-width: 1025px) {
+            justify-content: unset;
+        }
     }
 }

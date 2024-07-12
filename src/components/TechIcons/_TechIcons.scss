@@ -5,8 +5,18 @@
     justify-items: center;
     gap: 20px;
     border-radius: 15px;
-    padding: 20px 5%;
+    padding: 20px 8%;
     background-color: rgba($secondary-light, 0.9);
+
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: 1025px) {
+        grid-template-columns: repeat(7, 1fr);
+
+    }
 
 }
 
@@ -17,8 +27,8 @@
 
     @extend %flex-columnCentered;
     gap: 5px;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     padding: 5px;
     border-radius: 15px;
     background-color: rgba($secondary-medium, 0.9);

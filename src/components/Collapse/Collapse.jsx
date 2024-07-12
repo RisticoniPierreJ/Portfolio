@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function Collapse({children, title, customClass = ""}) {
+function Collapse({ children, title, customClass = "" }) {
     const [isContentShown, setIsContentShown] = useState(false);
 
     const showContent = () => {
@@ -12,16 +12,21 @@ function Collapse({children, title, customClass = ""}) {
     return (
         <article className={`${customClass}`}>
             <div className={`${customClass}__title`} onClick={showContent}>
-                <h1>{title}</h1>
+                <h3>{title}</h3>
                 <FontAwesomeIcon
                     icon="fa-solid fa-chevron-up"
-                    className={isContentShown ? "rotate" : "chevronUp"}
+                    // className={isContentShown ? "rotate" : ""}
+                    className={`fa-solid fa-chevron-up ${
+                        isContentShown ? "rotate" : ""
+                    }`}
                 />
             </div>
-            <div className={`${customClass}__txt ${isContentShown ? "show" : ""}`}>
-                <div className={`${customClass}__txt-inner`}>
-                    {children}
-                </div>
+            <div
+                className={`${customClass}__txt ${
+                    isContentShown ? "show" : ""
+                }`}
+            >
+                <div className={`${customClass}__txt-inner`}>{children}</div>
             </div>
         </article>
     );

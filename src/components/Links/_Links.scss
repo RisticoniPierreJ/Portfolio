@@ -6,7 +6,33 @@
     height: 100%;
 
     a {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-family: $font-family-title;
+        color: white;
     }
+
+    @media (min-width: 1025px) {
+        display: none;
+    }
+}
+
+.linksDesktop {
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+    @media (min-width: 1025px) {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            font-size: 1.25rem;
+            font-weight: 500;
+            font-family: $font-family-title;
+        }
+    }
+
 }

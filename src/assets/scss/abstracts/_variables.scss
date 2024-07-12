@@ -13,18 +13,40 @@ $secondary: #C5B185;
 
 
 
-//************ fonts ************//
+//************ fonts families ************//
 $font-family-title: 'Montserrat', sans-serif;
 $font-family-subTitle: 'teko', sans-serif;
 $font-family-text: 'roboto', sans-serif;
-// $font-color-mainTheme: #ff6060;
-// $font-color-light: #FFF;
-// $font-color-dark: #000;
 
 
-$fontSize-title: 1.3rem;
-$fontSize-title-S: 1rem;
-$fontSize-title-XL: 1.4rem;
-// $font-size-small: 0.75rem;
-// $font-size-main: 1.125rem;
-// $font-size-large: 1.5rem;
+//************ fonts sizes ************//
+//****** Mobile ******//
+$mobile-text-S: 0.875rem; //14px
+$mobile-text-M: 1.3rem;
+$mobile-text-L: 1.4rem;
+
+$mobile-title-S: 1rem; //16px
+$mobile-title-M: 1.3rem; //20.8px
+$mobile-title-L: 1.4rem; //22.4px
+
+//****** Tablet ******//
+$tablet-text-S: 0.875rem; //14px
+$tablet-text-M: 1rem; //16px
+$tablet-text-L: 1.125rem; //18px
+
+$tablet-title-S: 1.25rem; //20px
+$tablet-title-M: 1.5rem; //24px
+$tablet-title-L: 1.625rem; //26px
+
+//****** Desktop ******//
+$desktop-text-S: 0.875rem; //14px
+$desktop-text-M: 1rem; //16px
+$desktop-text-L: 1.125rem; //18px
+
+$desktop-title-S: 1.5rem; //24px
+$desktop-title-M: 1.625rem; //26px
+$desktop-title-L: 1.875rem; //30px 
+
+
+
+

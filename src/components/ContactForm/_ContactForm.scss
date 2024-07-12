@@ -2,8 +2,10 @@
 .contactForm {
     @extend %flex-column;
     gap: 20px;
-    width: 80%;
-    width: 300px;
+    // width: 80%;
+    // width: 300px;
+    width: 75%;
+    max-width: 570px;
 
     &__input {
         @extend %flex-column;
@@ -17,33 +19,29 @@
 
         & input {
             height: 36px;
-            font-size: 0.875em;
+            font-size: 1rem;
             border-radius: 5px;
             // border: 1px solid rgb(0, 0, 0, 0.6);
             border: none;
             background: rgba($primary-medium, 0.7);
-            padding-left: 28px;
-
-
+            padding-left: 32px;
         }
 
         & textarea {
-            padding: 10px 10px 10px 28px;
+            padding: 8px 10px 10px 32px;
             // padding: 10px;
             border-radius: 5px;
             resize: none;
             overflow: auto;
             // border: 1px solid rgb(0, 0, 0, 0.6);
             border: none;
-            font-size: 0.875em;
+            font-size: 1rem;
             background: rgba($primary-medium, 0.7);
 
             // &::placeholder{
             //     padding-left: 18px;
             // }
         }
-
-
     }
 
     &__icon {
@@ -56,6 +54,5 @@
     &__button {
         @extend %flex-columnCentered;
         margin-top: 20px;
-        // gap: 20px;
     }
 }
