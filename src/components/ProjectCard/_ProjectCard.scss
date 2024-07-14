@@ -1,22 +1,20 @@
 /************************ projectCard  ************************/
 .projectCard {
-    width: 100%;
-    min-width: 341px;
-    min-height: 255px;
+    @extend %flex-row;
+    position: relative;
+    width: 341px;
     border-radius: 15px;
+
     // #28
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    position: relative;
-    @extend %flex-row;
 
     @media (min-width: 768px) {
-        min-width: unset;
+        width: unset;
     }
 
-    &__blurLoad {
-        background-size: cover;
-        background-position: center;
-        border-radius: 15px;
+    @media (min-width: 1025px) {
+        max-width: 550px;
+
     }
 
     &__image {
@@ -24,20 +22,11 @@
         height: 100%;
         border-radius: 15px;
         object-fit: cover;
-        // aspect-ratio: 1/1;
-        display: block;
-        object-position: center;
-        transition: opacity 0.3s ease-in-out;
-        opacity: 0;
-    }
-
-    &__image.loaded {
-        opacity: 1;
     }
 
     &__content {
         width: 100%;
-        min-width: 341px;
+        // min-width: 341px;
         padding: 15px 20px 15px 15px;
         border-radius: 0 0 15px 15px;
         background-color: rgba($secondary-light, 0.7);
@@ -47,6 +36,8 @@
 
         position: absolute;
         bottom: 0;
+
+        // display: none;
 
         @media (min-width: 768px) {
             min-width: unset;

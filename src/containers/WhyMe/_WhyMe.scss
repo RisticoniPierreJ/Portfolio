@@ -13,6 +13,11 @@
         // font-family: $font-family-title;
         text-align: center;
         line-height: 1.2;
+        max-width: 550px;
+
+        @media (min-width: 768px) {
+            max-width: 600px;
+        }
 
         & span {
             color: $primary-dark;
@@ -87,7 +92,7 @@
             @media (min-width: 768px) {
                 font-size: 1.5rem;
             }
-    
+
             @media (min-width: 1025px) {
                 font-size: 1.625rem;
             }

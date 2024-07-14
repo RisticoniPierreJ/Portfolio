@@ -7,9 +7,10 @@ import Services from "../../containers/Services/Services";
 import WhyMe from "../../containers/WhyMe/WhyMe";
 
 function Home() {
+
     return (
         <>
-            <main id="Acceuil">
+            <main id="Acceuil" className="homeMainContainer">
                 <section className="acceuil">
                     <Hero />
                     {/* SEPARATEUR HAUT DE SECTION ISSU DU SITE */}

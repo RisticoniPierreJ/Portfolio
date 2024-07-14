@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import techIconsData from "../../data/techIconsData";
-import { getImageUrl } from "../../utils/imageUtils";
+import { getIconUrl } from "../../utils/imageUtils";
 
 function TechIcons() {
     return (
@@ -9,19 +9,20 @@ function TechIcons() {
                 <article className="techIcon" key={index}>
                     <img
                         className="techIcon__image"
-                        src={getImageUrl(icon.fileName)}
+                        src={getIconUrl(icon.fileName)}
                         alt={`Icone de technologie ${icon.title}`}
                         loading="lazy"
                     />
                     <h3 className="techIcon__title">{icon.title}</h3>
                 </article>
             ))}
+
+            {/* Icone points de suspension toujours présent en dernier */}
             <article className="techIcon">
                 <FontAwesomeIcon
                     icon="fa-solid fa-ellipsis"
                     className="techIcon__image"
                 />
-                <h3 className="techIcon__title">{}</h3>
             </article>
         </div>
     );

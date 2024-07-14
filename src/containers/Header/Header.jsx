@@ -17,15 +17,8 @@ function Header() {
                     >
                         Ghost.Dev
                     </ScrollLink>
-                    <Navbar />
 
-                    {/* <ul>
-                    <li>Acceuil</li>
-                    <li>Projets</li>
-                    <li>Pour quoi </li>
-                    <li>Compétences</li>
-                    <li>Contact</li>
-                </ul> */}
+                    <Navbar />
                 </nav>
             )}
         </header>

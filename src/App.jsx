@@ -6,13 +6,13 @@ import ViewProject from "./views/ViewProject/ViewProject.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import Footer from "./containers/Footer/Footer.jsx";
 import NotFound from "./views/NotFound/NotFound.jsx";
+import ScrollToTopIcon from "./components/ScrollToTopIcon/ScrollToTopIcon.jsx";
 
 function App() {
     return (
         <Router basename="/Portfolio">
             <ScrollToTop />
 
-            {/* <Navbar /> */}
             <Header />
 
             <Routes>
@@ -21,7 +21,8 @@ function App() {
                 <Route path="/404" element={<NotFound />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-
+            
+            <ScrollToTopIcon />
             <Footer />
         </Router>
     );

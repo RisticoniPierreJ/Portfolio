@@ -1,10 +1,13 @@
 [
     {
-        "id": "c67ab8a7",
+        "id": "1",
         "title": "Oh my food",
-        "cover": "https://thumbs2.imgbox.com/f5/43/6tFJtMDA_t.png",
-        "coverSmall": "https://images2.imgbox.com/37/67/fF7ek3lG_o.png",
-        "logo": "https://images2.imgbox.com/9e/e9/kJcaJQKS_o.png",
+        "cover": {
+            "mobile": "ohMyFood_300x225.webp",
+            "tablet": "ohMyFood_800x600.webp",
+            "desktop": "ohMyFood_1240x930.webp"
+        },
+        "logo": "ohmyfood.png",
         "description": "L'objectif de cette mission était de développer l'interface mobile-first du site Ohmyfood, une start-up spécialisée dans la restauration. Le site répertorie les menus de restaurants gastronomiques, permettant aux clients de composer leur repas à l'avance pour minimiser les temps d'attente.",
         "challenges": [
             {
@@ -27,21 +30,21 @@
         "desktop": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/be/ce/HLDrZSW1_o.jpg"]
+                "images": ["OhMyFood_desktop_acceuil.webp"]
             },
             {
                 "title": "Restaurant",
-                "images": ["https://images2.imgbox.com/21/e6/JXZBfyJA_o.jpg"]
+                "images": ["OhMyFood_desktop_pageResto.webp"]
             }
         ],
         "mobile": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/28/ff/ReRpxMMM_o.jpg"]
+                "images": ["OhMyFood_phone_acceuil.webp"]
             },
             {
                 "title": "Restaurant",
-                "images": ["https://images2.imgbox.com/fc/8d/YPGBJtCT_o.jpg"]
+                "images": ["OhMyFood_phone_pageResto.webp"]
             }
         ],
         "tags": ["Html", "Css", "Sass", "Git", "GitHub"],
@@ -49,11 +52,14 @@
         "demo": "https://risticonipierrej.github.io/OhMyFood/"
     },
     {
-        "id": "b9123946",
+        "id": "2",
         "title": "Kaza",
-        "cover": "https://thumbs2.imgbox.com/2f/f4/4kw8HdWV_t.png",
-        "coverSmall": "https://images2.imgbox.com/f0/55/0ADomfhz_o.png",
-        "logo": "https://images2.imgbox.com/7f/a8/Lq6ZF9Bb_o.png",
+        "cover": {
+            "mobile": "kaza_300x225.webp",
+            "tablet": "kaza_800x600.webp",
+            "desktop": "kaza_1240x930.webp"
+        },
+        "logo": "Kaza.png",
         "description": "L'objectif de cette mission était de développer l'interface front-end du site Kasa, une entreprise de location d'appartements entre particuliers. J'ai utilisé React et React Router pour offrir une expérience utilisateur moderne et dynamique. La refonte du site devait inclure une transition vers une stack JavaScript complète et un design responsive basé sur des maquettes Figma.",
         "challenges": [
             {
@@ -76,29 +82,29 @@
         "desktop": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/d8/87/wQQl5mqf_o.jpg"]
+                "images": ["Kaza_desktop_acceuil.webp"]
             },
             {
                 "title": "Logement",
-                "images": ["https://images2.imgbox.com/29/e4/GNUEGuim_o.jpg"]
+                "images": ["Kaza_desktop_house.webp"]
             },
             {
                 "title": "Á propos",
-                "images": ["https://images2.imgbox.com/3f/5a/ZFTGlAb0_o.jpg"]
+                "images": ["Kaza_desktop_aPropos.webp"]
             }
         ],
         "mobile": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/3d/40/rDh2XyLy_o.jpg"]
+                "images": ["Kaza_phone_acceuil.webp"]
             },
             {
                 "title": "Logement",
-                "images": ["https://images2.imgbox.com/f1/a8/1FpgbONe_o.jpg"]
+                "images": ["Kaza_phone_house.webp"]
             },
             {
                 "title": "Á propos",
-                "images": ["https://images2.imgbox.com/a9/4d/cmKTfIAu_o.jpg"]
+                "images": ["Kaza_phone_aPropos.webp"]
             }
         ],
         "tags": ["Html", "Css", "Sass", "Javascript", "React", "React Router"],
@@ -106,11 +112,14 @@
         "demo": "https://risticonipierrej.github.io/Kasa/"
     },
     {
-        "id": "46d188c5",
+        "id": "3",
         "title": "Domaine Victoria",
-        "cover": "https://thumbs2.imgbox.com/86/30/cgeSEpXl_t.png",
-        "coverSmall": "https://images2.imgbox.com/2e/17/C0LNdOE7_o.png",
-        "logo": "https://images2.imgbox.com/be/2a/P4bl88yT_o.png",
+        "cover": {
+            "mobile": "domaineVictoria_300x225.webp",
+            "tablet": "domaineVictoria_800x600.webp",
+            "desktop": "domaineVictoria_1240x930.webp"
+        },
+        "logo": "DomaineVictoria.png",
         "description": "L'objectif de ce projet professionnel était de créer un site web pour la location de villas de luxe en Corse, spécifiquement en Balagne. Le site devait être entièrement fonctionnel,responsive, esthétiquement plaisant, et optimisé pour le SEO afin d'attirer et de convertir les visiteurs en clients potentiels.",
         "challenges": [
             {
@@ -141,37 +150,37 @@
         "desktop": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/7a/77/DVZmH4o5_o.jpg"]
+                "images": ["DV_desktop_acceuil.webp"]
             },
             {
                 "title": "villas",
-                "images": ["https://images2.imgbox.com/a1/ba/ylYlTmMJ_o.jpg"]
+                "images": ["DV_desktop_villas.webp"]
             },
             {
                 "title": "Tarifs",
-                "images": ["https://images2.imgbox.com/0f/e8/zy4shb7c_o.jpg"]
+                "images": ["DV_desktop_tarifs.webp"]
             },
             {
                 "title": "Contact",
-                "images": ["https://images2.imgbox.com/79/d7/5vQEFGUs_o.jpg"]
+                "images": ["DV_desktop_contact.webp"]
             }
         ],
         "mobile": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/ce/cb/bsBtC2PU_o.jpg"]
+                "images": ["DV_phone_acceuil.webp"]
             },
             {
                 "title": "villas",
-                "images": ["https://images2.imgbox.com/0a/db/kc0qfliO_o.jpg"]
+                "images": ["DV_phone_villas.webp"]
             },
             {
                 "title": "Tarifs",
-                "images": ["https://images2.imgbox.com/4c/24/c5pVUi3E_o.jpg"]
+                "images": ["DV_phone_tarifs.webp"]
             },
             {
                 "title": "Contact",
-                "images": ["https://images2.imgbox.com/21/61/jOdQOpnQ_o.jpg"]
+                "images": ["DV_phone_contact.webp"]
             }
         ],
         "tags": ["Html", "Css", "Javascript", "Sass", "Git", "C#"],
@@ -179,11 +188,14 @@
         "demo": "https://www.domaine-victoria.com/index.html"
     },
     {
-        "id": "0979876d",
+        "id": "4",
         "title": "Booki",
-        "cover": "https://thumbs2.imgbox.com/76/cf/CRLRVZLJ_t.png",
-        "coverSmall": "https://images2.imgbox.com/ea/54/c0aoSr2X_o.png",
-        "logo": "https://images2.imgbox.com/da/e1/exQzOqMv_o.png",
+        "cover": {
+            "mobile": "booki_300x225.webp",
+            "tablet": "booki_800x600.webp",
+            "desktop": "booki_1240x930.webp"
+        },
+        "logo": "Booki.png",
         "description": "L'objectif de cette mission était d'intégrer l'interface du site Booki en HTML et CSS, en veillant à ce que le site soit responsive et fonctionne parfaitement sur tous les appareils et tailles d'écran.Le site permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
         "challenges": [
             {
@@ -202,13 +214,13 @@
         "desktop": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/eb/6d/b0JRY79U_o.jpg"]
+                "images": ["Booki_desktop_acceuil.webp"]
             }
         ],
         "mobile": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/0d/f2/dunJCssX_o.jpg"]
+                "images": ["Booki_phone_acceuil.webp"]
             }
         ],
         "tags": ["Html", "Css"],
@@ -216,11 +228,14 @@
         "demo": "https://risticonipierrej.github.io/Booki/"
     },
     {
-        "id": "b4c67936",
+        "id": "5",
         "title": "Sophie Bluel",
-        "cover": "https://thumbs2.imgbox.com/c4/6f/oKgnksuN_t.png",
-        "coverSmall": "https://images2.imgbox.com/97/89/4Qsx9x4a_o.png",
-        "logo": "https://images2.imgbox.com/9f/28/lAW3R0iP_o.png",
+        "cover": {
+            "mobile": "sophieBluel_300x225.webp",
+            "tablet": "sophieBluel_800x600.webp",
+            "desktop": "sophieBluel_1240x930.webp"
+        },
+        "logo": "SophieBluel.png",
         "description": "L'objectif de cette mission était de développer le site portfolio d'une architecte d'intérieur en utilisant JavaScript pour créer des pages web dynamiques et communiquer avec une API. Cela incluait la gestion des interactions utilisateur et la manipulation du DOM.",
         "challenges": [
             {
@@ -239,23 +254,23 @@
         "desktop": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/cf/56/gVanXno4_o.jpg"]
+                "images": ["SophieBluel_desktop_acceuil.webp"]
             },
             {
                 "title": "Login",
-                "images": ["https://images2.imgbox.com/c1/bc/EtaWRv4C_o.jpg"]
+                "images": ["SophieBluel_desktop_login.webp"]
             },
             {
                 "title": "Admin",
-                "images": ["https://images2.imgbox.com/28/9a/b4orJb5Y_o.jpg"]
+                "images": ["SophieBluel_desktop_acceuilModeEdition.webp"]
             },
             {
                 "title": "Admin modale #1",
-                "images": ["https://images2.imgbox.com/ad/75/EHoVcsII_o.png"]
+                "images": ["SophieBluel_desktop_modale_01.webp"]
             },
             {
                 "title": "Admin modale #2",
-                "images": ["https://images2.imgbox.com/de/f5/YSD7r03f_o.png"]
+                "images": ["SophieBluel_desktop_modale_02.webp"]
             }
         ],
         "mobile": [
@@ -269,11 +284,14 @@
         "demo": ""
     },
     {
-        "id": "cb2f9222",
+        "id": "6",
         "title": "724Events",
-        "cover": "https://thumbs2.imgbox.com/d1/a7/77qkZbVc_t.png",
-        "coverSmall": "https://images2.imgbox.com/34/1c/JayKFzvz_o.png",
-        "logo": "https://images2.imgbox.com/0a/12/reDnFSmi_o.png",
+        "cover": {
+            "mobile": "724Events_300x225.webp",
+            "tablet": "724Events_800x600.webp",
+            "desktop": "724Events_1240x930.webp"
+        },
+        "logo": "724Event.png",
         "description": "L'objectif de cette mission était de débugger et finaliser le développement du site one-page de l'agence événementielle 724events. Cela impliquait l'utilisation des Chrome DevTools pour identifier les problèmes et des outils spécifiques à React, comme React Developer Tools, pour résoudre les bugs signalés.",
         "challenges": [
             {
@@ -296,7 +314,7 @@
         "desktop": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/c8/cf/bbzozh0u_o.jpg"]
+                "images": ["724Event_desktop.webp"]
             }
         ],
         "mobile": [
@@ -319,11 +337,14 @@
         "demo": ""
     },
     {
-        "id": "2cf259e1",
+        "id": "7",
         "title": "Nina Carducci",
-        "cover": "https://thumbs2.imgbox.com/cd/25/QOe1MfU3_t.png",
-        "coverSmall": "https://images2.imgbox.com/1b/59/vV0JWfkS_o.png",
-        "logo": "https://images2.imgbox.com/36/d1/HC74sZ2C_o.png",
+        "cover": {
+            "mobile": "ninaCarducci_300x225.webp",
+            "tablet": "ninaCarducci_800x600.webp",
+            "desktop": "ninaCarducci_1240x930.webp"
+        },
+        "logo": "NinaCarducci.png",
         "description": "L'objectif de cette mission était d'optimiser le référencement (SEO) et la performance du site de la photographe Nina Carducci. Le projet incluait l'amélioration de la vitesse de chargement, de la structure du code, et de l'accessibilité, en utilisant des outils comme Lighthouse et Wave.",
         "challenges": [
             {
@@ -354,13 +375,13 @@
         "desktop": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/e1/e8/PXaG0L5w_o.jpg"]
+                "images": ["NinaCarducci_desktop.webp"]
             }
         ],
         "mobile": [
             {
                 "title": "Acceuil",
-                "images": ["https://images2.imgbox.com/81/63/ZNTuiTzG_o.jpg"]
+                "images": ["NinaCarducci_phone.webp"]
             }
         ],
         "tags": [

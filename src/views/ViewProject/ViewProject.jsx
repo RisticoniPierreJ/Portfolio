@@ -8,6 +8,11 @@ import ProjectLinks from "../../components/ProjectLinks/ProjectLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DropDownGallery from "../../components/DropDownGallery/DropDownGaller";
 import { useState } from "react";
+import {
+    getProjectFullpageUrl,
+    getProjectCoverUrl,
+    getProjectLogoUrl,
+} from "../../utils/imageUtils";
 
 // Utilitaire pour diviser le texte par les points et générer des paragraphes
 function splitTextToParagraphs(text) {
@@ -35,9 +40,6 @@ function ViewProject() {
     // Gestion de l affichage des images
     const [selecteDesktopImg, setSelectedDesktopImg] = useState(0);
     const [selecteMobileImg, setSelectedMobileImg] = useState(0);
-
-    // gestion du lazyload avec blur
-    const [isLoaded, setIsLoaded] = useState(false);
 
     if (!project) {
         return <Navigate to="/404" replace />;
@@ -76,28 +78,25 @@ function ViewProject() {
     };
 
     return (
-        <main className="viewProjecttMain">
+        <main className="viewProjecttMain" id="Acceuil">
             {/************/}
             {/* Bannière */}
             {/************/}
             <div className="viewProjectBanner">
-                <div
-                    className="viewProjectBanner__blurLoad"
-                    style={{
-                        backgroundImage: `url(${project.coverSmall})`,
-                    }}
-                >
-                    <img
-                        className={`viewProjectBanner__img ${
-                            isLoaded ? "loaded" : ""
-                        }`}
-                        src={project.cover}
-                        alt="Bannière du projet"
-                        onLoad={() => setIsLoaded(true)}
-                    />
-                </div>
+                <img
+                    className="viewProjectBanner__img"
+                    src={getProjectCoverUrl(project.cover.desktop)}
+                    alt="Bannière du projet"
+                    srcSet={`
+                            ${getProjectCoverUrl(project.cover.mobile)} 300w,
+                            ${getProjectCoverUrl(project.cover.tablet)} 800w,
+                            ${getProjectCoverUrl(project.cover.desktop)} 1240w
+                    `}
+                    sizes="100vw"
+                />
+
                 <div className="viewProjectBanner__logo">
-                    <img src={project.logo} alt="logo du site web" />
+                    <img src={getProjectLogoUrl(project.logo)} alt="logo du site web" />
                 </div>
                 <FontAwesomeIcon
                     icon="fa-regular fa-circle-xmark"
@@ -110,17 +109,12 @@ function ViewProject() {
             {/* Contenu */}
             {/***********/}
             <section className="viewProject">
-                {/* <h2 className="viewProject__title">
-                        Le projet
-                    </h2> */}
-
                 <div className="viewProject__description">
                     <h2 className="viewProject__description-title">
                         Description
                     </h2>
                     <div className="viewProject__description-contentAndTagsContainer">
                         <div className="viewProject__description-content">
-                            {/* {project.description} */}
                             {splitTextToParagraphs(project.description)}
                         </div>
                         <div className="viewProject__tags">
@@ -128,19 +122,6 @@ function ViewProject() {
                         </div>
                     </div>
                 </div>
-
-                {/* <div className="viewProject__description">
-                        <h2 className="viewProject__description-title">
-                            Description
-                        </h2>
-                        <div className="viewProject__description-content">
-                            {splitTextToParagraphs(project.description)}
-                        </div>
-                    </div>
-
-                    <div className="viewProject__tags">
-                        <ProjectTags tags={project.tags} />
-                    </div> */}
 
                 <div className="viewProject__challenges">
                     <h2 className="viewProject__challenges-title">
@@ -222,29 +203,11 @@ function ViewProject() {
                                 loading="lazy"
                             />
                             <div className="desktopGallery__scrollContainer desktopGallery__scrollContainer-scrollInner">
-                                {/* <div
-                            className="desktopGallery__scrollContainer-blurLoad"
-                            style={{
-                              backgroundImage: `url(${project.coverSmall})`,
-                          }}
-                          >
-                        <img
-                            className={`desktopGallery__scrollContainer-image ${
-                            isLoaded ? "loaded" : ""
-                            }`}
-                            src={
-                                project.desktop[selecteDesktopImg].images[0]
-                            }
-                            alt="aperçu du site web sur desktop"
-                            onLoad={() => setIsLoaded(true)}
-                            loading="lazy"
-                        />
-                        </div> */}
                                 <img
-                                    src={
+                                    src={getProjectFullpageUrl(
                                         project.desktop[selecteDesktopImg]
                                             .images[0]
-                                    }
+                                    )}
                                     alt="aperçu du site web sur desktop"
                                     className="desktopGallery__scrollContainer-image"
                                     loading="lazy"
@@ -285,11 +248,10 @@ function ViewProject() {
                                 />
                                 <div className="mobileGallery__scrollContainer mobileGallery__scrollContainer-scrollInner">
                                     <img
-                                        // src={project.mobile[0].images}
-                                        src={
+                                        src={getProjectFullpageUrl(
                                             project.mobile[selecteMobileImg]
                                                 .images[0]
-                                        }
+                                        )}
                                         alt="aperçu du site web sur mobile"
                                         className="mobileGallery__scrollContainer-image"
                                         loading="lazy"

@@ -294,7 +294,7 @@ main {
 .contactForm {
   gap: 20px;
   width: 75%;
-  max-width: 570px;
+  max-width: 450px;
 }
 .contactForm__input {
   gap: 5px;
@@ -477,10 +477,12 @@ main {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.08;
+  max-width: 500px;
 }
 @media (min-width: 768px) {
   .heroContent__description {
     font-size: 1.125rem;
+    max-width: unset;
   }
 }
 
@@ -543,22 +545,20 @@ main {
 
 /************************ projectCard  ************************/
 .projectCard {
-  width: 100%;
-  min-width: 341px;
-  min-height: 255px;
+  position: relative;
+  width: 341px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  position: relative;
 }
 @media (min-width: 768px) {
   .projectCard {
-    min-width: unset;
+    width: unset;
   }
 }
-.projectCard__blurLoad {
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
+@media (min-width: 1025px) {
+  .projectCard {
+    max-width: 550px;
+  }
 }
 .projectCard__image {
   width: 100%;
@@ -566,18 +566,9 @@ main {
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
-  -o-object-position: center;
-     object-position: center;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-.projectCard__image.loaded {
-  opacity: 1;
 }
 .projectCard__content {
   width: 100%;
-  min-width: 341px;
   padding: 15px 20px 15px 15px;
   border-radius: 0 0 15px 15px;
   background-color: rgba(245, 241, 229, 0.7);
@@ -675,6 +666,23 @@ main {
   .tags li {
     font-size: 14px;
   }
+}
+
+.scrollToTopIcon {
+  position: fixed;
+  padding: 10px;
+  right: 15px;
+  bottom: 15px;
+  color: #f5f1e5;
+  background-color: #C5B185;
+  z-index: 9000;
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: none;
+}
+
+.scrollToTopIcon.show {
+  display: block;
 }
 
 /************************ submitButton  ************************/
@@ -877,7 +885,6 @@ main {
 /************************ projects  ************************/
 .projects {
   gap: 20px;
-  padding: 0 17px;
 }
 @media (min-width: 768px) {
   .projects {
@@ -895,11 +902,18 @@ main {
   padding: 0 10px;
   padding-bottom: 50px;
   line-height: 1.3;
+  max-width: 450px;
+}
+@media (min-width: 768px) {
+  .servicesContainer {
+    max-width: 700px;
+  }
 }
 @media (min-width: 1025px) {
   .servicesContainer {
     padding: 0 0 60px 0;
     flex-direction: row;
+    max-width: 1300px;
   }
 }
 
@@ -932,6 +946,12 @@ main {
 .whyMe__title {
   text-align: center;
   line-height: 1.2;
+  max-width: 550px;
+}
+@media (min-width: 768px) {
+  .whyMe__title {
+    max-width: 600px;
+  }
 }
 .whyMe__title span {
   color: #82A57D;
@@ -1238,15 +1258,8 @@ section {
 /* ------------------ bannière ------------------ */
 .viewProjectBanner {
   position: relative;
-  background: #000;
   border-radius: 0 0 55px 55px;
-  min-height: 281px;
-}
-.viewProjectBanner__blurLoad {
-  background-size: cover;
-  background-position: center;
-  border-radius: 0 0 55px 55px;
-  opacity: 0.8;
+  max-height: 300px;
 }
 .viewProjectBanner__img {
   -o-object-fit: cover;
@@ -1254,19 +1267,7 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 0 0 55px 55px;
-  display: block;
-  -o-object-position: center;
-     object-position: center;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-@media (min-width: 768px) {
-  .viewProjectBanner__img {
-    height: 300px;
-  }
-}
-.viewProjectBanner__img.loaded {
-  opacity: 1;
+  max-height: 300px;
 }
 .viewProjectBanner__logo {
   width: 60%;
@@ -1348,6 +1349,7 @@ section {
 }
 .viewProject__description {
   gap: 35px;
+  max-width: 500px;
 }
 @media (min-width: 768px) {
   .viewProject__description {
@@ -1400,6 +1402,7 @@ section {
 }
 .viewProject__challenges {
   gap: 35px;
+  max-width: 500px;
 }
 @media (min-width: 768px) {
   .viewProject__challenges {
@@ -1408,7 +1411,7 @@ section {
 }
 @media (min-width: 1025px) {
   .viewProject__challenges {
-    max-width: 1050px;
+    max-width: 860px;
   }
 }
 .viewProject__challenges-title {
@@ -1538,10 +1541,11 @@ section {
 .mobileGallery__scrollContainer {
   position: absolute;
   top: 0;
+  background-color: #fffef9;
   align-items: center;
-  width: 94%;
-  height: 76%;
-  margin-top: 3.5%;
+  width: 76.1%;
+  height: 83.1%;
+  margin-top: 3.3%;
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1567,6 +1571,11 @@ section {
   }
 }
 
+@media (min-width: 768px) {
+  .mobileGallery {
+    width: 60%;
+  }
+}
 @media (min-width: 1025px) {
   .mobileGallery {
     width: 70%;
@@ -1578,7 +1587,7 @@ section {
   z-index: 1;
 }
 .mobileGallery__scrollContainer {
-  width: 64%;
-  height: 93%;
-  margin-top: 4.5%;
+  width: 67%;
+  height: 81%;
+  margin-top: 15.2%;
 }/*# sourceMappingURL=main.css.map */
