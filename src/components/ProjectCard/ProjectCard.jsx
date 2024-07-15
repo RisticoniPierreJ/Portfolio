@@ -78,7 +78,7 @@
 import { Link } from "react-router-dom";
 import projectsData from "../../data/projectsData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { getProjectCoverUrl } from "../../utils/imageUtils";
+import { getImageUrl } from "../../utils/imageUtils";
 
 function ProjectCard() {
     return (
@@ -87,16 +87,22 @@ function ProjectCard() {
                 <Link to={`/projet/${project.id}`} key={index}>
                     <article className="projectCard">
                         <img
-                            src={getProjectCoverUrl(project.cover.desktop)}
+                            src={getImageUrl(
+                                "projectCover",
+                                project.cover.desktop
+                            )}
                             alt="Photo présentation du projet"
                             srcSet={`
-                                    ${getProjectCoverUrl(
+                                    ${getImageUrl(
+                                        "projectCover",
                                         project.cover.mobile
                                     )} 300w,
-                                    ${getProjectCoverUrl(
+                                    ${getImageUrl(
+                                        "projectCover",
                                         project.cover.tablet
                                     )} 800w,
-                                    ${getProjectCoverUrl(
+                                    ${getImageUrl(
+                                        "projectCover",
                                         project.cover.desktop
                                     )} 1240w
                                 `}

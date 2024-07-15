@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import techIconsData from "../../data/techIconsData";
-import { getIconUrl } from "../../utils/imageUtils";
+import { getImageUrl } from "../../utils/imageUtils";
 
 function TechIcons() {
     return (
@@ -9,7 +9,8 @@ function TechIcons() {
                 <article className="techIcon" key={index}>
                     <img
                         className="techIcon__image"
-                        src={getIconUrl(icon.fileName)}
+                        // src={getImageUrl("icon",icon.fileName)}
+                        src={getImageUrl("techIcons", icon.fileName)}
                         alt={`Icone de technologie ${icon.title}`}
                         loading="lazy"
                     />

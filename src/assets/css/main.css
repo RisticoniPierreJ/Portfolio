@@ -805,6 +805,16 @@ main {
     display: none;
   }
 }
+.header__homeIcon {
+  font-size: 24px;
+  color: #82A57D;
+  cursor: pointer;
+}
+@media (min-width: 1025px) {
+  .header__homeIcon {
+    display: none;
+  }
+}
 
 /************************ Hero ************************/
 .hero {

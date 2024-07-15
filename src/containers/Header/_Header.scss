@@ -22,4 +22,14 @@
             display: none;
         }
     }
+
+    &__homeIcon {
+        font-size: 24px;
+        color: $primary-dark;
+        cursor: pointer;
+
+        @media (min-width: 1025px) {
+            display: none;
+        }
+    }
 }

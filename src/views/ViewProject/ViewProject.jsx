@@ -8,11 +8,7 @@ import ProjectLinks from "../../components/ProjectLinks/ProjectLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DropDownGallery from "../../components/DropDownGallery/DropDownGaller";
 import { useState } from "react";
-import {
-    getProjectFullpageUrl,
-    getProjectCoverUrl,
-    getProjectLogoUrl,
-} from "../../utils/imageUtils";
+import { getImageUrl } from "../../utils/imageUtils";
 
 // Utilitaire pour diviser le texte par les points et générer des paragraphes
 function splitTextToParagraphs(text) {
@@ -49,29 +45,51 @@ function ViewProject() {
     const mutlipleMobileImg = project.mobile.length > 1;
 
     // Gestion des clics pour les boutons de navigation
-    const handlePrevDesktop = () => {
-        setSelectedDesktopImg((prevIndex) =>
-            prevIndex > 0 ? prevIndex - 1 : project.desktop.length - 1
-        );
-    };
+    // const handlePrevDesktop = () => {
+    //     setSelectedDesktopImg((prevIndex) =>
+    //         prevIndex > 0 ? prevIndex - 1 : project.desktop.length - 1
+    //     );
+    // };
 
-    const handleNextDesktop = () => {
-        setSelectedDesktopImg((prevIndex) =>
-            prevIndex < project.desktop.length - 1 ? prevIndex + 1 : 0
-        );
-    };
+    // const handleNextDesktop = () => {
+    //     setSelectedDesktopImg((prevIndex) =>
+    //         prevIndex < project.desktop.length - 1 ? prevIndex + 1 : 0
+    //     );
+    // };
 
-    const handlePrevMobile = () => {
-        setSelectedMobileImg((prevIndex) =>
-            prevIndex > 0 ? prevIndex - 1 : project.mobile.length - 1
-        );
+    const handleDesktopNavigation = (direction) => {
+        setSelectedDesktopImg((prevIndex) => {
+            if (direction === "prev") {
+                return prevIndex > 0 ? prevIndex - 1 : project.desktop.length - 1;
+            } else if (direction === "next") {
+                return prevIndex < project.desktop.length - 1 ? prevIndex + 1 : 0;
+            }
+        });
     };
+    
 
-    const handleNextMobile = () => {
-        setSelectedMobileImg((prevIndex) =>
-            prevIndex < project.mobile.length - 1 ? prevIndex + 1 : 0
-        );
+    // const handlePrevMobile = () => {
+    //     setSelectedMobileImg((prevIndex) =>
+    //         prevIndex > 0 ? prevIndex - 1 : project.mobile.length - 1
+    //     );
+    // };
+
+    // const handleNextMobile = () => {
+    //     setSelectedMobileImg((prevIndex) =>
+    //         prevIndex < project.mobile.length - 1 ? prevIndex + 1 : 0
+    //     );
+    // };
+
+    const handleMobileNavigation = (direction) => {
+        setSelectedMobileImg((prevIndex) => {
+            if (direction === "prev") {
+                return prevIndex > 0 ? prevIndex - 1 : project.mobile.length - 1;
+            } else if (direction === "next") {
+                return prevIndex < project.mobile.length - 1 ? prevIndex + 1 : 0;
+            }
+        });
     };
+    
 
     const handleClose = () => {
         navigate("/");
@@ -85,18 +103,30 @@ function ViewProject() {
             <div className="viewProjectBanner">
                 <img
                     className="viewProjectBanner__img"
-                    src={getProjectCoverUrl(project.cover.desktop)}
+                    src={getImageUrl("projectCover", project.cover.desktop)}
                     alt="Bannière du projet"
                     srcSet={`
-                            ${getProjectCoverUrl(project.cover.mobile)} 300w,
-                            ${getProjectCoverUrl(project.cover.tablet)} 800w,
-                            ${getProjectCoverUrl(project.cover.desktop)} 1240w
+                            ${getImageUrl(
+                                "projectCover",
+                                project.cover.mobile
+                            )} 300w,
+                            ${getImageUrl(
+                                "projectCover",
+                                project.cover.tablet
+                            )} 800w,
+                            ${getImageUrl(
+                                "projectCover",
+                                project.cover.desktop
+                            )} 1240w
                     `}
                     sizes="100vw"
                 />
 
                 <div className="viewProjectBanner__logo">
-                    <img src={getProjectLogoUrl(project.logo)} alt="logo du site web" />
+                    <img
+                        src={getImageUrl("projectLogo", project.logo)}
+                        alt="logo du site web"
+                    />
                 </div>
                 <FontAwesomeIcon
                     icon="fa-regular fa-circle-xmark"
@@ -179,7 +209,7 @@ function ViewProject() {
                     <div className="galleryContainer">
                         {mutlipleDesktopImg && (
                             <div className="galleryContainer__navigate">
-                                <button onClick={handlePrevDesktop}>
+                                <button onClick={() => handleDesktopNavigation("prev")}>
                                     <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
                                 </button>
                                 <DropDownGallery
@@ -189,7 +219,7 @@ function ViewProject() {
                                     }
                                     selectedIndex={selecteDesktopImg}
                                 />
-                                <button onClick={handleNextDesktop}>
+                                <button onClick={() => handleDesktopNavigation("next")}>
                                     <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
                                 </button>
                             </div>
@@ -204,7 +234,8 @@ function ViewProject() {
                             />
                             <div className="desktopGallery__scrollContainer desktopGallery__scrollContainer-scrollInner">
                                 <img
-                                    src={getProjectFullpageUrl(
+                                    src={getImageUrl(
+                                        "projectFullpage",
                                         project.desktop[selecteDesktopImg]
                                             .images[0]
                                     )}
@@ -222,7 +253,7 @@ function ViewProject() {
                     <div className="galleryContainer">
                         {mutlipleMobileImg && (
                             <div className="galleryContainer__navigate">
-                                <button onClick={handlePrevMobile}>
+                                <button onClick={() => handleMobileNavigation("prev")}>
                                     <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
                                 </button>
                                 <DropDownGallery
@@ -232,7 +263,7 @@ function ViewProject() {
                                     }
                                     selectedIndex={selecteMobileImg}
                                 />
-                                <button onClick={handleNextMobile}>
+                                <button onClick={() => handleMobileNavigation("next")}>
                                     <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
                                 </button>
                             </div>
@@ -248,7 +279,8 @@ function ViewProject() {
                                 />
                                 <div className="mobileGallery__scrollContainer mobileGallery__scrollContainer-scrollInner">
                                     <img
-                                        src={getProjectFullpageUrl(
+                                        src={getImageUrl(
+                                            "projectFullpage",
                                             project.mobile[selecteMobileImg]
                                                 .images[0]
                                         )}
