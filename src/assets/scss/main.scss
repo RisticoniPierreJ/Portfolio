@@ -3,13 +3,16 @@
 
 @import "./base/reset";
 
+@import "../../components/Banner/Banner";
 @import "../../components/Collapse/Collapse";
 @import "../../components/ContactForm/ContactForm";
 @import "../../components/DropDownGallery/DropDownGallery";
+@import "../../components/Gallery/Gallery";
 @import "../../components/HeroContent/HeroContent";
 @import "../../components/HeroImage/HeroImage";
 @import "../../components/Links/Links";
 @import "../../components/ProjectCard/ProjectCard";
+@import "../../components/ProjectContent/ProjectContent";
 @import "../../components/ProjectLinks/ProjectLinks";
 @import "../../components/ProjectTags/ProjectTags";
 @import "../../components/ScrollToTopIcon/ScrollToTopIcon";
@@ -18,14 +21,14 @@
 @import "../../components/ToggleButton/ToggleButton";
 
 
-@import "../../containers/Contact/Contact";
+@import "../../containers/ContactContainer/ContactContainer";
 @import "../../containers/Footer/Footer";
 @import "../../containers/Header/Header";
-@import "../../containers/Hero/Hero";
+@import "../../containers/HeroContainer/HeroContainer";
 @import "../../containers/Navbar/Navbar";
-@import "../../containers/Projects/Projects";
-@import "../../containers/Services/Services";
-@import "../../containers/WhyMe/WhyMe";
+@import "../../containers/ProjectsContainer/ProjectsContainer";
+@import "../../containers/ServicesContainer/ServicesContainer";
+@import "../../containers/WhyMeContainer/WhyMeContainer";
 
 @import "../../views/Home/Home";
 @import "../../views/NotFound/NotFound";

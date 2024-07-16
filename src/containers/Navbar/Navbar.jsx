@@ -23,7 +23,7 @@ const variants = {
 function Navbar() {
     const [open, setOpen] = useState(false);
 
-    // Fermeture du menu si l'utilisateur clique en dehors de la navbar
+    // Gestion de la fermeture du menu si l'utilisateur clique en dehors de la navbar
     useEffect(() => {
         const handleOutsideClick = (event) => {
             if (

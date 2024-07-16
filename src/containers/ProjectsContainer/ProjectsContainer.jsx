@@ -1,6 +1,6 @@
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
-function Project() {
+function ProjectsContainer() {
     return (
         <div className="projects">
             <ProjectCard />
@@ -8,4 +8,4 @@ function Project() {
     );
 }
 
-export default Project;
+export default ProjectsContainer;

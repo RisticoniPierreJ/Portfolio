@@ -13,14 +13,15 @@ function Collapse({ children, title, customClass = "" }) {
         <article className={`${customClass}`}>
             <div className={`${customClass}__title`} onClick={showContent}>
                 <h3>{title}</h3>
+
                 <FontAwesomeIcon
                     icon="fa-solid fa-chevron-up"
-                    // className={isContentShown ? "rotate" : ""}
-                    className={`fa-solid fa-chevron-up ${
+                    className={`${customClass}__chevronUp ${
                         isContentShown ? "rotate" : ""
                     }`}
                 />
             </div>
+
             <div
                 className={`${customClass}__txt ${
                     isContentShown ? "show" : ""

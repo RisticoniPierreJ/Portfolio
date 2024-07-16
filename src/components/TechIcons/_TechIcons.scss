@@ -21,10 +21,6 @@
 }
 
 .techIcon {
-    // Dimensiosn pour 320px
-    // width: 100px;
-    // height: 100px;
-
     @extend %flex-columnCentered;
     gap: 5px;
     width: 90px;
@@ -32,7 +28,6 @@
     padding: 5px;
     border-radius: 15px;
     background-color: rgba($secondary-medium, 0.9);
-
 
     // #19
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -44,5 +39,6 @@
 
     &__title {
         text-wrap: nowrap;
+        font-size: 0.875rem;
     }
 }

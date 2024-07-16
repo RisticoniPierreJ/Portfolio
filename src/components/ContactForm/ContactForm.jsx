@@ -10,6 +10,8 @@ function ContactForm() {
     const sendEmail = (e) => {
         e.preventDefault();
 
+        
+        // Envoie le formulaire avec emailjs
         emailjs
             .sendForm("service_y242j7j", "template_s42qskr", form.current, {
                 publicKey: "kAPcRjfujUwO4rQQk",
@@ -29,10 +31,7 @@ function ContactForm() {
 
     return (
         <form ref={form} onSubmit={sendEmail} className="contactForm">
-            {/* <div className="contactForm__inputContainer">
-
-            </div> */}
-            <div className="contactForm__input">
+            <div className="contactForm__inputContainer">
                 <FontAwesomeIcon
                     className="contactForm__icon"
                     icon="fa-solid fa-user"
@@ -46,7 +45,7 @@ function ContactForm() {
                     placeholder="Nom(*)"
                 />
             </div>
-            <div className="contactForm__input">
+            <div className="contactForm__inputContainer">
                 <FontAwesomeIcon
                     className="contactForm__icon"
                     icon="fa-solid fa-envelope"
@@ -60,7 +59,7 @@ function ContactForm() {
                     placeholder="Email(*)"
                 />
             </div>
-            <div className="contactForm__input">
+            <div className="contactForm__inputContainer">
                 <FontAwesomeIcon
                     className="contactForm__icon"
                     icon="fa-solid fa-phone-flip"
@@ -73,7 +72,7 @@ function ContactForm() {
                     placeholder="Téléphone"
                 />
             </div>
-            <div className="contactForm__input">
+            <div className="contactForm__inputContainer">
                 <FontAwesomeIcon
                     className="contactForm__icon"
                     icon="fa-solid fa-comment-dots"
@@ -93,6 +92,7 @@ function ContactForm() {
                 <SubmitButton>Envoyer</SubmitButton>
             </div>
 
+            {/* Affichage des messages de succès ou d'erreur */}
             {error === false ? (
                 <p>Message envoyé !</p>
             ) : (

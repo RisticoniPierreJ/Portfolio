@@ -1,13 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function WhyMe() {
+function WhyMeContainer() {
+    const [cardCount, setCardCount] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    // Gestion du défilement et affichage des chevrons
     useEffect(() => {
         const wrapper = document.querySelector(".whyMe__wrapper");
         const chevronLeft = document.querySelector(".whyMe__chevron-left");
         const chevronRight = document.querySelector(".whyMe__chevron-right");
 
+        // Mise à jour du nombre de cartes
+        const cards = document.querySelectorAll(".whyMe__card");
+        setCardCount(cards.length);
+
+        // Fonction pour vérifier la position de défilement
         const checkScrollPosition = () => {
+            // Afficher ou masquer les chevrons selon la position de défilement
             if (wrapper.scrollLeft > 0) {
                 chevronLeft.classList.add("whyMe__chevron-visible");
             } else {
@@ -22,18 +32,23 @@ function WhyMe() {
             } else {
                 chevronRight.classList.remove("whyMe__chevron-visible");
             }
+
+            // Mettre à jour l'index actif
+            const cardWidth = wrapper.scrollWidth / cards.length;
+            setActiveIndex(Math.round(wrapper.scrollLeft / cardWidth));
         };
 
         wrapper.addEventListener("scroll", checkScrollPosition);
-
-        // Initial check
-        checkScrollPosition();
+        
+        // Vérification initiale de la position de défilement après un délai
+        setTimeout(checkScrollPosition, 100);
 
         return () => {
             wrapper.removeEventListener("scroll", checkScrollPosition);
         };
     }, []);
 
+    // Fonctions pour faire défiler les cartes
     const scrollLeft = () => {
         const wrapper = document.querySelector(".whyMe__wrapper");
         wrapper.scrollBy({ left: -330, behavior: "smooth" });
@@ -46,10 +61,18 @@ function WhyMe() {
 
     return (
         <div className="whyMe">
-            <p className="whyMe__title">
-                La <span>présence en ligne</span> est devenue <span>essentielle</span> pour toutes les
-                entreprises, quelle que soit leur taille ou leur secteur.
-            </p>
+            <div className="whyMe__title">
+                <p>
+                    La <span>présence en ligne</span> est devenue{" "}
+                    <span>essentielle</span> pour toutes les entreprises, quelle
+                    que soit leur taille ou leur secteur.
+                </p>
+                <p>
+                    Pour maximiser <span>l&apos;impact</span> de votre site web,
+                    il est <span>crucial</span> de surveiller et de comprendre
+                    les éléments suivants :
+                </p>
+            </div>
             <div className="whyMe__container">
                 <FontAwesomeIcon
                     className="whyMe__chevron whyMe__chevron-left"
@@ -117,9 +140,21 @@ function WhyMe() {
                     icon="fa-solid fa-chevron-right"
                     onClick={scrollRight}
                 />
+                <div className="bulletPoints">
+                    {Array.from({ length: cardCount }).map((_, index) => (
+                        <span
+                            key={index}
+                            className={`bulletPoints__singlePoint ${
+                                index === activeIndex
+                                    ? "bulletPoints__singlePoint-active"
+                                    : ""
+                            }`}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
 }
 
-export default WhyMe;
+export default WhyMeContainer;

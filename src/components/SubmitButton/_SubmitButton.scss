@@ -1,4 +1,4 @@
-/************************ submitButton  ************************/
+/************************ SubmitButton  ************************/
 .button {
     @extend %flex-rowCentered;
     width: 150px;
@@ -11,7 +11,7 @@
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 600;
-    color: white;
     background-color: $secondary;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }

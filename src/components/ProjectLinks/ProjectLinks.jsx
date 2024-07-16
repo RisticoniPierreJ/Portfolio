@@ -1,26 +1,28 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-
-function ProjectLinks({ repos = '', demo = '' }) {
+function ProjectLinks({ repos = "", demo = "" }) {
     return (
-
         <article className="projectLinks">
             <Link
                 to={repos}
-                className={`projectLinks__repo ${!repos ? 'projectLinks__disabled' : ''}`}
+                className={`projectLinks__repo ${
+                    !repos ? "projectLinks__disabled" : ""
+                }`}
                 aria-disabled={!repos}
             >
-                <FontAwesomeIcon className="projectLinks__icon" icon="fa-brands fa-github" />
-                <p className="projectLinks__title">Repo</p>
+                <FontAwesomeIcon icon="fa-brands fa-github" size="2x" />
+                <p className="projectLinks__title">Code</p>
             </Link>
             <Link
                 to={demo}
-                className={`projectLinks__demo ${!demo ? 'projectLinks__disabled' : ''}`}
+                className={`projectLinks__demo ${
+                    !demo ? "projectLinks__disabled" : ""
+                }`}
                 aria-disabled={!demo}
             >
-                <FontAwesomeIcon className="projectLinks__icon" icon="fa-solid fa-globe" />
+                <FontAwesomeIcon icon="fa-solid fa-globe" size="2x" />
                 <p className="projectLinks__title">Demo</p>
             </Link>
         </article>

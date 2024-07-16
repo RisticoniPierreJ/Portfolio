@@ -4,87 +4,11 @@
     padding-bottom: 60px;
 }
 
-
-/* ------------------ bannière ------------------ */
-.viewProjectBanner {
-    position: relative;
-    // height: 250px;
-    border-radius: 0 0 55px 55px;
-    // min-height: 281px;
-    max-height: 300px;
-
-    &__img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 0 0 55px 55px;
-        max-height: 300px;
-
-
-        @media (min-width: 768px) {
-            // height: 300px;
-        }
-    }
-
-    &__logo {
-        @extend %flex-columnCentered;
-        width: 60%;
-        height: 70px;
-        padding: 10px 5%;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        background-color: white;
-        border-radius: 5px;
-        border: 5px solid $secondary;
-        // background-color: rgba($secondary-light, 0.4);
-        // // background: rgba($primary-dark, 0.8);
-        // backdrop-filter: blur(3px);
-        // -webkit-backdrop-filter: blur(3px);
-
-        @media (min-width: 768px) {
-            // height: 300px;
-            width: 60%;
-            height: 100px;
-        }
-
-        & img {
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
-            // border-radius: 5px;
-            // opacity: 0.2;
-        }
-    }
-
-    &__closeIcon {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        color: $secondary-light;
-        cursor: pointer;
-
-
-        @media (min-width: 768px) {
-            width: 40px;
-            height: 40px;
-        }
-    }
-}
-
-
 /* ------------------ contenu ------------------ */
 .viewProject {
     @extend %flex-columnCentered;
     gap: 65px;
     padding: 45px 10px 125px 10px;
-
 
     @media (min-width: 768px) {
         padding: 45px 12% 125px 12%;
@@ -92,164 +16,6 @@
 
     @media (min-width: 1025px) {
         padding: 45px 5% 125px 5%;
-    }
-
-    // &__title {
-    //     font-size: 2.5rem;
-    //     font-weight: 800;
-    // }
-
-    &__tags {
-        border-radius: 15px;
-        padding: 20px 5%;
-        background-color: rgba($secondary-light, 0.9);
-        width: 100%;
-        // #19
-        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-        // #28
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-
-        @media (min-width: 768px) {
-            margin: auto;
-            width: 95%;
-            max-width: 640px;
-        }
-
-        @media (min-width: 1025px) {
-            margin: unset;
-        }
-    }
-
-
-    /************************************************/
-    /*****************A FACTORISER ******************/
-    /************************************************/
-    &__description {
-        // font-size: 1.2rem;
-        // @extend %flex-column;
-        @extend %flex-columnCentered;
-        gap: 35px;
-
-        max-width: 500px;
-
-
-        @media (min-width: 768px) {
-            max-width: 640px;
-        }
-
-        @media (min-width: 1025px) {
-            // max-width: unset;
-            max-width: 1050px;
-
-        }
-
-        &-contentAndTagsContainer {
-            @extend %flex-columnCentered;
-            gap: 35px;
-
-
-            @media (min-width: 1025px) {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 65px;
-                align-items: start;
-            }
-        }
-
-        &-title {
-            font-family: $font-family-title;
-            // font-size: 1.4rem;
-            font-weight: 800;
-            color: $primary-dark;
-
-            &::after {
-                content: '';
-                display: block;
-                width: 50%;
-                height: 3px;
-                margin: 5px auto 0;
-                background-color: $primary-dark;
-            }
-
-            font-size: 1.375rem;
-
-            @media (min-width: 768px) {
-                font-size: 1.5rem;
-            }
-
-            @media (min-width: 1025px) {
-                font-size: 1.875rem;
-            }
-        }
-
-        &-content {
-            @extend %flex-column;
-
-            gap: 10px;
-            line-height: 1.2;
-        }
-    }
-
-    &__challenges {
-        // font-size: 1.2rem;
-        // @extend %flex-column;
-        @extend %flex-columnCentered;
-        gap: 35px;
-
-        max-width: 500px;
-
-
-        @media (min-width: 768px) {
-            max-width: 640px;
-        }
-
-        @media (min-width: 1025px) {
-            // max-width: unset;
-            max-width: 860px;
-        }
-
-        &-title {
-            font-family: $font-family-title;
-            // font-size: 1.4rem;
-            font-weight: 800;
-            color: $primary-dark;
-
-            &::after {
-                content: '';
-                display: block;
-                width: 50%;
-                height: 3px;
-                margin: 5px auto 0;
-                background-color: $primary-dark;
-            }
-
-            font-size: 1.375rem;
-
-            @media (min-width: 768px) {
-                font-size: 1.5rem;
-            }
-
-            @media (min-width: 1025px) {
-                font-size: 1.875rem;
-            }
-
-        }
-
-        &-content {
-            @extend %flex-column;
-            gap: 20px;
-            color: $secondary-light;
-            line-height: 1.2;
-
-            @media (min-width: 1025px) {
-                // display: grid;
-                // grid-template-columns: repeat(2, 1fr);
-
-                // max-width: 600px;
-            }
-        }
     }
 }
 
@@ -264,30 +30,15 @@
 
     @media (min-width: 768px) {
         padding: 23px 5% 50px 5%;
-        // width: 80%;
     }
 
     @media (min-width: 1025px) {
         padding: 23px 3% 50px 3%;
     }
 
-    &__allGaleriesContainer {
-        @extend %flex-columnCentered;
-        gap: 50px;
-        // gap: 10%;
-        // justify-content: space-between;
-
-        @media (min-width: 1025px) {
-            // padding: 23px 10% 50px 10%;
-            flex-direction: row;
-            align-items: flex-start;
-        }
-    }
-
-
     &__title {
         font-family: $font-family-title;
-        // font-size: 1.4rem;
+        font-size: 1.375rem;
         font-weight: 800;
         color: $secondary-light;
 
@@ -300,7 +51,6 @@
             background-color: $secondary-light;
         }
 
-        font-size: 1.375rem;
 
         @media (min-width: 768px) {
             font-size: 1.5rem;
@@ -309,119 +59,5 @@
         @media (min-width: 1025px) {
             font-size: 1.875rem;
         }
-    }
-}
-
-.galleryContainer {
-    @extend %flex-columnCentered;
-    gap: 20px;
-
-    &__navigate {
-        @extend %flex-rowCentered;
-        gap: 20px;
-
-        & button {
-            border-radius: 50px;
-            width: 40px;
-            height: 40px;
-            border: none;
-            // #19
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-            // background-color: $secondary-light;
-            background-color: $secondary;
-            color: $secondary-light;
-
-            @media (min-width: 768px) {
-                width: 50px;
-                height: 50px;
-            }
-        }
-    }
-}
-
-.desktopGallery,
-.mobileGallery {
-    // @extend %flex-columnCentered;
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media (min-width: 768px) {
-        width: 90%;
-    }
-
-    &__frame {
-        width: 100%;
-        pointer-events: none;
-        z-index: 1;
-    }
-
-    &__scrollContainer {
-        position: absolute;
-        top: 0;
-        background-color: #fffef9;
-
-        @extend %flex-column;
-        align-items: center;
-        width: 76.1%;
-        height: 83.1%;
-        margin-top: 3.3%;
-
-        overflow-y: auto;
-        // masque les barres de défilement pour IE et Edge
-        -ms-overflow-style: none;
-        // masque les barres de défilement pour Firefox
-        scrollbar-width: none;
-
-        // masque les barres de défilement pour Chrome, Safari, et Opera
-        &-scrollInner::-webkit-scrollbar {
-            display: none;
-        }
-
-        &-image {
-            display: block;
-            width: 100%;
-            height: auto;
-
-
-            object-fit: cover;
-            object-position: center;
-        }
-    }
-}
-
-.desktopGallery {
-    @media (min-width: 1025px) {
-        width: 100%;
-        // padding: 23px 10% 50px 10%;
-        // flex-direction: row;
-        // align-items: flex-start;
-    }
-}
-
-.mobileGallery {
-
-    @media (min-width: 768px) {
-        width: 60%;
-    }
-
-    @media (min-width: 1025px) {
-        width: 70%;
-    }
-
-    &__frame {
-        width: 72%;
-        pointer-events: none;
-        z-index: 1;
-    }
-
-    &__scrollContainer {
-        width: 67%;
-        height: 81%;
-        margin-top: 15.2%;
     }
 }

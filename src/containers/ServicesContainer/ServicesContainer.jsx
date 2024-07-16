@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Collapse from "../../components/Collapse/Collapse";
 
-function Services() {
+function ServicesContainer() {
     return (
         <div className="servicesContainer">
             <Collapse title="Création" customClass="collapse">
@@ -147,4 +147,4 @@ function Services() {
     );
 }
 
-export default Services;
+export default ServicesContainer;

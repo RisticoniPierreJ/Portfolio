@@ -29,15 +29,13 @@ const itemVariants = {
 };
 
 function Links() {
+    // Liste des éléments de menu correspondant aux ID des sections de la page Home
     const items = ["Acceuil", "Projets", "Services", "Compétences", "Contact"];
 
     return (
         <>
             <motion.div className="links" variants={linksVariants}>
                 {items.map((item) => (
-                    // <motion.a href={`#${item}`} key={item} variants={itemVariants}>
-                    //     {item}
-                    // </motion.a>
                     <motion.div
                         key={item}
                         variants={itemVariants}
@@ -58,9 +56,6 @@ function Links() {
 
             <div className="linksDesktop">
                 {items.map((item) => (
-                    // <motion.a href={`#${item}`} key={item} variants={itemVariants}>
-                    //     {item}
-                    // </motion.a>
                     <div key={item}>
                         <ScrollLink
                             to={item}

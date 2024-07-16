@@ -2,7 +2,7 @@ import HeroContent from "../../components/HeroContent/HeroContent";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import { Link as ScrollLink } from "react-scroll";
 
-function Hero() {
+function HeroContainer() {
     return (
         <div className="hero">
             <div className="hero__top">
@@ -31,4 +31,4 @@ function Hero() {
     );
 }
 
-export default Hero;
+export default HeroContainer;

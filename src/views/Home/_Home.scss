@@ -1,26 +1,17 @@
 /************************ home  ************************/
-// html {
-//     scroll-snap-type: y mandatory;
-//     scroll-behavior: smooth;
-// }
-
 section {
     padding-bottom: 45px;
     scroll-snap-align: center;
     background-color: $secondary-light;
     position: relative;
-    // height: 100vh;
 }
 
 .sectionTitle {
-    text-align: center;
-    font-family: $font-family-title;
-    font-weight: 800;
-    // margin-bottom: 15px;
-    margin-top: 15px;
-
-    // font-size: $mobile-title-M;
     font-size: 1.375rem;
+    font-weight: 800;
+    font-family: $font-family-title;
+    text-align: center;
+    margin-top: 15px;
 
     @media (min-width: 768px) {
         font-size: 1.5rem;
@@ -55,19 +46,15 @@ section {
     }
 }
 
-.sectionSubTitle {
-    text-align: center;
-    // font-size: 14px;
-    // margin-bottom: 10px;
 
-    & span {
-        color: $primary-dark;
-        font-weight: 800;
-    }
+/* ------------------ Gestion du flex des sections, et du sytle en fonction des séparateurs ------------------ */
+.acceuil, .skills {
+    @extend %flex-columnCentered;
+
 }
 
-.skills {
-    @extend %flex-columnCentered;
+.acceuil {
+    padding-top: 50px;
 }
 
 .project,
@@ -91,6 +78,15 @@ section {
     }
 }
 
+.services {
+
+    &__container {
+        @media (min-width: 768px) {
+            padding: 0 5%;
+        }
+    }
+}
+
 .contact {
 
     &__container {
@@ -100,25 +96,8 @@ section {
 }
 
 
-.services {
-
-    &__container {
-
-        @media (min-width: 768px) {
-            padding: 0 5%;
-        }
-
-    }
-}
-
-.acceuil {
-    padding-top: 50px;
-    @extend %flex-columnCentered;
-}
-
-
 //
-// CODE POUR LES SEPARATEURS DE SECTION
+/* ------------------ Séparateurs de section ------------------ */
 //
 // Séparateur du haut
 .custom-shape-divider-bottom-1719499125 {
@@ -179,8 +158,4 @@ section {
         width: calc(238% + 1.3px);
         height: 46px;
     }
-}
-
-.homeMainContainer {
-    // position: relative;
 }

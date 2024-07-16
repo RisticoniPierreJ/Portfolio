@@ -9,7 +9,6 @@ function TechIcons() {
                 <article className="techIcon" key={index}>
                     <img
                         className="techIcon__image"
-                        // src={getImageUrl("icon",icon.fileName)}
                         src={getImageUrl("techIcons", icon.fileName)}
                         alt={`Icone de technologie ${icon.title}`}
                         loading="lazy"
@@ -18,7 +17,7 @@ function TechIcons() {
                 </article>
             ))}
 
-            {/* Icone points de suspension toujours présent en dernier */}
+            {/* Icône points de suspension toujours présent en dernier */}
             <article className="techIcon">
                 <FontAwesomeIcon
                     icon="fa-solid fa-ellipsis"

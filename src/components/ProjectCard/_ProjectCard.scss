@@ -1,4 +1,4 @@
-/************************ projectCard  ************************/
+/************************ ProjectCard  ************************/
 .projectCard {
     @extend %flex-row;
     position: relative;
@@ -26,18 +26,13 @@
 
     &__content {
         width: 100%;
-        // min-width: 341px;
         padding: 15px 20px 15px 15px;
         border-radius: 0 0 15px 15px;
-        background-color: rgba($secondary-light, 0.7);
-        // background: rgba($primary-dark, 0.8);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-
         position: absolute;
         bottom: 0;
-
-        // display: none;
+        background-color: rgba($secondary-light, 0.7);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
 
         @media (min-width: 768px) {
             min-width: unset;

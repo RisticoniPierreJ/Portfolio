@@ -4,9 +4,10 @@
     @extend %flex-column;
     width: 100%;
     overflow: hidden;
+    border-radius: 0 0 5px 5px;
+
     // #28
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    border-radius: 0 0 5px 5px;
 
 
     &__title {
@@ -14,19 +15,15 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        border-radius: 5px 5px 0 0;
-        // padding: 10px 15px;
         padding: 25px 15px;
+        border-radius: 5px 5px 0 0;
         background: $primary-dark;
-        z-index: 2;
         cursor: pointer;
-
+        z-index: 2;
 
         font-family: $font-family-title;
         color: $secondary-light;
         font-weight: 500;
-
-        // font-size: $mobile-title-L;
         font-size: 1.125rem;
 
         @media (min-width: 768px) {
@@ -42,28 +39,14 @@
 
     &__txt {
         background: $primary-dark;
-        // background: $secondary-light;
-        // border-radius: 0 0 5px 5px;
         border-top: 8px solid $secondary-medium;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
-
-        // @media (min-width: 1025px) {
-        //     max-height: none;
-        //     height: 450px;
-        //     // height: auto;
-        // }
     }
 
     &__txt.show {
-        // max-height: 250px;
         max-height: 350px;
-        // max-height: 1000px; 
-
-        // @media (min-width: 1025px) {
-        //     max-height: none;
-        // }
     }
 
     &__txt-inner {
@@ -71,20 +54,14 @@
         @extend %flex-column;
         gap: 10px;
     }
-}
 
+    &__chevronUp {
+        transition: transform 0.3s ease-in-out;
+    }
 
-.fa-solid.fa-chevron-up {
-    transition: transform 0.3s ease-in-out;
-
-    // @media (min-width: 1025px) {
-    //     display: none;
-    // }
-
-}
-
-.fa-solid.fa-chevron-up.rotate {
-    transform: rotate(180deg);
+    &__chevronUp.rotate {
+        transform: rotate(180deg);
+    }
 }
 
 /************************ Collapse desktop ************************/
@@ -99,39 +76,20 @@
     }
 
     &__txt.show {
+
         @media (min-width: 1025px) {
             max-height: none;
         }
     }
 
-    .fa-solid.fa-chevron-up {
-        // transition: transform 0.3s ease-in-out;
+    &__chevronUp {
 
         @media (min-width: 1025px) {
             display: none;
         }
-
     }
 
 }
-
-// .projectCollapse {
-//     &__txt {
-
-//         @media (min-width: 1025px) {
-//             max-height: none;
-//             // height: 450px;
-//             height: 100%;
-//         }
-//     }
-
-//     &__txt.show {
-//         @media (min-width: 1025px) {
-//             max-height: none;
-//             height: 100%;
-//         }
-//     }
-// }
 
 /************************ ProjectCollapse  ************************/
 .projectCollapse {
@@ -140,9 +98,6 @@
 
     &__title {
         padding: 10px 15px;
-        // padding: 30px 15px;
-
-        // font-size: $mobile-title-S;
         font-size: 1rem;
         font-weight: 600;
         min-height: 52px;

@@ -8,8 +8,6 @@ function ToggleButton({ setOpen }) {
                 <motion.path
                     strokeWidth="2"
                     stroke="white"
-                    // stroke="grey"
-                    // stroke="#C5B185"
                     strokeLinecap="round"
                     variants={{
                         closed: { d: "M 3 6 L 21 6" },
@@ -19,10 +17,8 @@ function ToggleButton({ setOpen }) {
                 <motion.path
                     strokeWidth="2"
                     stroke="white"
-                    // stroke="grey"
-                    // stroke="#C5B185"
                     strokeLinecap="round"
-                    d="M 3 12 L 21 12" // 18 units
+                    d="M 3 12 L 21 12"
                     variants={{
                         closed: { opacity: 1 },
                         open: { opacity: 0 },
@@ -31,8 +27,6 @@ function ToggleButton({ setOpen }) {
                 <motion.path
                     strokeWidth="2"
                     stroke="white"
-                    // stroke="grey"
-                    // stroke="#C5B185"
                     strokeLinecap="round"
                     variants={{
                         closed: { d: "M 3 18 L 21 18" },

@@ -1,18 +1,19 @@
 import "../../assets/css/main.css";
 import TechIcons from "../../components/TechIcons/TechIcons";
-import Contact from "../../containers/Contact/Contact";
-import Hero from "../../containers/Hero/Hero";
-import Project from "../../containers/Projects/Projects";
-import Services from "../../containers/Services/Services";
-import WhyMe from "../../containers/WhyMe/WhyMe";
+import ContactContainer from "../../containers/ContactContainer/ContactContainer";
+import HeroContainer from "../../containers/HeroContainer/HeroContainer";
+import ProjectsContainer from "../../containers/ProjectsContainer/ProjectsContainer";
+import ServicesContainer from "../../containers/ServicesContainer/ServicesContainer";
+import WhyMeContainer from "../../containers/WhyMeContainer/WhyMeContainer";
 
 function Home() {
 
     return (
         <>
             <main id="Acceuil" className="homeMainContainer">
+                {/* Section  hero*/}
                 <section className="acceuil">
-                    <Hero />
+                    <HeroContainer />
                     {/* SEPARATEUR HAUT DE SECTION ISSU DU SITE */}
                     <div
                         id="Projets"
@@ -42,16 +43,18 @@ function Home() {
                     </div>
                 </section>
 
+                {/* Section  projet*/}
                 <section className="project">
                     <div className="project__container">
                         <h2 className="sectionTitle sectionTitle__light">
                             Mes Projets
                         </h2>
 
-                        <Project />
+                        <ProjectsContainer />
                     </div>
                 </section>
 
+                {/* Section  services*/}
                 <section id="Services" className="services">
                     {/* SEPARATEUR BAS DE SECTION ISSU DU SITE */}
                     <div className="custom-shape-divider-top-1719498626">
@@ -82,11 +85,11 @@ function Home() {
                         <h2 className="sectionTitle sectionTitle__dark">
                             Pourquoi faire appel à moi ?
                         </h2>
-                        <WhyMe />
+                        <WhyMeContainer />
                         <h2 className="sectionTitle sectionTitle__dark">
                             Services
                         </h2>
-                        <Services />
+                        <ServicesContainer />
                     </div>
 
                     {/* SEPARATEUR BAS DE SECTION ISSU DU SITE */}
@@ -118,6 +121,7 @@ function Home() {
                     </div>
                 </section>
 
+                {/* Section  compétences*/}
                 <section className="skills">
                     <div className="skills__container">
                         <h2 className="sectionTitle sectionTitle__light">
@@ -127,6 +131,7 @@ function Home() {
                     </div>
                 </section>
 
+                {/* Section  contact*/}
                 <section id="Contact" className="contact">
                     {/* SEPARATEUR BAS DE SECTION ISSU DU SITE */}
                     <div className="custom-shape-divider-top-1719498626">
@@ -156,10 +161,7 @@ function Home() {
                         <h2 className="sectionTitle sectionTitle__dark">
                             Contact
                         </h2>
-                        <p className="sectionSubTitle">
-                            Vous avez un <span>projet</span> ? contactez moi !
-                        </p>
-                        <Contact />
+                        <ContactContainer />
                     </div>
                 </section>
             </main>

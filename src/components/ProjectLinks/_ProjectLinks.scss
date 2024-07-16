@@ -2,30 +2,23 @@
 .projectLinks {
     @extend %flex-rowCentered;
     gap: 15px;
-    border-radius: 15px;
-    padding: 15px 15px;
-    // width: 65%;
-    background-color: rgba($secondary-light, 0.9);
+    margin-top: 20px;
+
+    @media (min-width: 1025px) {
+        justify-content: flex-start;
+        ;
+    }
 
     &__repo,
     &__demo {
-        @extend %flex-columnCentered;
-        gap: 10px;
-        width: 80px;
-        height: 80px;
-        padding: 5px;
+        @extend %flex-rowCentered;
+        gap: 13px;
+        padding: 6px 20px;
         border-radius: 15px;
         background-color: rgba($secondary-medium, 0.9);
 
-
         // #19
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-    }
-
-    &__icon {
-        width: 65%;
-        height: 65%;
     }
 
     &__title {
@@ -37,5 +30,4 @@
         opacity: 0.5;
         pointer-events: none;
     }
-
 }
