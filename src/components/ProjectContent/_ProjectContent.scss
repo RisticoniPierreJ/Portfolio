@@ -96,3 +96,8 @@
         }
     }
 }
+
+.framerMotionContainer {
+    @extend %flex-columnCentered;
+    gap: 65px;
+}

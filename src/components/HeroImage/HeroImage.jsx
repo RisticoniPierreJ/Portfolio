@@ -1,10 +1,31 @@
-import avatar from "../../assets/images/Character_Fry.png";
+import avatar from "../../assets/images/WebDevelopper-removebg-preview.png";
+import { motion } from "framer-motion";
+
+const variants = {
+    initial: {
+        opacity: 0,
+        x: 100,
+    },
+    animate: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.5,
+            delay: 0.2,
+        },
+    },
+};
 
 function HeroImage() {
     return (
-        <div className="heroImage">
+        <motion.div
+            className="heroImage"
+            variants={variants}
+            initial="initial"
+            animate="animate"
+        >
             <div className="heroImage__picture">
-                <img src={avatar} alt="Portrait du propriétaire" loading="lazy"/>
+                <img src={avatar} alt="Portrait du propriétaire" />
                 <svg
                     viewBox="0 0 500 500"
                     xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +61,7 @@ function HeroImage() {
                     </path>
                 </svg>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

@@ -5,14 +5,20 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer__social">
-                <Link to="https://www.linkedin.com/in/pierre-jean-risticoni-54b4472aa/">
+                <Link
+                    to="https://www.linkedin.com/in/pierre-jean-risticoni-54b4472aa/"
+                    aria-label="LinkedIn de Pierre-Jean Risticoni"
+                >
                     <FontAwesomeIcon
                         icon="fa-brands fa-linkedin"
                         className="footer__social-icon"
                     />
                 </Link>
 
-                <Link to="https://github.com/RisticoniPierreJ">
+                <Link
+                    to="https://github.com/RisticoniPierreJ"
+                    aria-label="GitHub de Pierre-Jean Risticoni"
+                >
                     <FontAwesomeIcon
                         icon="fa-brands fa-github"
                         className="footer__social-icon"

@@ -6,8 +6,14 @@ function ScrollToTop() {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        // Fait défiler la fenêtre en haut de la page à chaque changement de route
-        window.scrollTo(0, 0);
+        const handleScrollToTop = () => {
+            // Défilement en haut de la page après un délai pour permettre l'animation
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 500);
+        };
+
+        handleScrollToTop();
     }, [pathname]);
 
     return null;

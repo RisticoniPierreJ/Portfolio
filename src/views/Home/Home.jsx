@@ -5,12 +5,31 @@ import HeroContainer from "../../containers/HeroContainer/HeroContainer";
 import ProjectsContainer from "../../containers/ProjectsContainer/ProjectsContainer";
 import ServicesContainer from "../../containers/ServicesContainer/ServicesContainer";
 import WhyMeContainer from "../../containers/WhyMeContainer/WhyMeContainer";
+import { motion, useIsPresent } from "framer-motion";
+
+import Header from "../../containers/Header/Header.jsx";
+
+const variants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.2,
+        },
+    },
+};
 
 function Home() {
-
+    const isPresent = useIsPresent();
     return (
         <>
             <main id="Acceuil" className="homeMainContainer">
+                <Header />
+
                 {/* Section  hero*/}
                 <section className="acceuil">
                     <HeroContainer />
@@ -46,9 +65,15 @@ function Home() {
                 {/* Section  projet*/}
                 <section className="project">
                     <div className="project__container">
-                        <h2 className="sectionTitle sectionTitle__light">
+                        <motion.h2
+                            className="sectionTitle sectionTitle__light"
+                            variants={variants}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                        >
                             Mes Projets
-                        </h2>
+                        </motion.h2>
 
                         <ProjectsContainer />
                     </div>
@@ -82,13 +107,25 @@ function Home() {
                     </div>
 
                     <div className="services__container">
-                        <h2 className="sectionTitle sectionTitle__dark">
+                        <motion.h2
+                            className="sectionTitle sectionTitle__dark"
+                            variants={variants}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                        >
                             Pourquoi faire appel à moi ?
-                        </h2>
+                        </motion.h2>
                         <WhyMeContainer />
-                        <h2 className="sectionTitle sectionTitle__dark">
+                        <motion.h2
+                            className="sectionTitle sectionTitle__dark"
+                            variants={variants}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                        >
                             Services
-                        </h2>
+                        </motion.h2>
                         <ServicesContainer />
                     </div>
 
@@ -124,9 +161,15 @@ function Home() {
                 {/* Section  compétences*/}
                 <section className="skills">
                     <div className="skills__container">
-                        <h2 className="sectionTitle sectionTitle__light">
+                        <motion.h2
+                            className="sectionTitle sectionTitle__light"
+                            variants={variants}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                        >
                             Compétences
-                        </h2>
+                        </motion.h2>
                         <TechIcons />
                     </div>
                 </section>
@@ -158,12 +201,31 @@ function Home() {
                         </svg>
                     </div>
                     <div className="contact__container">
-                        <h2 className="sectionTitle sectionTitle__dark">
+                        <motion.h2
+                            className="sectionTitle sectionTitle__dark"
+                            variants={variants}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                        >
                             Contact
-                        </h2>
+                        </motion.h2>
                         <ContactContainer />
                     </div>
                 </section>
+                <motion.div
+                    initial={{ scaleX: 1 }}
+                    animate={{
+                        scaleX: 0,
+                        transition: { duration: 0.5, ease: "circOut" },
+                    }}
+                    exit={{
+                        scaleX: 1,
+                        transition: { duration: 0.5, ease: "circIn" },
+                    }}
+                    style={{ originX: isPresent ? 0 : 1 }}
+                    className="privacy-screen"
+                />
             </main>
         </>
     );

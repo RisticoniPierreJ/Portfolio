@@ -2,10 +2,14 @@
 .hero {
     @extend %flex-column;
     gap: 25px;
+    margin-top: 50px;
+
+    // @extend %flex-columnCentered;
 
     @media (min-width: 768px) {
         padding: 0 5%;
         gap: 50px;
+        // margin-top: unset;
     }
 
     @media (min-width: 1025px) {
@@ -19,9 +23,10 @@
 
         @media (min-width: 768px) {
             flex-direction: row-reverse;
-            align-items: unset;
-            justify-content: unset;
+            // align-items: unset;
+            // justify-content: unset;
             width: 100%;
+            gap: 50px;
         }
     }
 

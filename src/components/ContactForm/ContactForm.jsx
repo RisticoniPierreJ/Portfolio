@@ -2,6 +2,34 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+
+const variants = {
+    initial: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: 0.3,
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const inputVariants = {
+    initial: {
+        opacity: 0,
+        y: 50,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+        },
+    },
+};
 
 function ContactForm() {
     const form = useRef();
@@ -10,7 +38,6 @@ function ContactForm() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        
         // Envoie le formulaire avec emailjs
         emailjs
             .sendForm("service_y242j7j", "template_s42qskr", form.current, {
@@ -30,11 +57,23 @@ function ContactForm() {
     };
 
     return (
-        <form ref={form} onSubmit={sendEmail} className="contactForm">
-            <div className="contactForm__inputContainer">
+        <motion.form
+            ref={form}
+            onSubmit={sendEmail}
+            className="contactForm"
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+        >
+            <motion.div
+                className="contactForm__inputContainer"
+                variants={inputVariants}
+            >
                 <FontAwesomeIcon
                     className="contactForm__icon"
                     icon="fa-solid fa-user"
+                    aria-label="Nom"
                 />
                 <label htmlFor="name"></label>
                 <input
@@ -44,11 +83,15 @@ function ContactForm() {
                     required
                     placeholder="Nom(*)"
                 />
-            </div>
-            <div className="contactForm__inputContainer">
+            </motion.div>
+            <motion.div
+                className="contactForm__inputContainer"
+                variants={inputVariants}
+            >
                 <FontAwesomeIcon
                     className="contactForm__icon"
                     icon="fa-solid fa-envelope"
+                    aria-label="Email"
                 />
                 <label htmlFor="email"></label>
                 <input
@@ -58,11 +101,15 @@ function ContactForm() {
                     required
                     placeholder="Email(*)"
                 />
-            </div>
-            <div className="contactForm__inputContainer">
+            </motion.div>
+            <motion.div
+                className="contactForm__inputContainer"
+                variants={inputVariants}
+            >
                 <FontAwesomeIcon
                     className="contactForm__icon"
                     icon="fa-solid fa-phone-flip"
+                    aria-label="Téléphone"
                 />
                 <label htmlFor="phone"></label>
                 <input
@@ -71,11 +118,15 @@ function ContactForm() {
                     name="phone"
                     placeholder="Téléphone"
                 />
-            </div>
-            <div className="contactForm__inputContainer">
+            </motion.div>
+            <motion.div
+                className="contactForm__inputContainer"
+                variants={inputVariants}
+            >
                 <FontAwesomeIcon
                     className="contactForm__icon"
                     icon="fa-solid fa-comment-dots"
+                    aria-label="Message"
                 />
                 <label htmlFor="message"></label>
                 <textarea
@@ -87,10 +138,15 @@ function ContactForm() {
                     required
                     placeholder="Votre message(*)"
                 />
-            </div>
-            <div className="contactForm__button">
-                <SubmitButton>Envoyer</SubmitButton>
-            </div>
+            </motion.div>
+            <motion.div
+                className="contactForm__button"
+                variants={inputVariants}
+            >
+                <SubmitButton aria-label="Envoyer le message">
+                    Envoyer
+                </SubmitButton>
+            </motion.div>
 
             {/* Affichage des messages de succès ou d'erreur */}
             {error === false ? (
@@ -98,7 +154,7 @@ function ContactForm() {
             ) : (
                 error === true && <p>Erreur lors de l&apos;envoi du message</p>
             )}
-        </form>
+        </motion.form>
     );
 }
 

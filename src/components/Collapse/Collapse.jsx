@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 function Collapse({ children, title, customClass = "" }) {
     const [isContentShown, setIsContentShown] = useState(false);
@@ -10,7 +11,10 @@ function Collapse({ children, title, customClass = "" }) {
     };
 
     return (
-        <article className={`${customClass}`}>
+        <motion.article
+            className={`${customClass}`}
+            whileHover={{ scale: 1.1 }}
+        >
             <div className={`${customClass}__title`} onClick={showContent}>
                 <h3>{title}</h3>
 
@@ -29,7 +33,7 @@ function Collapse({ children, title, customClass = "" }) {
             >
                 <div className={`${customClass}__txt-inner`}>{children}</div>
             </div>
-        </article>
+        </motion.article>
     );
 }
 

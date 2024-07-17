@@ -2,7 +2,7 @@
 /********************************************** Placeholders ************************************************/
 /*********************************************************************************************************/
 /************************ Flex box ************************/
-.whyMe__card, .whyMe__title, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .viewProject__description-content, .viewProject__challenges-content, .heroContent__title, .desktopGallery__scrollContainer,
+.whyMe__card, .whyMe__title, .servicesCards__list, .servicesCards, .servicesContainer, .hero__buttons, .hero, .viewProject__description-content, .viewProject__challenges-content, .heroImage__picture, .heroContent__title, .desktopGallery__scrollContainer,
 .mobileGallery__scrollContainer, .contactForm__inputContainer, .contactForm, .collapse__txt-inner,
 .projectCollapse__txt-inner, .collapse,
 .projectCollapse {
@@ -12,7 +12,7 @@
 
 .viewProjectGallery, .viewProject, .notFound__container, .contact__container, .services__container,
 .project__container,
-.skills__container, .acceuil, .skills, .whyMe, .projects, .navbar, .hero__top, .footer, .contactContainer, .techIcon, .viewProject__description-contentAndTagsContainer, .viewProject__description, .viewProject__challenges, .links, .galleryContainer, .viewProjectGallery__allGaleriesContainer, .contactForm__button, .viewProjectBanner__logo {
+.skills__container, .acceuil, .skills, .whyMe, .projects, .navbar, .hero__top, .footer, .contactContainer, .techIcon, .framerMotionContainer, .viewProject__description-contentAndTagsContainer, .viewProject__description, .viewProject__challenges, .links, .galleryContainer, .viewProjectGallery__allGaleriesContainer, .contactForm__button, .viewProjectBanner__logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +24,7 @@
   display: flex;
 }
 
-.bulletPoints, .header, .footer__social, .toggleButton, .button, .tags li, .projectLinks__repo, .projectLinks__demo, .projectLinks, .heroImage__picture, .heroImage, .galleryContainer__navigate {
+.bulletPoints, .header, .footer__social, .toggleButton, .button, .tags li, .projectLinks__repo, .projectLinks__demo, .projectLinks, .galleryContainer__navigate {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -334,6 +334,7 @@ main {
   font-size: 1rem;
   font-weight: 600;
   min-height: 52px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .projectCollapse__title {
@@ -566,7 +567,6 @@ main {
 @media (min-width: 768px) {
   .heroContent {
     width: 100%;
-    padding: 70px 0 0 0;
   }
 }
 @media (min-width: 1025px) {
@@ -649,22 +649,39 @@ main {
 /************************ HeroImage  ************************/
 .heroImage {
   position: relative;
-  height: 40vh;
-  min-height: 345px;
-  width: 100%;
   z-index: 2000;
+  width: 100%;
+  height: 100%;
+}
+.heroImage__picture {
+  align-items: center;
 }
 .heroImage__picture-liquidShape {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  bottom: -30px;
   z-index: -100;
-  top: 10%;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .heroImage__picture-liquidShape {
+    width: 110%;
+  }
 }
 .heroImage__picture img {
-  width: 65%;
-  height: 100%;
   z-index: -50;
+  width: 70%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .heroImage__picture img {
+    width: 90%;
+    min-width: 375px;
+  }
+}
+@media (min-width: 1025px) {
+  .heroImage__picture img {
+    min-width: unset;
+  }
 }
 
 /************************ Links  ************************/
@@ -695,6 +712,7 @@ main {
     gap: 20px;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
   }
   .linksDesktop a {
     font-size: 1.25rem;
@@ -864,6 +882,10 @@ main {
   }
 }
 
+.framerMotionContainer {
+  gap: 65px;
+}
+
 /************************ ProjectLinks  ************************/
 .projectLinks {
   gap: 15px;
@@ -880,6 +902,11 @@ main {
   border-radius: 15px;
   background-color: rgba(224, 203, 157, 0.9);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: transform 0.1s ease-in-out;
+}
+.projectLinks__repo:hover, .projectLinks__demo:hover {
+  transform: scale(1.1);
+  background-color: #e0cb9d;
 }
 .projectLinks__title {
   font-weight: 500;
@@ -922,6 +949,7 @@ main {
   border-radius: 50px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   display: none;
+  cursor: pointer;
 }
 
 .scrollToTopIcon.show {
@@ -1066,6 +1094,7 @@ main {
 /************************ HeroContainer ************************/
 .hero {
   gap: 25px;
+  margin-top: 50px;
 }
 @media (min-width: 768px) {
   .hero {
@@ -1085,9 +1114,8 @@ main {
 @media (min-width: 768px) {
   .hero__top {
     flex-direction: row-reverse;
-    align-items: unset;
-    justify-content: unset;
     width: 100%;
+    gap: 50px;
   }
 }
 .hero__buttons {
@@ -1167,8 +1195,9 @@ main {
 }
 @media (min-width: 1025px) {
   .servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 0 60px 0;
-    flex-direction: row;
     max-width: 1300px;
   }
 }
@@ -1580,4 +1609,15 @@ section {
   .viewProjectGallery__title {
     font-size: 1.875rem;
   }
+}
+
+.privacy-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #82A57D;
+  z-index: 20000;
+  transform-origin: left;
 }/*# sourceMappingURL=main.css.map */

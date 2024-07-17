@@ -5,6 +5,22 @@ import DropDownGallery from "../DropDownGallery/DropDownGallery";
 import desktopImg from "../../assets/images/desktop_screen.png";
 import mobileImg from "../../assets/images/mobile_screen.png";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+
+const variants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+            staggerChildren: 0.2,
+        },
+    },
+};
 
 function Gallery({ project }) {
     // Gestion de l'affichage des images
@@ -43,22 +59,39 @@ function Gallery({ project }) {
     };
 
     return (
-        <div className="viewProjectGallery__allGaleriesContainer">
+        <motion.div
+            className="viewProjectGallery__allGaleriesContainer"
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+        >
             {/* Desktop  */}
-            <div className="galleryContainer">
+            <motion.div className="galleryContainer" variants={variants}>
                 {mutlipleDesktopImg && (
-                    <div className="galleryContainer__navigate">
-                        <button onClick={() => handleDesktopNavigation("prev")}>
+                    <div
+                        className="galleryContainer__navigate"
+                        aria-label="Navigation des images desktop"
+                    >
+                        <motion.button
+                            onClick={() => handleDesktopNavigation("prev")}
+                            whileHover={{ scale: 1.1 }}
+                            aria-label="Image précédente desktop"
+                        >
                             <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
-                        </button>
+                        </motion.button>
                         <DropDownGallery
                             pages={project.desktop}
                             onSelect={(index) => setSelectedDesktopImg(index)}
                             selectedIndex={selecteDesktopImg}
                         />
-                        <button onClick={() => handleDesktopNavigation("next")}>
+                        <motion.button
+                            onClick={() => handleDesktopNavigation("next")}
+                            whileHover={{ scale: 1.1 }}
+                            aria-label="Image suivante desktop"
+                        >
                             <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
-                        </button>
+                        </motion.button>
                     </div>
                 )}
 
@@ -81,23 +114,34 @@ function Gallery({ project }) {
                         />
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Mobile  */}
-            <div className="galleryContainer">
+            <motion.div className="galleryContainer" variants={variants}>
                 {mutlipleMobileImg && (
-                    <div className="galleryContainer__navigate">
-                        <button onClick={() => handleMobileNavigation("prev")}>
+                    <div
+                        className="galleryContainer__navigate"
+                        aria-label="Navigation des images mobile"
+                    >
+                        <motion.button
+                            onClick={() => handleMobileNavigation("prev")}
+                            whileHover={{ scale: 1.1 }}
+                            aria-label="Image précédente mobile"
+                        >
                             <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
-                        </button>
+                        </motion.button>
                         <DropDownGallery
                             pages={project.mobile}
                             onSelect={(index) => setSelectedMobileImg(index)}
                             selectedIndex={selecteMobileImg}
                         />
-                        <button onClick={() => handleMobileNavigation("next")}>
+                        <motion.button
+                            onClick={() => handleMobileNavigation("next")}
+                            whileHover={{ scale: 1.1 }}
+                            aria-label="Image suivante mobile"
+                        >
                             <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
-                        </button>
+                        </motion.button>
                     </div>
                 )}
 
@@ -122,8 +166,8 @@ function Gallery({ project }) {
                         </div>
                     </div>
                 )}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
 

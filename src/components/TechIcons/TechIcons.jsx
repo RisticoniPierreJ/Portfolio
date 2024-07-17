@@ -1,12 +1,52 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import techIconsData from "../../data/techIconsData";
 import { getImageUrl } from "../../utils/imageUtils";
+import { motion } from "framer-motion";
+
+const variants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+            staggerChildren: 0.08,
+        },
+    },
+};
+
+const iconVariants = {
+    initial: {
+        opacity: 0,
+        y: 20,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+        },
+    },
+};
 
 function TechIcons() {
     return (
-        <div className="techIconGrid">
+        <motion.div
+            className="techIconGrid"
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+        >
             {techIconsData.map((icon, index) => (
-                <article className="techIcon" key={index}>
+                <motion.article
+                    className="techIcon"
+                    key={index}
+                    variants={iconVariants}
+                >
                     <img
                         className="techIcon__image"
                         src={getImageUrl("techIcons", icon.fileName)}
@@ -14,17 +54,17 @@ function TechIcons() {
                         loading="lazy"
                     />
                     <h3 className="techIcon__title">{icon.title}</h3>
-                </article>
+                </motion.article>
             ))}
 
             {/* Icône points de suspension toujours présent en dernier */}
-            <article className="techIcon">
+            <motion.article className="techIcon" variants={iconVariants}>
                 <FontAwesomeIcon
                     icon="fa-solid fa-ellipsis"
                     className="techIcon__image"
                 />
-            </article>
-        </div>
+            </motion.article>
+        </motion.div>
     );
 }
 

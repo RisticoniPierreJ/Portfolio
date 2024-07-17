@@ -12,8 +12,9 @@
     }
 
     @media (min-width: 1025px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         padding: 0 0 60px 0;
-        flex-direction: row;
         max-width: 1300px;
     }
 }

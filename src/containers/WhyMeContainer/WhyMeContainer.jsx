@@ -1,5 +1,36 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+
+const variants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const cardVariants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+            staggerChildren: 0.4,
+        },
+    },
+};
 
 function WhyMeContainer() {
     const [cardCount, setCardCount] = useState(0);
@@ -39,7 +70,7 @@ function WhyMeContainer() {
         };
 
         wrapper.addEventListener("scroll", checkScrollPosition);
-        
+
         // Vérification initiale de la position de défilement après un délai
         setTimeout(checkScrollPosition, 100);
 
@@ -61,26 +92,39 @@ function WhyMeContainer() {
 
     return (
         <div className="whyMe">
-            <div className="whyMe__title">
-                <p>
+            <motion.div
+                className="whyMe__title"
+                variants={variants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+            >
+                <motion.p variants={variants}>
                     La <span>présence en ligne</span> est devenue{" "}
                     <span>essentielle</span> pour toutes les entreprises, quelle
                     que soit leur taille ou leur secteur.
-                </p>
-                <p>
+                </motion.p>
+                <motion.p variants={variants}>
                     Pour maximiser <span>l&apos;impact</span> de votre site web,
                     il est <span>crucial</span> de surveiller et de comprendre
                     les éléments suivants :
-                </p>
-            </div>
+                </motion.p>
+            </motion.div>
+
             <div className="whyMe__container">
                 <FontAwesomeIcon
                     className="whyMe__chevron whyMe__chevron-left"
                     icon="fa-solid fa-chevron-left"
                     onClick={scrollLeft}
                 />
-                <div className="whyMe__wrapper">
-                    <article className="whyMe__card">
+                <motion.div
+                    className="whyMe__wrapper"
+                    variants={variants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                >
+                    <motion.article className="whyMe__card" variants={cardVariants}>
                         <FontAwesomeIcon
                             className="whyMe__card-icon"
                             icon="fa-solid fa-screwdriver-wrench"
@@ -93,8 +137,8 @@ function WhyMeContainer() {
                             maintenir la performance et l&apos;efficacité de
                             votre site sont indispensables.
                         </p>
-                    </article>
-                    <article className="whyMe__card">
+                    </motion.article>
+                    <motion.article className="whyMe__card" variants={cardVariants}>
                         <FontAwesomeIcon
                             className="whyMe__card-icon"
                             icon="fa-solid fa-rotate"
@@ -107,8 +151,8 @@ function WhyMeContainer() {
                             pour rester compétitif grâce à des technologies à
                             jour
                         </p>
-                    </article>
-                    <article className="whyMe__card">
+                    </motion.article>
+                    <motion.article className="whyMe__card" variants={cardVariants}>
                         <FontAwesomeIcon
                             className="whyMe__card-icon"
                             icon="fa-solid fa-magnifying-glass"
@@ -121,8 +165,8 @@ function WhyMeContainer() {
                             des algorithmes de recherche est crucial pour la
                             visibilité de votre site
                         </p>
-                    </article>
-                    <article className="whyMe__card">
+                    </motion.article>
+                    <motion.article className="whyMe__card" variants={cardVariants}>
                         <FontAwesomeIcon
                             className="whyMe__card-icon"
                             icon="fa-solid fa-shield"
@@ -133,8 +177,8 @@ function WhyMeContainer() {
                             sécurité protègent vos données et celles de vos
                             utilisateurs
                         </p>
-                    </article>
-                </div>
+                    </motion.article>
+                </motion.div>
                 <FontAwesomeIcon
                     className="whyMe__chevron whyMe__chevron-right"
                     icon="fa-solid fa-chevron-right"

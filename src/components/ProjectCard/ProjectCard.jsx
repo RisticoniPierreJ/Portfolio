@@ -2,13 +2,42 @@ import { Link } from "react-router-dom";
 import projectsData from "../../data/projectsData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getImageUrl } from "../../utils/imageUtils";
+import { motion } from "framer-motion";
+
+const variants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+            delay: index * 0.1,
+        },
+    }),
+};
 
 function ProjectCard() {
     return (
         <>
             {projectsData.map((project, index) => (
-                <Link to={`/projet/${project.id}`} key={index}>
-                    <article className="projectCard">
+                <Link
+                    to={`/projet/${project.id}`}
+                    key={index}
+                    aria-label={`Lien vers le projet ${project.title}`}
+                >
+                    <motion.article
+                        className="projectCard"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.9 }}
+                        variants={variants}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        custom={index}
+                    >
                         <img
                             src={getImageUrl(
                                 "projectCover",
@@ -43,8 +72,9 @@ function ProjectCard() {
                         <FontAwesomeIcon
                             icon="fa-solid fa-circle-plus"
                             className="projectCard__plusBtn"
+                            aria-label={`Voir plus de détails sur le projet ${project.title}`}
                         />
-                    </article>
+                    </motion.article>
                 </Link>
             ))}
         </>

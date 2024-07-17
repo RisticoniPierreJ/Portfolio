@@ -1,8 +1,12 @@
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 function DropDownGallery({ pages, onSelect, selectedIndex }) {
     return (
-        <div className="dropDownGalleryContainer">
+        <motion.div
+            className="dropDownGalleryContainer"
+            whileHover={{ scale: 1.1 }}
+        >
             <select
                 value={selectedIndex}
                 onChange={(e) => onSelect(Number(e.target.value))}
@@ -19,7 +23,7 @@ function DropDownGallery({ pages, onSelect, selectedIndex }) {
                 ))}
             </select>
             <div className="dropDownGallery__arrow"></div>
-        </div>
+        </motion.div>
     );
 }
 
