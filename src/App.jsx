@@ -1,7 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import "../src/utils/fontAwesomeConfig.js";
-// import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
-// import Header from "./containers/Header/Header.jsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import Footer from "./containers/Footer/Footer.jsx";
 import ScrollToTopIcon from "./components/ScrollToTopIcon/ScrollToTopIcon.jsx";
 import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes.jsx";
@@ -9,7 +8,7 @@ import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes.jsx";
 function App() {
     return (
         <Router basename="/Portfolio">
-            {/* <ScrollToTop /> */}
+            <ScrollToTop />
             <AnimatedRoutes />
             <ScrollToTopIcon />
             <Footer />
