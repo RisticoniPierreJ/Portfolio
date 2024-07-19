@@ -95,6 +95,17 @@ section {
     }
 }
 
+/* ------------------ classe pour tranistion entre pages avec FramerMotion ------------------ */
+.privacy-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $primary-dark;
+    z-index: 20000;
+}
+
 
 //
 /* ------------------ Séparateurs de section ------------------ */

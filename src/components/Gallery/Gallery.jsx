@@ -68,6 +68,7 @@ function Gallery({ project }) {
         >
             {/* Desktop  */}
             <motion.div className="galleryContainer" variants={variants}>
+                {/* Barre de navigation de la galerie*/}
                 {mutlipleDesktopImg && (
                     <div
                         className="galleryContainer__navigate"
@@ -95,6 +96,7 @@ function Gallery({ project }) {
                     </div>
                 )}
 
+                {/* Galerie desktop */}
                 <div className="desktopGallery">
                     <img
                         src={desktopImg}
@@ -118,6 +120,7 @@ function Gallery({ project }) {
 
             {/* Mobile  */}
             <motion.div className="galleryContainer" variants={variants}>
+                {/* Barre de navigation de la galerie*/}
                 {mutlipleMobileImg && (
                     <div
                         className="galleryContainer__navigate"
@@ -145,6 +148,7 @@ function Gallery({ project }) {
                     </div>
                 )}
 
+                {/* Galerie mobile */}
                 {project.mobile[0].title !== "" && (
                     <div className="mobileGallery">
                         <img

@@ -20,6 +20,3 @@ function AnimatedRoutes() {
 }
 
 export default AnimatedRoutes;
-
-
-// initial={false}

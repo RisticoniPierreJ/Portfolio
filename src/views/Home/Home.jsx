@@ -5,9 +5,8 @@ import HeroContainer from "../../containers/HeroContainer/HeroContainer";
 import ProjectsContainer from "../../containers/ProjectsContainer/ProjectsContainer";
 import ServicesContainer from "../../containers/ServicesContainer/ServicesContainer";
 import WhyMeContainer from "../../containers/WhyMeContainer/WhyMeContainer";
-import { motion, useIsPresent } from "framer-motion";
-
 import Header from "../../containers/Header/Header.jsx";
+import { motion, useIsPresent } from "framer-motion";
 
 const variants = {
     initial: {

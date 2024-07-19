@@ -193,6 +193,7 @@ main {
 .viewProjectBanner {
   position: relative;
   border-radius: 0 0 55px 55px;
+  min-height: 280px;
   max-height: 300px;
 }
 .viewProjectBanner__img {
@@ -201,6 +202,7 @@ main {
   width: 100%;
   height: 100%;
   border-radius: 0 0 55px 55px;
+  min-height: 280px;
   max-height: 300px;
 }
 .viewProjectBanner__logo {
@@ -1447,6 +1449,17 @@ section {
   gap: 20px;
 }
 
+/* ------------------ classe pour tranistion entre pages avec FramerMotion ------------------ */
+.privacy-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #82A57D;
+  z-index: 20000;
+}
+
 /* ------------------ Séparateurs de section ------------------ */
 .custom-shape-divider-bottom-1719499125 {
   position: absolute;
@@ -1609,15 +1622,4 @@ section {
   .viewProjectGallery__title {
     font-size: 1.875rem;
   }
-}
-
-.privacy-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #82A57D;
-  z-index: 20000;
-  transform-origin: left;
 }/*# sourceMappingURL=main.css.map */
